@@ -1,47 +1,10 @@
 ﻿<%@ Page Title="Yard-eCart Ad post" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="CreateAdpost.aspx.cs" Inherits="YardeCart.CreateAdpost" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-   <%-- <style>
+        <link href="CSS/FormValidation.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/jquery.validate.password.css" rel="stylesheet" type="text/css" />
     
-        #form-content {
-            vertical-align:central;
-            margin:50px,25px;
-            margin-bottom: 30px;
-            margin-left: 20px;
-            margin-top: 10px;
-            padding: 25px 250px 10px;
-            width: 700px;
-    }
-        label {
-        float: left;
-    padding: 5px 0 0;
-    text-align: right;
-    width: 150px;
-
-        }
-
-     input{
-    float: left;
-    margin: 10px 30px;
-    }
-textarea{
-    float: left;
-    margin: 5px 5px;
-    height: 30px;
-    width:300px;
-}
-combo{
-    float: left;
-    margin: 30px 30px;
-    width:300px;
-}
-
-        .auto-style2 {
-            width: 539px;
-        }
-
-    </style>--%>
-    <div id="form-content">
+    <div id="form-content" style="vertical-align:central; padding-left:200px;">
         <fieldset id="fieldset1">
            
             <table >
@@ -56,7 +19,11 @@ combo{
                     </tr>
             <tr>
                 <td class="auto-style4"><label class="label" for="txtTitle">Title</label></td>
-                <td><asp:TextBox class="input" ID="txtTitle" runat="server" Height="24px" Width="551px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox></td>
+                <td><asp:TextBox class="input" ID="txtTitle" runat="server" Height="24px" Width="551px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" ControlToValidate="txtTitle" runat="server" ErrorMessage="Enter Ad Title"></asp:RequiredFieldValidator>
+                </td>
             </tr>
             
             <tr>
@@ -72,20 +39,34 @@ combo{
             <tr>
                 <td class="auto-style4"><label class="label" for="ddlCategory">Category</label></td>
                 <td><asp:DropDownList class="input" ID="ddlCategory" runat="server" Height="48px" Width="317px"></asp:DropDownList>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>
+                    <asp:Label ID="ErrCategory" ForeColor="Red" runat="server" ></asp:Label>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style4"><label class="label" for="txtPrice">Price</label></td>
-                <td><asp:TextBox class="input" ID="txtPrice" runat="server" BorderWidth="1px" Height="24px"></asp:TextBox></td>
+                <td><asp:TextBox class="input" ID="txtPrice" runat="server" BorderWidth="1px" Height="24px" Text="0.00"></asp:TextBox></td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ForeColor="Red" ControlToValidate="txtPrice" runat="server" ErrorMessage="Enter Price"></asp:RequiredFieldValidator>
+                </td>
+
             </tr>
             <tr>
                 <td class="auto-style4"><label class="label" for="txtTillDate">Show Till Date</label></td>
                 <td><asp:TextBox class="input" ID="txtTillDate" runat="server" TextMode="Date" BorderWidth="1px" Height="24px"></asp:TextBox></td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="Red" ControlToValidate="txtTillDate" runat="server" ErrorMessage="Select Till date"></asp:RequiredFieldValidator>
+                </td>
+
             </tr>
             
             <tr>
                 <td class="auto-style3"><label >Add Image for Ad</label></td>
                 <td class="auto-style1">
                     <asp:FileUpload ID="FileUpload1" runat="server" Height="24px" Width="551px" BorderWidth="1px" />
+                </td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ForeColor="Red" ControlToValidate="FileUpload1" runat="server" ErrorMessage="Select image file"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>

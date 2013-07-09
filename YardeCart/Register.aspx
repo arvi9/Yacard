@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="Yard-eCart Register" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="YardeCart.Register" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <link href="../CSS/FormValidation.css" rel="stylesheet" type="text/css" />
-    <link href="../CSS/jquery.validate.password.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/FormValidation.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/jquery.validate.password.css" rel="stylesheet" type="text/css" />
     
       <div style="vertical-align:central; padding-left:200px;">
         <div >Registeration form<br />
@@ -16,6 +16,9 @@
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell2" runat="server">
                     <asp:TextBox ID="txtUsername" runat="server" Height="24" Width="300" ></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsername" ForeColor="Red"
+                         ErrorMessage="must enter username"></asp:RequiredFieldValidator>    
+                    
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell3" runat="server">
                         <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" ValidateRequestMode="Disabled" CausesValidation="False">Check avaiilablity</asp:LinkButton>
@@ -33,7 +36,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell6" runat="server">
-                    <asp:RequiredFieldValidator ID="valtxtFirstname" runat="server" CssClass="error" ControlToValidate="txtFirstname" ErrorMessage="must enter your First name"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="valtxtFirstname" runat="server" ForeColor="Red" ControlToValidate="txtFirstname" ErrorMessage="must enter your First name"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="trLastname" runat="server">
@@ -46,7 +49,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell9" runat="server">
-                    <asp:RequiredFieldValidator ID="valtxtLastname" runat="server" CssClass="error" ControlToValidate="txtLastname" ErrorMessage="must enter your Last name"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="valtxtLastname" runat="server" ForeColor="Red" ControlToValidate="txtLastname" ErrorMessage="must enter your Last name"></asp:RequiredFieldValidator>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="trGender" runat="server">
@@ -85,7 +88,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell15" runat="server">
-                    <asp:RequiredFieldValidator ID="valtxtPassword" runat="server" CssClass="error" ControlToValidate="txtPassword" ErrorMessage="must enter your Password"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="valtxtPassword" runat="server" ForeColor="Red" ControlToValidate="txtPassword" ErrorMessage="must enter your Password"></asp:RequiredFieldValidator>
 
                     <div class="password-meter">
 	  					<div class="password-meter-message">&nbsp;</div>
@@ -107,7 +110,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell18" runat="server">
-                    <asp:Label ID="errPwd" CssClass="error" runat="server" Visible="false"></asp:Label>
+                    <asp:Label ID="errPwd" ForeColor="Red" runat="server" Visible="false"></asp:Label>
                 </asp:TableCell>
             </asp:TableRow>
             <asp:TableRow ID="trEmail" runat="server">
@@ -120,7 +123,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell21" runat="server">
-                    <asp:RequiredFieldValidator ID="valtxtEmail" runat="server" CssClass="error" ControlToValidate="txtEmail" ErrorMessage="must enter your Email" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="valtxtEmail" runat="server" ForeColor="Red" ControlToValidate="txtEmail" ErrorMessage="must enter your Email" SetFocusOnError="True"></asp:RequiredFieldValidator>
 
                 </asp:TableCell>
             </asp:TableRow>

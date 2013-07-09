@@ -24,6 +24,8 @@ namespace YardeCart
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            ErrCategory.Visible = false;
+
             string str = "";
             if (!IsPostBack)
             {
@@ -65,7 +67,13 @@ namespace YardeCart
             }
             else
             {
-
+                if (ddlCategory.SelectedIndex == 0)
+                {
+                    ErrCategory.Text = "Select Category";
+                    ErrCategory.Visible = true;
+                }
+                else
+                {
                 AdDetailsBll adbll = new AdDetailsBll();
 
                 UserInfoBll usrinfo = new UserInfoBll();
@@ -203,5 +211,6 @@ namespace YardeCart
                 }
             }
         }
+    }
     }
 }
