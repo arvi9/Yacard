@@ -12,3 +12,7 @@ D:\TIS\ResponsiveSite\Yardecart_July9\Yardecart\YardeCart\YardeCart.Entity\bin\D
 D:\TIS\ResponsiveSite\Yardecart_July9\Yardecart\YardeCart\YardeCart.Entity\obj\Debug\YardeCart.Entity.csprojResolveAssemblyReference.cache
 D:\TIS\ResponsiveSite\Yardecart_July9\Yardecart\YardeCart\YardeCart.Entity\obj\Debug\YardeCart.Entity.dll
 D:\TIS\ResponsiveSite\Yardecart_July9\Yardecart\YardeCart\YardeCart.Entity\obj\Debug\YardeCart.Entity.pdb
+D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Entity\bin\Debug\YardeCart.Entity.dll
+D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Entity\bin\Debug\YardeCart.Entity.pdb
+D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Entity\obj\Debug\YardeCart.Entity.dll
+D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Entity\obj\Debug\YardeCart.Entity.pdb

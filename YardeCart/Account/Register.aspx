@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="YardeCart.Account.Register" %>
 
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+<asp:Content runat="server"  ID="BodyContent" ContentPlaceHolderID="MainContent">
     <link href="../CSS/FormValidation.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/jquery.validate.password.css" rel="stylesheet" type="text/css" />
     
@@ -13,14 +13,18 @@
         });
     </script>
     
-        <div class="divHeadForm" style="color: #CC0066; font-family: 'Times New Roman'; font-size: x-large; background-color: #99CCFF; font-variant: ; text-align: center; vertical-align: top;">Registeration form</div>
-        <asp:Table ID="Table1" runat="server" HorizontalAlign="Center" GridLines="Horizontal" BackColor="#B5F0C8" Height="510px" Width="630px">
+    <div style="vertical-align:central; padding-left:200px;">
+        <div >Registeration form<br />
+            <br />
+            <br />
+        </div>
+        <asp:Table ID="Table1" runat="server" HorizontalAlign="Justify" GridLines="Horizontal"  Height="510px" Width="856px" style="font-size: small; font-family: Calibri">
             <asp:TableRow runat="server" ID="trUsername">
-                <asp:TableCell runat="server">
-                    <label for="txtUsername">User Name</label>
+                <asp:TableCell Width="300" runat="server">
+                    <label style="width:300px" for="txtUsername">User Name</label>
                 </asp:TableCell>
                 <asp:TableCell runat="server">
-                    <asp:TextBox ID="txtUsername" runat="server" Height="15" Width="200" ></asp:TextBox>
+                    <asp:TextBox ID="txtUsername" runat="server" Height="24" Width="300" ></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell runat="server">
                         <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" ValidateRequestMode="Disabled" CausesValidation="False">Check avaiilablity</asp:LinkButton>
@@ -34,7 +38,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell2" runat="server">
-                    <asp:TextBox ID="txtFirstname" runat="server" Height="15" Width="200"></asp:TextBox>
+                    <asp:TextBox ID="txtFirstname" runat="server" Height="24" Width="300"></asp:TextBox>
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell3" runat="server">
@@ -47,7 +51,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell5" runat="server">
-                    <asp:TextBox ID="txtLastname" runat="server" Height="15" Width="200"></asp:TextBox>
+                    <asp:TextBox ID="txtLastname" runat="server" Height="24" Width="300"></asp:TextBox>
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell6" runat="server">
@@ -59,9 +63,10 @@
                     <label for="gender">Gender</label>
                  
                 </asp:TableCell>
-                <asp:TableCell ID="TableCell8" runat="server" >
-                    <div class="divOption" style="width:200px;"  >
-                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" TextAlign="right" >
+                <asp:TableCell ID="TableCell8" Width="200
+                    px" runat="server" >
+                    <div class="divOption" style="width:554px;"  >
+                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" TextAlign="right" RepeatDirection="Horizontal" >
                                         <asp:ListItem Selected="True" Value="1">Male</asp:ListItem>
                                         <asp:ListItem Value="2">Female</asp:ListItem>
                                         <asp:ListItem Value="0">Rather not say</asp:ListItem>
@@ -85,7 +90,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell11" runat="server">
-                    <asp:TextBox ID="txtPassword" runat="server" Height="15" Width="200" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" runat="server" Height="24" Width="300" TextMode="Password"></asp:TextBox>
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell12" runat="server">
@@ -107,7 +112,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell14" runat="server">
-                    <asp:TextBox ID="txtRePassword" runat="server" Height="15" Width="200" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="txtRePassword" runat="server" Height="24"  Width="300" TextMode="Password"></asp:TextBox>
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell15" runat="server">
@@ -120,7 +125,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell17" runat="server">
-                    <asp:TextBox ID="txtEmail" runat="server" Height="15" Width="200"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" Height="24"  Width="300"></asp:TextBox>
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell18" runat="server">
@@ -134,7 +139,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell20" runat="server">
-                    <asp:TextBox ID="txtMobile" runat="server" Height="15" Width="200"></asp:TextBox>
+                    <asp:TextBox ID="txtMobile" runat="server" Height="24"  Width="300"></asp:TextBox>
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell21" runat="server">
@@ -150,7 +155,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell23" runat="server">
-                    <asp:TextBox ID="txtAddress" runat="server" Height="15" Width="200"></asp:TextBox>
+                    <asp:TextBox ID="txtAddress" runat="server" Height="24"  Width="300"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell24" runat="server">
                     <span class="inline-notice" id="Span13">
@@ -165,7 +170,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell26" runat="server">
-                    <asp:TextBox ID="txtStreetname" runat="server" Height="15" Width="200"></asp:TextBox>
+                    <asp:TextBox ID="txtStreetname" runat="server" Height="24"  Width="300"></asp:TextBox>
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell27" runat="server">
@@ -181,7 +186,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell29" runat="server">
-                    <asp:DropDownList ID="ddlCountry" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlCountry" Height="24px" Width="300" style="border:solid 1px"  runat="server"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell30" runat="server">
                     <span class="inline-notice" id="Span17">
@@ -196,7 +201,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell32" runat="server">
-                    <asp:DropDownList ID="ddlState" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlState" Height="24px" Width="300" style="border:solid 1px"  runat="server"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell33" runat="server">
                     <span class="inline-notice" id="Span19">
@@ -211,7 +216,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell35" runat="server">
-                    <asp:DropDownList ID="ddlCity" runat="server"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlCity" Height="24px" Width="300" style="border:solid 1px" runat="server"></asp:DropDownList>
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell36" runat="server">
                     <span class="inline-notice" id="Span21">
@@ -226,7 +231,7 @@
                  
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell38" runat="server">
-                    <asp:TextBox ID="txtZipcode" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtZipcode" Height="24px" Width="300" runat="server"></asp:TextBox>
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell39" runat="server">
                     <span class="inline-notice" id="Span23">
@@ -235,7 +240,6 @@
              
                 </asp:TableCell>
             </asp:TableRow>
-
             <asp:TableRow ID="trCheck" runat="server">
                 <asp:TableCell ID="TableCell40" runat="server">
                  &nbsp;
@@ -251,7 +255,6 @@
              
                 </asp:TableCell>
             </asp:TableRow>
-
             <asp:TableRow ID="TableRow2" runat="server">
                 <asp:TableCell ID="TableCell43" runat="server">
                  &nbsp;
@@ -266,13 +269,12 @@
              
                 </asp:TableCell>
             </asp:TableRow>
-
             <asp:TableRow ID="trRegister" runat="server">
                 <asp:TableCell ID="TableCell46" runat="server">
                  &nbsp;
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell47" runat="server">
-                    <asp:Button ID="btnRegister" runat="server" Text="Register" BackColor="PeachPuff" OnClick="btnRegister_Click" />
+                    <asp:Button ID="btnRegister" Width="100" runat="server" Text="Register" BorderStyle="Groove" BorderWidth="1px"  OnClick="btnRegister_Click" />
                 </asp:TableCell>
                 <asp:TableCell ID="TableCell48" runat="server">
                     <span class="inline-notice" id="Span29">
@@ -282,4 +284,5 @@
                 </asp:TableCell>
             </asp:TableRow>
         </asp:Table>
+        </div>
 </asp:Content>
