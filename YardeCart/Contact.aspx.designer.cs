@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace YardeCart {
-    
-    
-    public partial class Contact {
+namespace YardeCart
+{
+    public partial class Contact
+    {
     }
 }

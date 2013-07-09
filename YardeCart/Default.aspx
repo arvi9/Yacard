@@ -1,24 +1,35 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="YardeCart._Default" %>
+﻿<%@ Page Title="Yard-eCart Home Page" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="YardeCart._Default" %>
 
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h3>We suggest the following:</h3>
-    <ol class="round">
-        <li class="one">
-            <h5>Getting Started</h5>
-            ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            <a href="http://go.microsoft.com/fwlink/?LinkId=245146">Learn more…</a>
-        </li>
-        <li class="two">
-            <h5>Add NuGet packages and jump-start your coding</h5>
-            NuGet makes it easy to install and update free libraries and tools.
-            <a href="http://go.microsoft.com/fwlink/?LinkId=245147">Learn more…</a>
-        </li>
-        <li class="three">
-            <h5>Find Web Hosting</h5>
-            You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            <a href="http://go.microsoft.com/fwlink/?LinkId=245143">Learn more…</a>
-        </li>
-    </ol>
+    
+                <asp:GridView ID="GridView1" runat="server" Height="400px" Width="800px" AllowPaging="false" 
+                    AutoGenerateColumns="False" OnRowDataBound="GridView1_RowDataBound" 
+                    PageSize="1" ShowHeader="False" OnPageIndexChanging="GridView1_PageIndexChanging"
+                    >
+                    <Columns>
+                        <asp:TemplateField >
+                            <ItemTemplate>
+                                <span id="spnHtml0" runat="server"></span>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField >
+                            <ItemTemplate>
+                                <span id="spnHtml1" runat="server"></span>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField >
+                            <ItemTemplate>
+                                <span id="spnHtml2" runat="server"></span>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField >
+                            <ItemTemplate>
+                                <span id="spnHtml3" runat="server"></span>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                    <PagerStyle BorderStyle="Solid" HorizontalAlign="Center" VerticalAlign="Bottom" Wrap="True" />
+                </asp:GridView>
+
 </asp:Content>

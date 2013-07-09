@@ -17,7 +17,7 @@ namespace YardeCart
     {
         public string[] strImgpath = new string[5];
         DataTable dt = null;
-        public static int gridpageIndex=0;
+        public int gridpageIndex=0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -70,14 +70,15 @@ namespace YardeCart
 
         void BindAlbumGrid()
         {
-            int k = GridView1.PageCount;
-            gridpageIndex = 0;
+            GridView1.Controls.Clear();
+
+            //gridpageIndex = 0;
             AdDetailsBll adbll = new AdDetailsBll();
              dt = adbll.GetAllAdDetails();
             if (dt.Rows.Count > 4)
             {
                 decimal dPageSize = (dt.Rows.Count / 4M);
-                GridView1.PagerSettings.PageButtonCount = Convert.ToInt32(Math.Floor(dPageSize));
+                //GridView1.PagerSettings.PageButtonCount = Convert.ToInt32(Math.Floor(dPageSize));
                 //GridView1.PageSize = Convert.ToInt32(Math.Ceiling(dPageSize));
             }
             GridView1.DataSource = dt.DefaultView;
@@ -91,16 +92,17 @@ namespace YardeCart
             strImgpath=ipath.Split(':');   
 
             string path = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + strImgpath[0];
-            string strViewlink = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/Account/ViewAds.aspx?aid=" +aid + "&uid=" + userid;
+            string strViewlink = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/ViewAds.aspx?aid=" +aid + "&uid=" + userid;
+            string strBuylink = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/BuyAdpost.aspx";
 
 
             string htmlSText = @"<table>
 <tr><td><a title='{0}' href='{3}' ><IMG SRC='{3}' height='300px' width='200px' bordor='2' ></td></tr>
 <tr><td style='font-family: Britannic Bold; font-size: large; color: #CB5091; font-weight: bold;'><h3>{0}<h3></br><span>{4}</span></td></tr>" +
-                                "<tr><td style='font-family: Britannic Bold; font-size: large; color: #00CC00;'>{2}</td></tr><tr><td><a href='{5}' style='animation:alternate-reverse;font-family: Arial; font-size: medium; font-weight: bold; color: #3333FF;'>BUY</a></br><a href='{5}'>Details</a></td></tr></table>";
+                                "<tr><td style='font-family: Britannic Bold; font-size: large; color: #00CC00;'>{2}</td></tr><tr><td><a href='{6}' style='animation:alternate-reverse;font-family: Arial; font-size: medium; font-weight: bold; color: #3333FF;'>BUY</a></br><a href='{5}'>Details</a></td></tr></table>";
 
             string sTestHtml = string.Empty;
-            sTestHtml = string.Format(htmlSText, title, desc, category, strImgpath[0], price, strViewlink);
+            sTestHtml = string.Format(htmlSText, title, desc, category, strImgpath[0], price, strViewlink, strBuylink);
 
             //string sTestHtml = string.Empty;
             //    sTestHtml = string.Format(

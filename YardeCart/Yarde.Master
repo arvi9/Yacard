@@ -104,12 +104,20 @@
             <br />
             <br />
             <br />
+              
             <!--main_resize end  --> 
           </div>
             </header>
           <!--main_resize end  -->
+            <script type="text/javascript">
+
+            </script>
             <div>
-                    <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+                 <div style="font-size:large;padding-left:6em">
+                    <asp:Label ID="lblUsername" runat="server" Text="Label"></asp:Label>
+                </div>
+                <br/>
+                <asp:ContentPlaceHolder runat="server" ID="MainContent" />
             </div>
               <br />
           <br />
@@ -130,12 +138,12 @@
                 </div>
           </div>
           <!--main_resize end  -->
-        </div>
     
         <div class="footer">
         <div class="main_resize"> &copy; Copyright YARDeCART. All Rights Reserved. 2013</div>
         <!--main_resize end  -->
         <div class="clr"></div>
+        </div>
         </div>
     </form>
 </body>
