@@ -86,7 +86,9 @@ a.pic:hover img.h { background:url(../images/img_z.png) center no-repeat; visibi
 
 /* logo */
 
-.logo { float:left; padding:30px 0; margin:0; }
+.logo { float:left; padding:30px 0; margin:0;
+    height: 27px;
+}
 
 .logo a { font-size:30px; color:#fff; font-weight: normal;  }
 
