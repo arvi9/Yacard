@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 using YardeCart.Business;
 using YardeCart.Data;
 
-namespace YardeCart.Account
+namespace YardeCart
 {
     public partial class Login : Page
     {

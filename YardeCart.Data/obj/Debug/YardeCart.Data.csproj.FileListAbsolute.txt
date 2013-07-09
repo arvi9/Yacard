@@ -12,7 +12,3 @@ D:\TIS\ResponsiveSite\Yardecart_July9\Yardecart\YardeCart\YardeCart.Data\bin\Deb
 D:\TIS\ResponsiveSite\Yardecart_July9\Yardecart\YardeCart\YardeCart.Data\obj\Debug\YardeCart.Data.csprojResolveAssemblyReference.cache
 D:\TIS\ResponsiveSite\Yardecart_July9\Yardecart\YardeCart\YardeCart.Data\obj\Debug\YardeCart.Data.dll
 D:\TIS\ResponsiveSite\Yardecart_July9\Yardecart\YardeCart\YardeCart.Data\obj\Debug\YardeCart.Data.pdb
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Data\bin\Debug\YardeCart.Data.dll
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Data\bin\Debug\YardeCart.Data.pdb
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Data\obj\Debug\YardeCart.Data.dll
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Data\obj\Debug\YardeCart.Data.pdb

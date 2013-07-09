@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace YardeCart.Account {
+namespace YardeCart {
     
     
     public partial class Login {

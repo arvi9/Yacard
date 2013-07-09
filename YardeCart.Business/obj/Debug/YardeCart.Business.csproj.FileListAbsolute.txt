@@ -31,14 +31,3 @@ D:\TIS\ResponsiveSite\Yardecart_July9\Yardecart\YardeCart\YardeCart.Business\bin
 D:\TIS\ResponsiveSite\Yardecart_July9\Yardecart\YardeCart\YardeCart.Business\obj\Debug\YardeCart.Business.csprojResolveAssemblyReference.cache
 D:\TIS\ResponsiveSite\Yardecart_July9\Yardecart\YardeCart\YardeCart.Business\obj\Debug\YardeCart.Business.dll
 D:\TIS\ResponsiveSite\Yardecart_July9\Yardecart\YardeCart\YardeCart.Business\obj\Debug\YardeCart.Business.pdb
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Business\bin\Debug\YardeCart.Business.dll
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Business\bin\Debug\YardeCart.Business.pdb
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Business\bin\Debug\YardeCart.Common.dll
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Business\bin\Debug\YardeCart.Data.dll
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Business\bin\Debug\YardeCart.Entity.dll
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Business\bin\Debug\YardeCart.Common.pdb
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Business\bin\Debug\YardeCart.Data.pdb
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Business\bin\Debug\YardeCart.Entity.pdb
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Business\obj\Debug\YardeCart.Business.csprojResolveAssemblyReference.cache
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Business\obj\Debug\YardeCart.Business.dll
-D:\TIS\ResponsiveSite\YardeCartJuly8GITRepo\Yacard\YardeCart.Business\obj\Debug\YardeCart.Business.pdb
