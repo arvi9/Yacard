@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>(Pro) Responsive Template</title>
+<meta name="description" content="Enter Your Website Description Here">
+<meta name="keywords" content="website, business, store" />
+<meta name="robots" content="index, follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="Animated Responsive Image Grid - Cycling through a set of images in a responsive grid." />
+<meta name="keywords" content="grid, images, thumbnails, responsive, css3, jquery, javascript, random, transition, 3d, perspective" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/respon.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+<!--ui_totop START -->
+<link href="ui_totop/css/ui.totop.css" rel="stylesheet" />
+<script src="ui_totop/js/jquery.ui.totop.js" charset="utf-8"></script>
+<!-- ui_totop END -->
+<!-- DC Twitter Starts -->
+<link href="twitter_tweet/jquery.tweet.css" rel="stylesheet" />
+<script src="twitter_tweet/jquery.tweet.js" charset="utf-8"></script>
+<!-- DC Twitter End -->
+<!-- DC jflickrfeed Starts -->
+<link href="flickr/css/dc_jflickrfeed.css" type="text/css" rel="stylesheet" />
+<script src="flickr/js/jflickrfeed.js"></script>
+<!-- DC jflickrfeed: Colorbox Lightbox -->
+<link href="flickr/js/colorbox/colorbox.css" rel="stylesheet" type="text/css" media="screen" />
+<script src="flickr/js/colorbox/jquery.colorbox-min.js"></script>
+<!-- DC jflickrfeed Ends -->
+<!-- preloader Start -->
+<link href="preloader/css/preloader.css" rel="stylesheet" />
+<script src="preloader/js/jquery.preloader.js" charset="utf-8"></script>
+<!-- preloader END -->
+<!-- prettyPhoto Start -->
+<link rel="stylesheet" type="text/css" href="prettyPhoto/css/prettyPhoto.css" />
+<script type="text/javascript" src="prettyPhoto/js/jquery.prettyPhoto.js"></script>
+<!-- prettyPhoto END -->
+<!-- superfish -->
+<link rel="stylesheet" media="screen" href="superfish/css/superfish.css" />
+<script  src="superfish/js/superfish-1.4.8/js/hoverIntent.js"></script>
+<script  src="superfish/js/superfish-1.4.8/js/superfish.js"></script>
+<script  src="superfish/js/superfish-1.4.8/js/supersubs.js"></script>
+<script  src="js/selectnav.min.js"></script>
+<!-- ENDS superfish -->
+<!-- slides START -->
+<!-- start responsive script -->
+<!-- DC Ken Burns Panel Slider CSS -->
+<link rel="stylesheet" type="text/css" href="sliders/kbpanel-slider/css/kenburns-panel-settings.css" media="screen" />
+
+<!-- DC Javascript Library -->
+<script type="text/javascript" src="dcodes/jquery.easing.js"></script><!-- jQuery Easing (do not call twice on same page) -->
+
+<!-- DC Ken Burns Panel Slider JS -->
+<script type="text/javascript" src="sliders/kbpanel-slider/js/jquery.waitforimages.js"></script>
+<script type="text/javascript" src="sliders/kbpanel-slider/js/jquery.cssAnimate.mini.js"></script>
+<script type="text/javascript" src="sliders/kbpanel-slider/js/jquery.touchwipe.min.js"></script>
+<script type="text/javascript" src="sliders/kbpanel-slider/js/jquery.dcodes.kenburns-panel.min.js"></script>
+
+<!-- DC Ken Burns Panel Slider Settings -->
+<script type="text/javascript">
+$(function() {   
+    $('.kbpanel-bannercontainer').kenburn({
+ 
+        thumbWidth:70, // thumbnail width
+        thumbHeight:40, // thumbnail height
+         
+        thumbAmount:4,  // number of thumbnails to show
+        thumbStyle:"both",   // thumb, bullet, none, both
+        thumbVideoIcon:"on", // show a video icon for video content: off, on
+         
+        thumbVertical:"bottom",
+        thumbHorizontal:"center",                          
+        thumbXOffset:0,
+        thumbYOffset:40,
+        bulletXOffset:0,
+        bulletYOffset:-16,
+        hideThumbs:"on",
+        touchenabled:'on',  // allow touch swipe (suitable for mobile devices): on, off
+        pauseOnRollOverThumbs:'off', // pause slider when mouse over thumbnail
+        pauseOnRollOverMain:'on', // pause slider when mouse over slider
+        preloadedSlides:2, // number of slides to preload during startup
+         
+        timer:5, // time before next slide (5 = 5 seconds)
+         
+        debug:"off",                       
+         
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //                                               Google Fonts !!                                             //
+        // local GoogleFont JS from your server: http://www.yourdomain.com/kb-plugin/js/jquery.googlefonts.js        //
+        // GoogleFonts from Original Source: http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js or https:... //
+        //          PT+Sans+Narrow:400,700                                                                          //
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        googleFonts:'Oswald',
+        googleFontJS:'sliders/kbpanel-slider/js/jquery.googlefonts.js'
+    });
+         
+         
+    $('.tnone').click(function() {
+        $('.tbull').removeClass('selected');
+        $('.tthumb').removeClass('selected');
+        $('.tnone').addClass('selected');
+        $('.tauto').removeClass('selected');
+        $('.kenburn_thumb_container').css({'visibility':'hidden'});
+        $('.thumbbuttons').css({'visibility':'hidden'});       
+    });
+     
+    $('.tthumb').click(function() {
+        $('.tbull').removeClass('selected');
+        $('.tauto').removeClass('selected');
+        $('.tthumb').addClass('selected');
+        $('.tnone').removeClass('selected');
+        $('.kenburn_thumb_container').css({'visibility':'visible'});
+        $('.thumbbuttons').css({'visibility':'hidden'});
+        $('body').addClass('tp_showthumbsalways');
+        $('.kenburn_thumb_container').animate({'opacity':1},{duration:300,queue:false});
+         
+    });
+     
+    $('.tauto').click(function() {
+        $('.tauto').addClass('selected');
+        $('.tthumb').removeClass('selected');
+        $('.tnone').removeClass('selected');
+        $('.tbull').removeClass('selected');
+        $('body').removeClass('tp_showthumbsalways');
+        $('.kenburn_thumb_container').css({'visibility':'visible'});
+        $('.thumbbuttons').css({'visibility':'hidden'});
+        setTimeout(function() {
+            $('.kenburn_thumb_container').animate({'opacity':0},{duration:300,queue:false});
+        },100);
+         
+    });
+     
+    $('.tbull').click(function() {
+        $('.tbull').addClass('selected');
+        $('.tauto').removeClass('selected');
+        $('.tthumb').removeClass('selected');
+        $('.tnone').removeClass('selected');
+        $('.kenburn_thumb_container').css({'visibility':'hidden'});
+        $('.thumbbuttons').css({'visibility':'visible'});       
+    });
+     
+    $('body').addClass('tp_showthumbsalways');
+    $('.tthumb').click();
+         
+});
+</script>
+<!-- end responsive script -->
+<!-- slides END -->
+<!-- Config User Intarface Box Import START -->
+<script type="text/javascript" src="js/head_html_default_block.js"></script>
+<script type="text/javascript" src="js/head_html_block.js"></script>
+<!-- Config User Intarface Box Import END -->
+<!-- Gallery Starts -->
+<script type="text/javascript" src="js/gallery-masonry/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="js/gallery-masonry/modernizr-transitions.js"></script>
+<script type="text/javascript" src="js/gallery-masonry/gallery-masonry.js"></script>
+<!-- Gallery Ends -->
+</head>
+<body>
+<div class="body_pattern">
+  <div class="header_res">
+    <div class="main_resize">
+      <div class="logo"><a href="index.html"><span>Tru</span>gen</a></div>
+      <div class="menu">
+        <nav> 
+          <script type="text/javascript" src="js/menu_html_block.js"></script> 
+        </nav>
+      </div>
+      <!-- /menu -->
+      <div class="clr"></div>
+      <div class="top_text"> Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris <br />
+        <small>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor</small> </div>
+      <div class="RSS"> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss4" /></a> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss1" /></a> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss2" /></a> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss3" /></a> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss5" /></a> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss6" /></a> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss7" /></a> </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+    <br />
+    <br />
+    <br />
+    <!--main_resize end  --> 
+  </div>
+  <div class="main_resize" id="gallery"> 
+    <!--start responsive code -->
+    <div style=" margin:0 auto; position:relative;overflow:hidden;"> <!-- define slider container width (by strict force) -->
+      <div class="demoholder">
+        <div class="bggradient"></div>
+        <!-- <div class="kbpanel-bannercontainer centerme light"> light theme -->
+        <div class="kbpanel-bannercontainer centerme dark">
+          <ul>
+            <!-- Slide 1 -->
+            <li data-transition="fade" data-startalign="right,bottom" data-zoom="in" data-zoomfact="3" data-endAlign="center,top" data-panduration="12" data-colortransition="4"><img alt="" src="http://cdn.pimg.co/p/980x350/123321/fff/img.png" data-bw="http://cdn.pimg.co/p/500x350/123321/fff/img.png" data-thumb="http://cdn.pimg.co/p/80x50/123321/fff/img.png">
+              <div class="creative_layer">
+                <div class="cp-left faderight" >
+                  <p class="cp-title">Ken Burns Panel Slider</p>
+                  <p>Supports IE, Firefox, Chrome, Safari, Opera.</p>
+                  <p>The ultimate ken burns slider is here.<br />
+                    Supports URLs, YouTube/Vimeo Videos<br />
+                    multiple transition effects, transparent<br />
+                    panels, bullets/thumbs and more! <br />
+                  </p>
+                  <a style="margin-top:10px" class="kb-button" href="#">See More</a>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </li>
+            
+            <!-- Slide 2 -->
+            <li data-transition="slide" data-startalign="right,top" data-zoom="out" data-zoomfact="1.5" data-endAlign="left,bottom" data-panduration="8" data-colortransition="4"><img alt="" src="http://cdn.pimg.co/p/980x350/999999/fff/img.png" data-bw="http://cdn.pimg.co/p/500x350/999999/fff/img.png" data-thumb="http://cdn.pimg.co/p/80x50/999999/fff/img.png">
+              <div class="video_kenburner">
+                <div class="video_kenburn_wrap">
+                  <div class="video_video">
+                    <iframe class="video_clip" src="http://player.vimeo.com/video/4749536?title=0&byline=0&portrait=0"></iframe>
+                  </div>
+                  <div class="video_details">
+                    <p class="cp-title">Vimeo Video</p>
+                    <p>Watch sample embedded Vimeo video.<br />
+                    </p>
+                    <a style="margin-top:10px" class="kb-button" href="#">See More</a>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="close"></div>
+                </div>
+              </div>
+              <div class="creative_layer ">
+                <div class="cp-right fade">
+                  <p class="cp-title">Vimeo Support</p>
+                  <p>This slider supports embedded content.<br />
+                    Click the play button to play a sample video.<br />
+                  </p>
+                  <a style="margin-top:10px" class="kb-button" href="#">See More</a>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </li>
+            
+            <!-- Slide 3 -->
+            <li data-transition="slide" data-startalign="left,bottom" data-zoom="in" data-zoomfact="3" data-endAlign="center,center" data-panduration="8" data-colortransition="4"><img alt="" src="http://cdn.pimg.co/p/980x350/111/fff/img.png" data-bw="http://cdn.pimg.co/p/500x350/111/fff/img.png" data-thumb="http://cdn.pimg.co/p/80x50/111/fff/img.png">
+              <div class="creative_layer ">
+                <div class="cp-bottom fadeup">
+                  <p class="cp-title">Did You Know?</p>
+                  <p>The Ken Burns effect is a popular name for a type of panning and zooming effect used in video production from still imagery.</p>
+                </div>
+              </div>
+            </li>
+            
+            <!-- Slide 4 -->
+            <li data-transition="fade" data-startalign="right,top" data-zoom="out" data-zoomfact="1.2" data-endAlign="left,bottom" data-panduration="11" data-colortransition="4"><img alt="" src="http://cdn.pimg.co/p/980x350/999999/fff/img.png" data-bw="http://cdn.pimg.co/p/500x350/999999/fff/img.png" data-thumb="http://cdn.pimg.co/p/80x50/999999/fff/img.png">
+              <div class="creative_layer ">
+                <div class="cp-top fadedown" >
+                  <p class="cp-title">Your Portfolio, Revealed.</p>
+                  <p>Showcase your work and bring still images to life!</p>
+                </div>
+              </div>
+            </li>
+            
+            <!-- Slide 5 -->
+            <li data-transition="fade" data-startalign="center,top" data-zoom="in" data-zoomfact="1.6" data-endAlign="center,bottom" data-panduration="12" data-colortransition="4"><img alt="" src="http://cdn.pimg.co/p/980x350/123321/fff/img.png" data-bw="http://cdn.pimg.co/p/500x350/123321/fff/img.png" data-thumb="http://cdn.pimg.co/p/80x50/123321/fff/img.png">
+              <div class="video_kenburner">
+                <div class="video_kenburn_wrap">
+                  <div class="video_video">
+                    <iframe class="video_clip" src="http://www.youtube.com/embed/FG0fTKAqZ5g?hd=1&wmode=opaque&autohide=1&showinfo=0"></iframe>
+                  </div>
+                  <div class="video_details">
+                    <p class="cp-title">Youtube Video</p>
+                    <p>YouTube Video</p>
+                    <p>This is a sample YouTube video.</p>
+                    <a style="margin-top:10px" class="kb-button" href="#">See More</a>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="close"></div>
+                </div>
+              </div>
+              <div class="creative_layer ">
+                <div class="cp-left fade">
+                  <p class="cp-title">YouTube Support</p>
+                  <p>Click to Play!</p>
+                  <p>This innovative slider supports<br />
+                    YouTube content. Click to play!</p>
+                  <a style="margin-top:10px" class="kb-button" href="#">See More</a>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- /kbpanel-bannercontainer --> 
+        <!-- Banner Shadow Effect -->
+        <div class="bannershadow centerme"><img width="100%" height="40px" src="sliders/kbpanel-slider/images/bannershadow.png"></div>
+      </div>
+      <!-- /demoholder --> 
+      
+    </div>
+    <!--end responsive code -->
+    
+    <div class="clr"></div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <!--main_resize end  -->
+  <div class="bg"></div>
+  <div class="main_resize">
+    <div class="small_box"> <img src="images/h2_img_1.png" alt="Image" width="35" height="35" class="fl" />
+      <h3>Super Clean Design</h3>
+      <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros </p>
+    </div>
+    <div class="small_box"> <img src="images/h2_img_2.png" alt="Image" width="35" height="35" class="fl" />
+      <h3>Full Documentation</h3>
+      <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros </p>
+    </div>
+    <div class="small_box"> <img src="images/h2_img_3.png" alt="Image" width="35" height="35" class="fl" />
+      <h3>Unlimited Colors</h3>
+      <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros </p>
+    </div>
+    <div class="small_box"> <img src="images/h2_img_4.png" alt="Image" width="35" height="35" class="fl" />
+      <h3>Responsive Design</h3>
+      <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros </p>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <!--main_resize end  --> 
+</div>
+<div class="prefooter">
+  <div class="main_resize">
+    <div class="columns">
+      <div class="pref_blog">
+        <h2 class="not_font_color">Our Commitment</h2>
+        <p>We strive to deliver a level of service that exceeds the expectations of our customers. <br />
+          <br />
+          If you have any questions about our products or services, please do not hesitate to contact us. We have friendly, knowledgeable representatives available seven days a week to assist you.</p>
+        <div class="clr"></div>
+        <hr noshade color="#666666" size="1" width="96%">
+        <p>Subscribe to our mailing list for offers, news updates and more!</p>
+        
+        <!-- Mailing List Form -->
+        <div id="mailform-subscribe">
+          <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+            <input type="email" size="15" value="Your Email" name="EMAIL" class="required email" id="mce-EMAIL" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <div class="clear">
+              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+          </form>
+        </div>
+        <!-- Mailing List Form End -->
+        
+        <div class="clr"></div>
+      </div>
+      <div class="Flickr">
+        <h2 class="not_font_color">Latest Tweets</h2>
+        <!-- DC Twitter Start -->
+        <div id="ticker" class="query" style="width:100%;"></div>
+        <!-- DC Twitter End --> 
+      </div>
+      <div class="pref_blog">
+        <h2 class="not_font_color">Keep Updated</h2>
+        <p> 123 Example Way<br />
+          San Francisco, CA 94108<br />
+          USA <br />
+          <br />
+          Phone: (888) 123-4567 <br />
+          Fax: (887) 123-4567 <br />
+          contact&#64;example.com <br />
+          <br />
+          <!-- DC Facebook Likes Start -->
+          <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.facebook.com/DreamTemplate&send=false&layout=standard&width=200&show_faces=false&action=like&colorscheme=dark&font&height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:45px;" allowTransparency="true"></iframe>
+          <!-- DC Facebook Likes End --> 
+        </p>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <!--main_resize end  -->
+  <div class="clr"></div>
+</div>
+<div class="footer">
+  <div class="main_resize"> &copy; Copyright SiteName. All Rights Reserved. Design: [<a href="http://www.dreamtemplate.com/" target="_blank" title="DreamTemplate">dt</a>] </div>
+  <!--main_resize end  -->
+  <div class="clr"></div>
+</div>
+</div>
+</body>
+</html>

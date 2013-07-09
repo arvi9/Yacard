@@ -1,0 +1,31 @@
+/* Tiny Carousel */
+#slider1 { height: 360px; overflow:hidden; padding:0; margin:0;  }
+#slider1 h2 { float:left; padding:10px 0;}
+#slider1 .viewport { margin:0; padding:0; float: left; width:950px; height:350px; overflow: hidden; position: relative; }
+#slider1 .buttons { display: block; float:right; width:23px; height: 23px; text-indent:-999em; overflow: hidden;  position: relative; }
+#slider1 .prev { background: url(../images/r_arrow.png) top no-repeat; margin:30px 5px 1px 1px;  }
+#slider1 .next { background: url(../images/l_arrow.png) top no-repeat; margin:30px 0 0 0;  }
+#slider1 .prev:hover { background: url(../images/r_arrow_a.png) top no-repeat; margin:30px 5px 1px 1px;  }
+#slider1 .next:hover { background:url(../images/l_arrow_a.png) top no-repeat; margin:30px 0 0 0;  }
+#slider1 .disable { visibility: visible; }
+#slider1 .overview { list-style: none; position: absolute; padding: 0; margin: 0; width:auto; left: 0 top: 0; }
+#slider1 .overview li{ float: left; margin: 0 5px 0 0; padding:0; height: auto; width:auto;}
+
+/* responsive width */
+@media screen and (min-width:480px) and (max-width:800px) {
+  /* Target landscape smartphones, portrait tablets, narrow desktops  */
+#slider1 .viewport { margin:0 10px 0 0; padding:0; float: left; width:470px; height:230px; overflow: hidden; position: relative; }
+}
+
+@media screen and (max-width:479px) {
+  /* Target portrait smartphones */
+#slider1 .viewport { margin:0 10px 0 0; padding:0; float: left; width:230px; height:230px; overflow: hidden; position: relative; }
+}
+@media all and (orientation: landscape) {
+  /* Target device in landscape mode */
+}
+
+@media all and (orientation: portrait) {
+  /* Target device in portrait mode */
+}
+/* END responsive width */

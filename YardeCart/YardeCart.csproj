@@ -1,0 +1,2183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FAB2AE68-44E7-4274-BE69-0AF229729E43}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YardeCart</RootNamespace>
+    <AssemblyName>YardeCart</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.7.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.20\lib\net45\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.4.5.6\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.0\lib\net45\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.0.0\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ActivateUser.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\ViewAds.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Account\CreateAdpost.aspx" />
+    <Content Include="CSS\FormValidation.css" />
+    <Content Include="CSS\jquery.validate.password.css" />
+    <Content Include="CSS\YardeCartStyleSheet.css" />
+    <Content Include="html-default\about.html" />
+    <Content Include="html-default\animate_slider\css\fallback.css" />
+    <Content Include="html-default\animate_slider\css\style1.css" />
+    <Content Include="html-default\animate_slider\js\jquery.gridrotator.js" />
+    <Content Include="html-default\animate_slider\js\jquery.transit.min.js" />
+    <Content Include="html-default\animate_slider\js\modernizr.custom.26887.js" />
+    <Content Include="html-default\blog.html" />
+    <Content Include="html-default\blog2.html" />
+    <Content Include="html-default\box_setting\colorpicker\css\colorpicker.css" />
+    <Content Include="html-default\box_setting\colorpicker\css\layout.css" />
+    <Content Include="html-default\box_setting\colorpicker\images\blank.gif" />
+    <Content Include="html-default\box_setting\colorpicker\images\colorpicker_background.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\colorpicker_hex.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\colorpicker_hsb_b.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\colorpicker_hsb_h.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\colorpicker_hsb_s.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\colorpicker_indic.gif" />
+    <Content Include="html-default\box_setting\colorpicker\images\colorpicker_overlay.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\colorpicker_rgb_b.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\colorpicker_rgb_g.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\colorpicker_rgb_r.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\colorpicker_select.gif" />
+    <Content Include="html-default\box_setting\colorpicker\images\colorpicker_submit.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\custom_background.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\custom_hex.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\custom_hsb_b.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\custom_hsb_h.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\custom_hsb_s.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\custom_indic.gif" />
+    <Content Include="html-default\box_setting\colorpicker\images\custom_rgb_b.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\custom_rgb_g.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\custom_rgb_r.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\custom_submit.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\select.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\select2.png" />
+    <Content Include="html-default\box_setting\colorpicker\images\slider.png" />
+    <Content Include="html-default\box_setting\colorpicker\index.html" />
+    <Content Include="html-default\box_setting\colorpicker\js\colorpicker.js" />
+    <Content Include="html-default\box_setting\colorpicker\js\eye.js" />
+    <Content Include="html-default\box_setting\colorpicker\js\jquery.animate-colors-min.js" />
+    <Content Include="html-default\box_setting\colorpicker\js\jquery.js" />
+    <Content Include="html-default\box_setting\colorpicker\js\layout.js" />
+    <Content Include="html-default\box_setting\colorpicker\js\utils.js" />
+    <Content Include="html-default\box_setting\css\box-setting.css" />
+    <Content Include="html-default\box_setting\images\bg_images\blank.png" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c1.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c10.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c11.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c12.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c13.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c14.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c15.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c16.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c17.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c18.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c19.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c2.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c20.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c21.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c22.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c23.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c24.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c25.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c26.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c27.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c28.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c3.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c4.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c5.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c6.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c7.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c8.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\color\c9.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d1.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d10.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d11.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d12.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d13.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d14.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d15.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d16.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d17.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d18.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d19.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d2.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d20.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d21.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d22.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d23.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d24.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d25.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d26.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d27.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d28.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d29.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d3.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d30.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d31.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d32.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d33.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d34.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d35.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d36.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d37.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d38.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d39.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d4.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d40.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d41.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d42.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d43.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d44.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d45.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d46.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d47.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d48.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d49.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d5.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d50.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d51.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d52.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d53.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d54.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d55.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d56.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d57.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d58.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d59.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d6.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d60.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d61.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d62.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d63.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d64.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d65.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d66.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d67.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d68.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d69.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d7.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d70.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d71.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d72.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d73.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d74.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d75.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d76.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d8.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\d9.png" />
+    <Content Include="html-default\box_setting\images\bg_images\dark\graph.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l1.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l10.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l100.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l101.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l102.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l103.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l104.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l105.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l106.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l107.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l108.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l109.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l11.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l110.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l12.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l13.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l14.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l15.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l16.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l17.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l18.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l19.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l2.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l20.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l21.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l22.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l23.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l24.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l25.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l26.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l27.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l28.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l29.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l3.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l30.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l31.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l32.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l33.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l34.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l35.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l36.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l37.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l38.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l39.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l4.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l40.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l41.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l42.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l43.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l44.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l45.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l46.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l47.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l48.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l49.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l5.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l50.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l51.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l52.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l53.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l54.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l55.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l56.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l57.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l58.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l59.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l6.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l60.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l61.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l62.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l63.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l64.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l65.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l66.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l67.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l68.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l69.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l7.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l70.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l71.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l72.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l73.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l74.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l75.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l76.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l77.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l78.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l79.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l8.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l80.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l81.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l82.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l83.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l84.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l85.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l86.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l87.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l88.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l89.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l9.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l90.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l91.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l92.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l93.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l94.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l95.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l96.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l97.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l98.png" />
+    <Content Include="html-default\box_setting\images\bg_images\light\l99.png" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w1.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w10.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w11.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w12.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w13.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w14.png" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w15.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w16.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w17.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w18.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w19.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w2.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w3.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w4.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w5.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w6.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w7.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w8.jpg" />
+    <Content Include="html-default\box_setting\images\bg_images\wood\w9.jpg" />
+    <Content Include="html-default\box_setting\images\box\left_arrow.png" />
+    <Content Include="html-default\box_setting\images\box\right_arrow.png" />
+    <Content Include="html-default\box_setting\js\box-setting.js" />
+    <Content Include="html-default\box_setting\js\jquery.cookies.2.2.0.min.js" />
+    <Content Include="html-default\clients.html" />
+    <Content Include="html-default\company.html" />
+    <Content Include="html-default\contact.html" />
+    <Content Include="html-default\css\broken-glass\slider-brokenglass-style-dark.css" />
+    <Content Include="html-default\css\broken-glass\slider-brokenglass-style.css" />
+    <Content Include="html-default\css\dc_ios.css" />
+    <Content Include="html-default\css\feature-carousel.css" />
+    <Content Include="html-default\css\flex\flexslider.css" />
+    <Content Include="html-default\css\flick.css" />
+    <Content Include="html-default\css\focused\focused-slider.css" />
+    <Content Include="html-default\css\jfancytile\jquery.jfancytile.css" />
+    <Content Include="html-default\css\lessgrid.css" />
+    <Content Include="html-default\css\nivo-slider\dark.css" />
+    <Content Include="html-default\css\nivo-slider\default.css" />
+    <Content Include="html-default\css\nivo-slider\nivo-slider.css" />
+    <Content Include="html-default\css\photogrid\jquery.photogrid.css" />
+    <Content Include="html-default\css\respon.css" />
+    <Content Include="html-default\css\showcase\showcase.css" />
+    <Content Include="html-default\css\skitter\skitter.styles.css" />
+    <Content Include="html-default\css\slidorion\reset.css" />
+    <Content Include="html-default\css\slidorion\slidorion.css" />
+    <Content Include="html-default\css\slidorion\style.css" />
+    <Content Include="html-default\css\style.css" />
+    <Content Include="html-default\css\website.css" />
+    <Content Include="html-default\dc-elements.html" />
+    <Content Include="html-default\dc-embed.html" />
+    <Content Include="html-default\dc-format.html" />
+    <Content Include="html-default\dc-organize.html" />
+    <Content Include="html-default\dcodes\get_dcodes.exe" />
+    <Content Include="html-default\dcodes\readme.html" />
+    <Content Include="html-default\dcodes\webstore\css\images\amazon-mini.png" />
+    <Content Include="html-default\dcodes\webstore\css\images\body.jpg" />
+    <Content Include="html-default\dcodes\webstore\css\images\credit-mini.png" />
+    <Content Include="html-default\dcodes\webstore\css\images\googleckout-mini.png" />
+    <Content Include="html-default\dcodes\webstore\css\images\load.gif" />
+    <Content Include="html-default\dcodes\webstore\css\images\paypal-mini.png" />
+    <Content Include="html-default\dcodes\webstore\css\images\skrill-mini.png" />
+    <Content Include="html-default\dcodes\webstore\css\style.css" />
+    <Content Include="html-default\dcodes\webstore\js\jquery.instant.webstore.js" />
+    <Content Include="html-default\dc_iso_portfolio\css\dc_iso_portfolio.css" />
+    <Content Include="html-default\dc_iso_portfolio\images\icon-link.png" />
+    <Content Include="html-default\dc_iso_portfolio\images\icon1.png" />
+    <Content Include="html-default\dc_iso_portfolio\images\icon2.png" />
+    <Content Include="html-default\dc_iso_portfolio\images\icon3.png" />
+    <Content Include="html-default\dc_iso_portfolio\images\icon4.png" />
+    <Content Include="html-default\dc_iso_portfolio\images\icon5.png" />
+    <Content Include="html-default\dc_iso_portfolio\js\dc_iso_portfolio.js" />
+    <Content Include="html-default\dc_iso_portfolio\js\jquery.isotope.min.js" />
+    <Content Include="html-default\dc_iso_portfolio\js\jquery.min.js" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\css\prettyPhoto.css" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\fullscreen\high.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\fullscreen\huge.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\fullscreen\wide.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\default\loader.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\default\sprite.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\thumbnails\flash-logo.png" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\images\thumbnails\quicktime-logo.gif" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\js\jquery.min.js" />
+    <Content Include="html-default\dc_iso_portfolio\prettyPhoto\js\jquery.prettyPhoto.js" />
+    <Content Include="html-default\dc_tile_portfolio\css\dc_tile_portfolio.css" />
+    <Content Include="html-default\dc_tile_portfolio\js\dc_tile_portfolio.js" />
+    <Content Include="html-default\dc_tile_portfolio\js\jquery.easing.min.js" />
+    <Content Include="html-default\dc_tile_portfolio\js\jquery.freetile.min.js" />
+    <Content Include="html-default\dc_tile_portfolio\js\jquery.min.js" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\css\prettyPhoto.css" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\fullscreen\high.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\fullscreen\huge.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\fullscreen\wide.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\default\loader.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\default\sprite.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\thumbnails\flash-logo.png" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\images\thumbnails\quicktime-logo.gif" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\js\jquery.min.js" />
+    <Content Include="html-default\dc_tile_portfolio\prettyPhoto\js\jquery.prettyPhoto.js" />
+    <Content Include="html-default\ElasticSlideshow\css\noscript.css" />
+    <Content Include="html-default\ElasticSlideshow\css\style.css" />
+    <Content Include="html-default\ElasticSlideshow\images\large\1.jpg" />
+    <Content Include="html-default\ElasticSlideshow\images\large\2.jpg" />
+    <Content Include="html-default\ElasticSlideshow\images\large\3.jpg" />
+    <Content Include="html-default\ElasticSlideshow\images\large\4.jpg" />
+    <Content Include="html-default\ElasticSlideshow\images\large\5.jpg" />
+    <Content Include="html-default\ElasticSlideshow\images\large\6.jpg" />
+    <Content Include="html-default\ElasticSlideshow\images\large\7.jpg" />
+    <Content Include="html-default\ElasticSlideshow\images\pattern.png" />
+    <Content Include="html-default\ElasticSlideshow\images\thumbs\1.jpg" />
+    <Content Include="html-default\ElasticSlideshow\images\thumbs\2.jpg" />
+    <Content Include="html-default\ElasticSlideshow\images\thumbs\3.jpg" />
+    <Content Include="html-default\ElasticSlideshow\images\thumbs\4.jpg" />
+    <Content Include="html-default\ElasticSlideshow\images\thumbs\5.jpg" />
+    <Content Include="html-default\ElasticSlideshow\images\thumbs\6.jpg" />
+    <Content Include="html-default\ElasticSlideshow\images\thumbs\7.jpg" />
+    <Content Include="html-default\ElasticSlideshow\js\jquery.easing.1.3.js" />
+    <Content Include="html-default\ElasticSlideshow\js\jquery.eislideshow.js" />
+    <Content Include="html-default\error.html" />
+    <Content Include="html-default\faq.html" />
+    <Content Include="html-default\features_fullwidth.html" />
+    <Content Include="html-default\features_leftsidebar.html" />
+    <Content Include="html-default\features_rightsidebar.html" />
+    <Content Include="html-default\flickr\css\dc_jflickrfeed.css" />
+    <Content Include="html-default\flickr\js\colorbox\colorbox.css" />
+    <Content Include="html-default\flickr\js\colorbox\images\controls.png" />
+    <Content Include="html-default\flickr\js\colorbox\images\loading.gif" />
+    <Content Include="html-default\flickr\js\colorbox\jquery.colorbox-min.js" />
+    <Content Include="html-default\flickr\js\cycle\jquery.cycle.all.js" />
+    <Content Include="html-default\flickr\js\jflickrfeed.js" />
+    <Content Include="html-default\gallery.html" />
+    <Content Include="html-default\gallery\desktop-gallery\css\layout.css" />
+    <Content Include="html-default\gallery\desktop-gallery\css\style.css" />
+    <Content Include="html-default\gallery\desktop-gallery\images\add-large-images-here.txt" />
+    <Content Include="html-default\gallery\desktop-gallery\images\ajax-loader_dark.gif" />
+    <Content Include="html-default\gallery\desktop-gallery\images\empty.gif" />
+    <Content Include="html-default\gallery\desktop-gallery\images\fs_img_g_bg.png" />
+    <Content Include="html-default\gallery\desktop-gallery\images\nextImgBtn.png" />
+    <Content Include="html-default\gallery\desktop-gallery\images\prevImgBtn.png" />
+    <Content Include="html-default\gallery\desktop-gallery\images\thumbs\add-thumbnail-images-here.txt" />
+    <Content Include="html-default\gallery\desktop-gallery\images\toolbar_fs_icon.png" />
+    <Content Include="html-default\gallery\desktop-gallery\images\toolbar_n_icon.png" />
+    <Content Include="html-default\gallery\desktop-gallery\index.html" />
+    <Content Include="html-default\gallery\desktop-gallery\js\jquery.easing.js" />
+    <Content Include="html-default\gallery\desktop-gallery\js\jquery.min.js" />
+    <Content Include="html-default\gallery\desktop-gallery\js\jquery.touchSwipe.js" />
+    <Content Include="html-default\gallery\expansion\css\component.css" />
+    <Content Include="html-default\gallery\expansion\css\style.css" />
+    <Content Include="html-default\gallery\expansion\images\add-images-here.txt" />
+    <Content Include="html-default\gallery\expansion\images\magnify-round.png" />
+    <Content Include="html-default\gallery\expansion\images\magnify-square.png" />
+    <Content Include="html-default\gallery\expansion\images\thumbs\add-images-here.txt" />
+    <Content Include="html-default\gallery\expansion\index.html" />
+    <Content Include="html-default\gallery\expansion\js\jquery.min.js" />
+    <Content Include="html-default\gallery\expansion\js\modernizr.custom.js" />
+    <Content Include="html-default\gallery\expansion\js\script.js" />
+    <Content Include="html-default\gallery\megafolio\css\style.css" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_1.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_10.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_11.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_12.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_13.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_14.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_15.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_16.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_17.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_18.gif" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_19.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_2.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_3.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_4.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_5.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_6.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_7.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_8.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\assets\images\image_9.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\css\documenter_style.css" />
+    <Content Include="html-default\gallery\megafolio\documentation\css\img\info.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\css\img\pre_bg.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\css\img\warning.png" />
+    <Content Include="html-default\gallery\megafolio\documentation\css\shDocumenter.css" />
+    <Content Include="html-default\gallery\megafolio\documentation\documentation.html" />
+    <Content Include="html-default\gallery\megafolio\documentation\js\jquery.easing.js" />
+    <Content Include="html-default\gallery\megafolio\documentation\js\jquery.min.js.js" />
+    <Content Include="html-default\gallery\megafolio\documentation\js\jquery.scrollTo-1.4.2-min.js" />
+    <Content Include="html-default\gallery\megafolio\documentation\js\script.js" />
+    <Content Include="html-default\gallery\megafolio\documentation\js\shBrushCss.js" />
+    <Content Include="html-default\gallery\megafolio\documentation\js\shBrushJScript.js" />
+    <Content Include="html-default\gallery\megafolio\documentation\js\shBrushXml.js" />
+    <Content Include="html-default\gallery\megafolio\documentation\js\shCore.js" />
+    <Content Include="html-default\gallery\megafolio\images\icons\flexible.png" />
+    <Content Include="html-default\gallery\megafolio\images\icons\grid.png" />
+    <Content Include="html-default\gallery\megafolio\images\icons\leaf.png" />
+    <Content Include="html-default\gallery\megafolio\images\icons\light.png" />
+    <Content Include="html-default\gallery\megafolio\images\icons\mobile.png" />
+    <Content Include="html-default\gallery\megafolio\images\icons\nike.png" />
+    <Content Include="html-default\gallery\megafolio\images\icons\runner.png" />
+    <Content Include="html-default\gallery\megafolio\index.html" />
+    <Content Include="html-default\gallery\megafolio\index2.html" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\black50.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\grain.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\link.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\link_clean.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\loader.gif" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\lupe.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\plus.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\resize.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\socialbar-bg.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\bgtile.jpg" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\blog.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\buy.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\check.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\closer.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\colorpicker.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\diag.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\givetry.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\grain.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\headergradient.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\image.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\link.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\list.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\logo.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\low_contrast_linen.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\media.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\metro.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\navy_blue.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\opener.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\portfolio.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\slogenshadow.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\topgradient.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\twitter.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\tiles\zoom.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\white50.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\assets\zoom_clean.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\css\settings.css" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\blank.gif" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\fancybox_loading.gif" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\fancybox_overlay.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\fancybox_sprite.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\helpers\fancybox_buttons.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\helpers\jquery.fancybox-media.js" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\jquery.fancybox.css" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\jquery.fancybox.js" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\jquery.fancybox.pack.js" />
+    <Content Include="html-default\gallery\megafolio\megafolio\fancybox\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="html-default\gallery\megafolio\megafolio\icons\comments.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\icons\facebook.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\icons\like.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\icons\more.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\icons\twitter.png" />
+    <Content Include="html-default\gallery\megafolio\megafolio\js\jquery.megafoliopro.js" />
+    <Content Include="html-default\gallery\megafolio\megafolio\js\jquery.megafoliopro.min.js" />
+    <Content Include="html-default\gallery\megafolio\megafolio\js\jquery.min.js" />
+    <Content Include="html-default\gallery\megafolio\megafolio\js\jquery.plugins.min.js" />
+    <Content Include="html-default\gallery\multimedia-gallery\css\autoSlideMenu.css" />
+    <Content Include="html-default\gallery\multimedia-gallery\css\index_autoSlide_horizontal_full.css" />
+    <Content Include="html-default\gallery\multimedia-gallery\css\index_scroll_vertical_full.css" />
+    <Content Include="html-default\gallery\multimedia-gallery\css\jquery.jscrollpane.scroll_horizontal_full.css" />
+    <Content Include="html-default\gallery\multimedia-gallery\css\jquery.jscrollpane.scroll_horizontal_small.css" />
+    <Content Include="html-default\gallery\multimedia-gallery\css\jquery.jscrollpane.scroll_vertical_full.css" />
+    <Content Include="html-default\gallery\multimedia-gallery\css\jquery.jscrollpane.scroll_vertical_small.css" />
+    <Content Include="html-default\gallery\multimedia-gallery\css\layout.css" />
+    <Content Include="html-default\gallery\multimedia-gallery\css\prettyPhoto.css" />
+    <Content Include="html-default\gallery\multimedia-gallery\css\skeleton.css" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\add-images-here.txt" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\audio\add_your_songs_here.txt" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\active_item.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\backward.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\detail.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\dir_backward.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\dir_forward.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\forward.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\fullscreen_enter.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\fullscreen_exit.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\link.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\music_off.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\music_on.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\pause.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\play.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\playlist_close.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\playlist_open.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\thumb_backward.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\thumb_backward_on.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\thumb_backward_v.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\thumb_backward_v_on.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\thumb_forward.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\thumb_forward_on.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\thumb_forward_v.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\data\icons\thumb_forward_v_on.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\default\loader.gif" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\default\sprite.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="html-default\gallery\multimedia-gallery\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="html-default\gallery\multimedia-gallery\index.html" />
+    <Content Include="html-default\gallery\multimedia-gallery\index2.html" />
+    <Content Include="html-default\gallery\multimedia-gallery\js\jquery.apPlaylistManager.min.js" />
+    <Content Include="html-default\gallery\multimedia-gallery\js\jquery.easing.js" />
+    <Content Include="html-default\gallery\multimedia-gallery\js\jquery.jscrollpane.min.js" />
+    <Content Include="html-default\gallery\multimedia-gallery\js\jquery.min.js" />
+    <Content Include="html-default\gallery\multimedia-gallery\js\jquery.mousewheel.min.js" />
+    <Content Include="html-default\gallery\multimedia-gallery\js\jquery.prettyPhoto.js" />
+    <Content Include="html-default\gallery\multimedia-gallery\js\jquery.slide.js" />
+    <Content Include="html-default\gallery\multimedia-gallery\js\jquery.touchSwipe.js" />
+    <Content Include="html-default\gallery\multimedia-gallery\js\soundmanager2-nodebug-jsmin.js" />
+    <Content Include="html-default\gallery\multimedia-gallery\swf\soundmanager2.swf" />
+    <Content Include="html-default\gallery\multimedia-gallery\swf\soundmanager2_debug.swf" />
+    <Content Include="html-default\gallery\multimedia-gallery\swf\soundmanager2_flash9.swf" />
+    <Content Include="html-default\gallery\multimedia-gallery\swf\soundmanager2_flash9_debug.swf" />
+    <Content Include="html-default\gallery\pan-gallery\css\ie.css" />
+    <Content Include="html-default\gallery\pan-gallery\css\jquery.jscrollpane.css" />
+    <Content Include="html-default\gallery\pan-gallery\css\pangallery.css" />
+    <Content Include="html-default\gallery\pan-gallery\css\pangallery_fixed.css" />
+    <Content Include="html-default\gallery\pan-gallery\data\bg.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\close.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\image_backward.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\image_forward.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\image_toggle_minus.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\image_toggle_plus.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\info_toggle.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\menu_backward.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\menu_forward.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\menu_toggle.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\slideshow_pause.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\slideshow_play.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\thumb_backward_h.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\thumb_backward_v.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\thumb_forward_h.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\icons\thumb_forward_v.png" />
+    <Content Include="html-default\gallery\pan-gallery\data\loader.gif" />
+    <Content Include="html-default\gallery\pan-gallery\data\media\add_images_here.txt" />
+    <Content Include="html-default\gallery\pan-gallery\index.html" />
+    <Content Include="html-default\gallery\pan-gallery\js\jquery.address-1.5.min.js" />
+    <Content Include="html-default\gallery\pan-gallery\js\jquery.apPlaylistManager.min.js" />
+    <Content Include="html-default\gallery\pan-gallery\js\jquery.cj-swipe.js" />
+    <Content Include="html-default\gallery\pan-gallery\js\jquery.easing.js" />
+    <Content Include="html-default\gallery\pan-gallery\js\jquery.jscrollpane.min.js" />
+    <Content Include="html-default\gallery\pan-gallery\js\jquery.min.js" />
+    <Content Include="html-default\gallery\pan-gallery\js\jquery.mousewheel.js" />
+    <Content Include="html-default\gallery\pan-gallery\js\jquery.panGallery.min.js" />
+    <Content Include="html-default\gallery\photomatrix-gallery\css\layout.css" />
+    <Content Include="html-default\gallery\photomatrix-gallery\css\reset.css" />
+    <Content Include="html-default\gallery\photomatrix-gallery\css\skeleton.css" />
+    <Content Include="html-default\gallery\photomatrix-gallery\css\style.css" />
+    <Content Include="html-default\gallery\photomatrix-gallery\images\add-large-images-here.txt" />
+    <Content Include="html-default\gallery\photomatrix-gallery\images\ajax-loader.gif" />
+    <Content Include="html-default\gallery\photomatrix-gallery\images\background.png" />
+    <Content Include="html-default\gallery\photomatrix-gallery\images\close.png" />
+    <Content Include="html-default\gallery\photomatrix-gallery\images\hover-magnify.png" />
+    <Content Include="html-default\gallery\photomatrix-gallery\images\nav.png" />
+    <Content Include="html-default\gallery\photomatrix-gallery\images\thumbs\add-thumbnail-images-here.txt" />
+    <Content Include="html-default\gallery\photomatrix-gallery\images\thumb_bg.jpg" />
+    <Content Include="html-default\gallery\photomatrix-gallery\index.html" />
+    <Content Include="html-default\gallery\photomatrix-gallery\js\jquery.easing.js" />
+    <Content Include="html-default\gallery\photomatrix-gallery\js\jquery.kinetic.js" />
+    <Content Include="html-default\gallery\photomatrix-gallery\js\jquery.kineticScrollbar.js" />
+    <Content Include="html-default\gallery\photomatrix-gallery\js\jquery.min.js" />
+    <Content Include="html-default\gallery\photomatrix-gallery\js\jquery.mousewheel.min.js" />
+    <Content Include="html-default\gallery\photomatrix-gallery\js\jquery.tmpl.min.js" />
+    <Content Include="html-default\gallery\photomatrix-gallery\js\jquery.touchSwipe.js" />
+    <Content Include="html-default\gallery\pile-portfolio\css\layout.css" />
+    <Content Include="html-default\gallery\pile-portfolio\css\pile.css" />
+    <Content Include="html-default\gallery\pile-portfolio\images\add-images-here.txt" />
+    <Content Include="html-default\gallery\pile-portfolio\images\bg.png" />
+    <Content Include="html-default\gallery\pile-portfolio\index.html" />
+    <Content Include="html-default\gallery\pile-portfolio\js\jquery.min.js" />
+    <Content Include="html-default\gallery\pile-portfolio\js\jquery.script.js" />
+    <Content Include="html-default\gallery\pile-portfolio\js\modernizr.custom.63321.js" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\css\prettyPhoto.css" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\fullscreen\high.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\fullscreen\huge.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\fullscreen\wide.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\default\loader.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\default\sprite.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\thumbnails\flash-logo.png" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\images\thumbnails\quicktime-logo.gif" />
+    <Content Include="html-default\gallery\pile-portfolio\prettyPhoto\js\jquery.prettyPhoto.js" />
+    <Content Include="html-default\gallery\polaroid-gallery\albums\album1\add-large-images-here.txt" />
+    <Content Include="html-default\gallery\polaroid-gallery\albums\album1\thumbs\add-thumbnail-images-here.txt" />
+    <Content Include="html-default\gallery\polaroid-gallery\albums\album2\add-large-images-here.txt" />
+    <Content Include="html-default\gallery\polaroid-gallery\albums\album2\thumbs\add-thumbnail-images-here.txt" />
+    <Content Include="html-default\gallery\polaroid-gallery\albums\album3\add-large-images-here.txt" />
+    <Content Include="html-default\gallery\polaroid-gallery\albums\album3\thumbs\add-thumbnail-images-here.txt" />
+    <Content Include="html-default\gallery\polaroid-gallery\css\background-light.png" />
+    <Content Include="html-default\gallery\polaroid-gallery\css\background.png" />
+    <Content Include="html-default\gallery\polaroid-gallery\css\bg.png" />
+    <Content Include="html-default\gallery\polaroid-gallery\css\layout.css" />
+    <Content Include="html-default\gallery\polaroid-gallery\css\loader.gif" />
+    <Content Include="html-default\gallery\polaroid-gallery\css\next.png" />
+    <Content Include="html-default\gallery\polaroid-gallery\css\prev.png" />
+    <Content Include="html-default\gallery\polaroid-gallery\css\skeleton.css" />
+    <Content Include="html-default\gallery\polaroid-gallery\css\style-dark.css" />
+    <Content Include="html-default\gallery\polaroid-gallery\css\style-light.css" />
+    <Content Include="html-default\gallery\polaroid-gallery\index.html" />
+    <Content Include="html-default\gallery\polaroid-gallery\js\jquery.min.js" />
+    <Content Include="html-default\gallery\polaroid-gallery\js\jquery.touchSwipe.js" />
+    <Content Include="html-default\gallery\polaroid-gallery\js\jquery.transform-0.9.3.min.js" />
+    <Content Include="html-default\gallery\polaroid-gallery\js\styleswitcher.js" />
+    <Content Include="html-default\gallery\portfolio-gallery\css\layout.css" />
+    <Content Include="html-default\gallery\portfolio-gallery\css\skeleton.css" />
+    <Content Include="html-default\gallery\portfolio-gallery\css\style.css" />
+    <Content Include="html-default\gallery\portfolio-gallery\images\add-large-images-here.txt" />
+    <Content Include="html-default\gallery\portfolio-gallery\images\bg_content.png" />
+    <Content Include="html-default\gallery\portfolio-gallery\images\bg_content1.png" />
+    <Content Include="html-default\gallery\portfolio-gallery\images\icons.png" />
+    <Content Include="html-default\gallery\portfolio-gallery\images\loader.gif" />
+    <Content Include="html-default\gallery\portfolio-gallery\images\nav.png" />
+    <Content Include="html-default\gallery\portfolio-gallery\images\pattern.png" />
+    <Content Include="html-default\gallery\portfolio-gallery\images\pattern2.png" />
+    <Content Include="html-default\gallery\portfolio-gallery\images\thumbs\add-thumbnail-images-here.txt" />
+    <Content Include="html-default\gallery\portfolio-gallery\index.html" />
+    <Content Include="html-default\gallery\portfolio-gallery\js\jquery-ui.min.js" />
+    <Content Include="html-default\gallery\portfolio-gallery\js\jquery.easing.js" />
+    <Content Include="html-default\gallery\portfolio-gallery\js\jquery.flip.js" />
+    <Content Include="html-default\gallery\portfolio-gallery\js\jquery.flip.min.js" />
+    <Content Include="html-default\gallery\portfolio-gallery\js\jquery.min.js" />
+    <Content Include="html-default\gallery\portfolio-gallery\js\jquery.mousewheel.min.js" />
+    <Content Include="html-default\gallery\portfolio-gallery\js\jquery.touchSwipe.js" />
+    <Content Include="html-default\gallery\respo-gallery\css\layout.css" />
+    <Content Include="html-default\gallery\respo-gallery\css\reset.css" />
+    <Content Include="html-default\gallery\respo-gallery\css\skeleton.css" />
+    <Content Include="html-default\gallery\respo-gallery\css\style-dark.css" />
+    <Content Include="html-default\gallery\respo-gallery\css\style-light.css" />
+    <Content Include="html-default\gallery\respo-gallery\images\add-large-images-here.txt" />
+    <Content Include="html-default\gallery\respo-gallery\images\ajax-loader.gif" />
+    <Content Include="html-default\gallery\respo-gallery\images\black.png" />
+    <Content Include="html-default\gallery\respo-gallery\images\nav.png" />
+    <Content Include="html-default\gallery\respo-gallery\images\nav_thumbs.png" />
+    <Content Include="html-default\gallery\respo-gallery\images\pattern-dark.png" />
+    <Content Include="html-default\gallery\respo-gallery\images\pattern-light.png" />
+    <Content Include="html-default\gallery\respo-gallery\images\pattern2.png" />
+    <Content Include="html-default\gallery\respo-gallery\images\thumbs\add-thumbnail-images-here.txt" />
+    <Content Include="html-default\gallery\respo-gallery\images\views.png" />
+    <Content Include="html-default\gallery\respo-gallery\index.html" />
+    <Content Include="html-default\gallery\respo-gallery\js\gallery.js" />
+    <Content Include="html-default\gallery\respo-gallery\js\jquery.easing.js" />
+    <Content Include="html-default\gallery\respo-gallery\js\jquery.elastislide.js" />
+    <Content Include="html-default\gallery\respo-gallery\js\jquery.min.js" />
+    <Content Include="html-default\gallery\respo-gallery\js\jquery.tmpl.min.js" />
+    <Content Include="html-default\gallery\respo-gallery\js\jquery.touchSwipe.js" />
+    <Content Include="html-default\gallery\respo-gallery\js\styleswitcher.js" />
+    <Content Include="html-default\gallery\side-gallery\css\style.css" />
+    <Content Include="html-default\gallery\side-gallery\images\add-large-images-here.txt" />
+    <Content Include="html-default\gallery\side-gallery\images\ajax-loader_dark.gif" />
+    <Content Include="html-default\gallery\side-gallery\images\background-pattern.png" />
+    <Content Include="html-default\gallery\side-gallery\images\empty.gif" />
+    <Content Include="html-default\gallery\side-gallery\images\round_custom_scrollbar_bg.png" />
+    <Content Include="html-default\gallery\side-gallery\images\round_custom_scrollbar_bg_over.png" />
+    <Content Include="html-default\gallery\side-gallery\images\side-background.png" />
+    <Content Include="html-default\gallery\side-gallery\images\sw_arrow_indicator.png" />
+    <Content Include="html-default\gallery\side-gallery\images\sw_btn_bg.png" />
+    <Content Include="html-default\gallery\side-gallery\images\sw_dragger_bg.png" />
+    <Content Include="html-default\gallery\side-gallery\images\sw_thumb_selected.png" />
+    <Content Include="html-default\gallery\side-gallery\images\sw_transparent_black_bg.png" />
+    <Content Include="html-default\gallery\side-gallery\images\thumbs\add-thumbnail-images-here.txt" />
+    <Content Include="html-default\gallery\side-gallery\index.html" />
+    <Content Include="html-default\gallery\side-gallery\js\jquery.easing.js" />
+    <Content Include="html-default\gallery\side-gallery\js\jquery.min.js" />
+    <Content Include="html-default\gallery\side-gallery\js\jquery.mousewheel.min.js" />
+    <Content Include="html-default\gallery\side-gallery\js\jquery.touchSwipe.js" />
+    <Content Include="html-default\gallery\simple-gallery\css\caption.png" />
+    <Content Include="html-default\gallery\simple-gallery\css\layout.css" />
+    <Content Include="html-default\gallery\simple-gallery\css\loader.gif" />
+    <Content Include="html-default\gallery\simple-gallery\css\loaderWhite.gif" />
+    <Content Include="html-default\gallery\simple-gallery\css\nextPageArrow.gif" />
+    <Content Include="html-default\gallery\simple-gallery\css\nextPageArrowWhite.gif" />
+    <Content Include="html-default\gallery\simple-gallery\css\page-defaults.css" />
+    <Content Include="html-default\gallery\simple-gallery\css\prevPageArrow.gif" />
+    <Content Include="html-default\gallery\simple-gallery\css\prevPageArrowWhite.gif" />
+    <Content Include="html-default\gallery\simple-gallery\css\simplegallery.css" />
+    <Content Include="html-default\gallery\simple-gallery\css\skeleton.css" />
+    <Content Include="html-default\gallery\simple-gallery\images\add-large-images-here.txt" />
+    <Content Include="html-default\gallery\simple-gallery\images\thumbs\add-thumbnail-images-here.txt" />
+    <Content Include="html-default\gallery\simple-gallery\index.html" />
+    <Content Include="html-default\gallery\simple-gallery\js\jquery.history.js" />
+    <Content Include="html-default\gallery\simple-gallery\js\jquery.min.js" />
+    <Content Include="html-default\gallery\simple-gallery\js\jquery.opacityrollover.js" />
+    <Content Include="html-default\gallery\simple-gallery\js\jquery.simplegallery.js" />
+    <Content Include="html-default\gallery\simple-gallery\js\jquery.touchSwipe.js" />
+    <Content Include="html-default\gallery\simple-gallery\js\jush.js" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\css\prettyPhoto.css" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\fullscreen\high.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\fullscreen\huge.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\fullscreen\wide.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\default\loader.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\default\sprite.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\thumbnails\flash-logo.png" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\images\thumbnails\quicktime-logo.gif" />
+    <Content Include="html-default\gallery\simple-gallery\prettyPhoto\js\jquery.prettyPhoto.js" />
+    <Content Include="html-default\gallery\super-gallery\css\ie.css" />
+    <Content Include="html-default\gallery\super-gallery\css\layout.css" />
+    <Content Include="html-default\gallery\super-gallery\css\multiGalleryPlaylistBottomInside.css" />
+    <Content Include="html-default\gallery\super-gallery\css\multiGalleryPlaylistBottomInside_fixed.css" />
+    <Content Include="html-default\gallery\super-gallery\css\multiGalleryPlaylistBottomOutside.css" />
+    <Content Include="html-default\gallery\super-gallery\css\multiGalleryPlaylistLeftInside.css" />
+    <Content Include="html-default\gallery\super-gallery\css\multiGalleryPlaylistLeftInside_fixed.css" />
+    <Content Include="html-default\gallery\super-gallery\css\multiGalleryPlaylistLeftOutside.css" />
+    <Content Include="html-default\gallery\super-gallery\css\multiGalleryPlaylistRightInside.css" />
+    <Content Include="html-default\gallery\super-gallery\css\multiGalleryPlaylistRightInside_fixed.css" />
+    <Content Include="html-default\gallery\super-gallery\css\multiGalleryPlaylistRightOutside.css" />
+    <Content Include="html-default\gallery\super-gallery\css\multiGalleryPlaylistTopInside.css" />
+    <Content Include="html-default\gallery\super-gallery\css\multiGalleryPlaylistTopInside_fixed.css" />
+    <Content Include="html-default\gallery\super-gallery\css\multiGalleryPlaylistTopOutside.css" />
+    <Content Include="html-default\gallery\super-gallery\css\skeleton.css" />
+    <Content Include="html-default\gallery\super-gallery\data\add-images-here.txt" />
+    <Content Include="html-default\gallery\super-gallery\data\bg.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\info.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\info_off.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\info_on.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\link.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\link_off.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\link_on.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\minus.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\minus_off.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\minus_on.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\next.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\next_off.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\next_on.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\pause.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\pause_off.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\pause_on.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\play.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\playlist_next_h.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\playlist_next_v.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\playlist_prev_h.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\playlist_prev_v.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\play_off.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\play_on.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\plus.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\plus_off.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\plus_on.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\prev.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\prev_off.png" />
+    <Content Include="html-default\gallery\super-gallery\data\icons\prev_on.png" />
+    <Content Include="html-default\gallery\super-gallery\data\loader.gif" />
+    <Content Include="html-default\gallery\super-gallery\index.html" />
+    <Content Include="html-default\gallery\super-gallery\index2.html" />
+    <Content Include="html-default\gallery\super-gallery\js\jquery.address-1.3.2.min.js" />
+    <Content Include="html-default\gallery\super-gallery\js\jquery.easing.js" />
+    <Content Include="html-default\gallery\super-gallery\js\jquery.gallery.js" />
+    <Content Include="html-default\gallery\super-gallery\js\jquery.min.js" />
+    <Content Include="html-default\gallery\super-gallery\js\jquery.touchSwipe.js" />
+    <Content Include="html-default\gallery\super-gallery\media\add-images-here.txt" />
+    <Content Include="html-default\gallery\thumbnail-gallery\css\index_grid_horizontal_buttons.css" />
+    <Content Include="html-default\gallery\thumbnail-gallery\css\index_grid_horizontal_scroll.css" />
+    <Content Include="html-default\gallery\thumbnail-gallery\css\index_grid_vertical_buttons.css" />
+    <Content Include="html-default\gallery\thumbnail-gallery\css\index_grid_vertical_scroll.css" />
+    <Content Include="html-default\gallery\thumbnail-gallery\css\index_line_horizontal_buttons.css" />
+    <Content Include="html-default\gallery\thumbnail-gallery\css\index_line_horizontal_scroll.css" />
+    <Content Include="html-default\gallery\thumbnail-gallery\css\index_line_vertical_buttons.css" />
+    <Content Include="html-default\gallery\thumbnail-gallery\css\index_line_vertical_scroll.css" />
+    <Content Include="html-default\gallery\thumbnail-gallery\css\jquery.jscrollpane_horizontal.css" />
+    <Content Include="html-default\gallery\thumbnail-gallery\css\jquery.jscrollpane_vertical.css" />
+    <Content Include="html-default\gallery\thumbnail-gallery\css\prettyPhoto.css" />
+    <Content Include="html-default\gallery\thumbnail-gallery\data\icons\play.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\data\icons\thumb_backward.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\data\icons\thumb_backward_on.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\data\icons\thumb_backward_v.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\data\icons\thumb_backward_v_on.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\data\icons\thumb_forward.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\data\icons\thumb_forward_on.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\data\icons\thumb_forward_v.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\data\icons\thumb_forward_v_on.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\default\loader.gif" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\default\sprite.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="html-default\gallery\thumbnail-gallery\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="html-default\gallery\thumbnail-gallery\index.html" />
+    <Content Include="html-default\gallery\thumbnail-gallery\index2.html" />
+    <Content Include="html-default\gallery\thumbnail-gallery\js\jquery.easing.js" />
+    <Content Include="html-default\gallery\thumbnail-gallery\js\jquery.gallery.js" />
+    <Content Include="html-default\gallery\thumbnail-gallery\js\jquery.jscrollpane.min.js" />
+    <Content Include="html-default\gallery\thumbnail-gallery\js\jquery.min.js" />
+    <Content Include="html-default\gallery\thumbnail-gallery\js\jquery.mousewheel.min.js" />
+    <Content Include="html-default\gallery\thumbnail-gallery\js\jquery.prettyPhoto.js" />
+    <Content Include="html-default\gallery\thumbnail-gallery\js\jquery.touchSwipe.js" />
+    <Content Include="html-default\gallery\thumbnail-gallery\media\add-images-here.txt" />
+    <Content Include="html-default\gallery\vertical-gallery\css\layout.css" />
+    <Content Include="html-default\gallery\vertical-gallery\css\skeleton.css" />
+    <Content Include="html-default\gallery\vertical-gallery\css\style.css" />
+    <Content Include="html-default\gallery\vertical-gallery\images\add-large-images-here.txt" />
+    <Content Include="html-default\gallery\vertical-gallery\images\icons\background.png" />
+    <Content Include="html-default\gallery\vertical-gallery\images\icons\loader.gif" />
+    <Content Include="html-default\gallery\vertical-gallery\images\icons\next.png" />
+    <Content Include="html-default\gallery\vertical-gallery\images\icons\prev.png" />
+    <Content Include="html-default\gallery\vertical-gallery\images\icons\title.png" />
+    <Content Include="html-default\gallery\vertical-gallery\images\thumbs\add-thumbnail-images-here.txt" />
+    <Content Include="html-default\gallery\vertical-gallery\index.html" />
+    <Content Include="html-default\gallery\vertical-gallery\js\jquery.easing.js" />
+    <Content Include="html-default\gallery\vertical-gallery\js\jquery.min.js" />
+    <Content Include="html-default\gallery\vertical-gallery\js\jquery.touchSwipe.js" />
+    <Content Include="html-default\gallery\vertical-gallery\js\verticalgallery.js" />
+    <Content Include="html-default\gallery\video-gallery\css\ie.css" />
+    <Content Include="html-default\gallery\video-gallery\css\videoGallery.css" />
+    <Content Include="html-default\gallery\video-gallery\css\videoGallery_fixed.css" />
+    <Content Include="html-default\gallery\video-gallery\data\bg.png" />
+    <Content Include="html-default\gallery\video-gallery\data\icons\next.png" />
+    <Content Include="html-default\gallery\video-gallery\data\icons\next_on.png" />
+    <Content Include="html-default\gallery\video-gallery\data\icons\next_v.png" />
+    <Content Include="html-default\gallery\video-gallery\data\icons\next_v_on.png" />
+    <Content Include="html-default\gallery\video-gallery\data\icons\prev.png" />
+    <Content Include="html-default\gallery\video-gallery\data\icons\prev_on.png" />
+    <Content Include="html-default\gallery\video-gallery\data\icons\prev_v.png" />
+    <Content Include="html-default\gallery\video-gallery\data\icons\prev_v_on.png" />
+    <Content Include="html-default\gallery\video-gallery\data\icons\switch.png" />
+    <Content Include="html-default\gallery\video-gallery\data\icons\switch_on.png" />
+    <Content Include="html-default\gallery\video-gallery\data\loader.gif" />
+    <Content Include="html-default\gallery\video-gallery\index.html" />
+    <Content Include="html-default\gallery\video-gallery\index2.html" />
+    <Content Include="html-default\gallery\video-gallery\js\froogaloop.js" />
+    <Content Include="html-default\gallery\video-gallery\js\jquery.address-1.5.min.js" />
+    <Content Include="html-default\gallery\video-gallery\js\jquery.apPlaylistManager.min.js" />
+    <Content Include="html-default\gallery\video-gallery\js\jquery.apVimeoPlayer.min.js" />
+    <Content Include="html-default\gallery\video-gallery\js\jquery.apYoutubePlayer.min.js" />
+    <Content Include="html-default\gallery\video-gallery\js\jquery.easing.js" />
+    <Content Include="html-default\gallery\video-gallery\js\jquery.jscrollpane.min.js" />
+    <Content Include="html-default\gallery\video-gallery\js\jquery.min.js" />
+    <Content Include="html-default\gallery\video-gallery\js\jquery.mousewheel.min.js" />
+    <Content Include="html-default\gallery\video-gallery\js\jquery.videoGallery.min.js" />
+    <Content Include="html-default\images\big_bg_bg.png" />
+    <Content Include="html-default\images\body_bg.png" />
+    <Content Include="html-default\images\broken-glass\br.png" />
+    <Content Include="html-default\images\broken-glass\line.png" />
+    <Content Include="html-default\images\broken-glass\lines.png" />
+    <Content Include="html-default\images\broken-glass\lines_dark.png" />
+    <Content Include="html-default\images\broken-glass\next.png" />
+    <Content Include="html-default\images\broken-glass\next1.png" />
+    <Content Include="html-default\images\broken-glass\next_dark.png" />
+    <Content Include="html-default\images\broken-glass\next_dark1.png" />
+    <Content Include="html-default\images\broken-glass\pause.png" />
+    <Content Include="html-default\images\broken-glass\pause_dark.png" />
+    <Content Include="html-default\images\broken-glass\play.png" />
+    <Content Include="html-default\images\broken-glass\play_dark.png" />
+    <Content Include="html-default\images\broken-glass\prev.png" />
+    <Content Include="html-default\images\broken-glass\prev1.png" />
+    <Content Include="html-default\images\broken-glass\prev_dark.png" />
+    <Content Include="html-default\images\broken-glass\prev_dark1.png" />
+    <Content Include="html-default\images\carousel\arrow-l.png" />
+    <Content Include="html-default\images\carousel\arrow-r.png" />
+    <Content Include="html-default\images\carousel\bg-carousel.png" />
+    <Content Include="html-default\images\flickr_1.png" />
+    <Content Include="html-default\images\flick\arrow-l.png" />
+    <Content Include="html-default\images\flick\arrow-r.png" />
+    <Content Include="html-default\images\flick\ps_album-bg.png" />
+    <Content Include="html-default\images\footer_bg.png" />
+    <Content Include="html-default\images\f_1.png" />
+    <Content Include="html-default\images\f_1_1.png" />
+    <Content Include="html-default\images\f_2.png" />
+    <Content Include="html-default\images\f_2_1.png" />
+    <Content Include="html-default\images\f_3.png" />
+    <Content Include="html-default\images\f_3_1.png" />
+    <Content Include="html-default\images\f_4.png" />
+    <Content Include="html-default\images\f_4_1.png" />
+    <Content Include="html-default\images\f_5.png" />
+    <Content Include="html-default\images\f_5_1.png" />
+    <Content Include="html-default\images\f_6.png" />
+    <Content Include="html-default\images\f_6_1.png" />
+    <Content Include="html-default\images\f_7.png" />
+    <Content Include="html-default\images\f_7_1.png" />
+    <Content Include="html-default\images\h2_img_1.png" />
+    <Content Include="html-default\images\h2_img_2.png" />
+    <Content Include="html-default\images\h2_img_3.png" />
+    <Content Include="html-default\images\h2_img_4.png" />
+    <Content Include="html-default\images\header_bg.png" />
+    <Content Include="html-default\images\img1.png" />
+    <Content Include="html-default\images\img2.png" />
+    <Content Include="html-default\images\img3.png" />
+    <Content Include="html-default\images\img4.png" />
+    <Content Include="html-default\images\img_h.png" />
+    <Content Include="html-default\images\img_z.png" />
+    <Content Include="html-default\images\ios\container-bg.jpg" />
+    <Content Include="html-default\images\ios\h-slider-1.jpg" />
+    <Content Include="html-default\images\ios\h-slider-2.jpg" />
+    <Content Include="html-default\images\ios\h-slider-3.jpg" />
+    <Content Include="html-default\images\ios\h-slider-4.jpg" />
+    <Content Include="html-default\images\ios\h-slider-5.jpg" />
+    <Content Include="html-default\images\ios\selector-shadow.png" />
+    <Content Include="html-default\images\jfancytile\arrow-l.png" />
+    <Content Include="html-default\images\jfancytile\arrow-r.png" />
+    <Content Include="html-default\images\jfancytile\mask.png" />
+    <Content Include="html-default\images\jfancytile\mask1.PNG" />
+    <Content Include="html-default\images\jfancytile\mask2.PNG" />
+    <Content Include="html-default\images\jfancytile\mask3.PNG" />
+    <Content Include="html-default\images\mailform-subscribe.png" />
+    <Content Include="html-default\images\panel\slide1-1.jpg" />
+    <Content Include="html-default\images\panel\slide1-2.jpg" />
+    <Content Include="html-default\images\panel\slide1.jpg" />
+    <Content Include="html-default\images\panel\slide2-1.jpg" />
+    <Content Include="html-default\images\panel\slide2-2.jpg" />
+    <Content Include="html-default\images\panel\slide2.jpg" />
+    <Content Include="html-default\images\panel\slide3-1.jpg" />
+    <Content Include="html-default\images\panel\slide3-2.jpg" />
+    <Content Include="html-default\images\panel\slide3.jpg" />
+    <Content Include="html-default\images\panel\slide4-1.jpg" />
+    <Content Include="html-default\images\panel\slide4-2.jpg" />
+    <Content Include="html-default\images\panel\slide4.jpg" />
+    <Content Include="html-default\images\prefooter_bg.png" />
+    <Content Include="html-default\images\showcase\add-thumb-and-large-images-here.txt" />
+    <Content Include="html-default\images\showcase\arrows-small.png" />
+    <Content Include="html-default\images\showcase\arrows.png" />
+    <Content Include="html-default\images\showcase\black-opacity-40.png" />
+    <Content Include="html-default\images\showcase\black-opacity-60.png" />
+    <Content Include="html-default\images\showcase\black-opacity-80.png" />
+    <Content Include="html-default\images\showcase\plus.png" />
+    <Content Include="html-default\images\showcase\white-opacity-40.png" />
+    <Content Include="html-default\images\showcase\white-opacity-60.png" />
+    <Content Include="html-default\images\showcase\white-opacity-80.png" />
+    <Content Include="html-default\images\skitter\ajax-loader.gif" />
+    <Content Include="html-default\images\skitter\focus-button.png" />
+    <Content Include="html-default\images\skitter\next.png" />
+    <Content Include="html-default\images\skitter\pause-button.png" />
+    <Content Include="html-default\images\skitter\play-button.png" />
+    <Content Include="html-default\images\skitter\prev.png" />
+    <Content Include="html-default\images\skitter\slide1.jpeg" />
+    <Content Include="html-default\images\skitter\slide2.jpeg" />
+    <Content Include="html-default\images\skitter\slide3.jpeg" />
+    <Content Include="html-default\images\skitter\slide4.jpeg" />
+    <Content Include="html-default\images\skitter\slide5.jpeg" />
+    <Content Include="html-default\images\spacer.gif" />
+    <Content Include="html-default\images\sub.png" />
+    <Content Include="html-default\images\twiter_img.png" />
+    <Content Include="html-default\images\ul_li_a.png" />
+    <Content Include="html-default\index-1.html" />
+    <Content Include="html-default\index-10.html" />
+    <Content Include="html-default\index-11.html" />
+    <Content Include="html-default\index-12.html" />
+    <Content Include="html-default\index-13.html" />
+    <Content Include="html-default\index-14.html" />
+    <Content Include="html-default\index-15.html" />
+    <Content Include="html-default\index-16.html" />
+    <Content Include="html-default\index-17.html" />
+    <Content Include="html-default\index-18.html" />
+    <Content Include="html-default\index-19.html" />
+    <Content Include="html-default\index-2.html" />
+    <Content Include="html-default\index-20.html" />
+    <Content Include="html-default\index-3.html" />
+    <Content Include="html-default\index-4.html" />
+    <Content Include="html-default\index-5.html" />
+    <Content Include="html-default\index-6.html" />
+    <Content Include="html-default\index-7.html" />
+    <Content Include="html-default\index-8.html" />
+    <Content Include="html-default\index-9.html" />
+    <Content Include="html-default\index.html" />
+    <Content Include="html-default\js\accordion.js" />
+    <Content Include="html-default\js\dream-accordion\css\dream-accordion.css" />
+    <Content Include="html-default\js\dream-accordion\data\icons\close.jpg" />
+    <Content Include="html-default\js\dream-accordion\data\icons\close.png" />
+    <Content Include="html-default\js\dream-accordion\data\icons\controls_next.gif" />
+    <Content Include="html-default\js\dream-accordion\data\icons\controls_pause.gif" />
+    <Content Include="html-default\js\dream-accordion\data\icons\controls_play.gif" />
+    <Content Include="html-default\js\dream-accordion\data\icons\controls_prev.gif" />
+    <Content Include="html-default\js\dream-accordion\data\icons\play2.png" />
+    <Content Include="html-default\js\dream-accordion\data\loader.gif" />
+    <Content Include="html-default\js\dream-accordion\js\dream-accordion.js" />
+    <Content Include="html-default\js\dream-accordion\js\froogaloop.min.js" />
+    <Content Include="html-default\js\dream-accordion\js\jquery.transform-0.9.3.min.js" />
+    <Content Include="html-default\js\effects.js" />
+    <Content Include="html-default\js\flex\froogaloop.js" />
+    <Content Include="html-default\js\flex\jquery.easing.js" />
+    <Content Include="html-default\js\flex\jquery.fitvid.js" />
+    <Content Include="html-default\js\flex\jquery.flexslider-min.js" />
+    <Content Include="html-default\js\flex\jquery.flexslider.js" />
+    <Content Include="html-default\js\flex\jquery.mousewheel.js" />
+    <Content Include="html-default\js\flex\modernizr.js" />
+    <Content Include="html-default\js\flick.js" />
+    <Content Include="html-default\js\focused\focused-slider.js" />
+    <Content Include="html-default\js\gallery-masonry\gallery-masonry.js" />
+    <Content Include="html-default\js\gallery-masonry\jquery.masonry.min.js" />
+    <Content Include="html-default\js\gallery-masonry\modernizr-transitions.js" />
+    <Content Include="html-default\js\head_html_block.js" />
+    <Content Include="html-default\js\head_html_default_block.js" />
+    <Content Include="html-default\js\ios\jquery.iosslider.js" />
+    <Content Include="html-default\js\ios\jquery.iosslider.min.js" />
+    <Content Include="html-default\js\jquery.easing.js" />
+    <Content Include="html-default\js\jquery.featureCarousel.js" />
+    <Content Include="html-default\js\jquery.min.js" />
+    <Content Include="html-default\js\jquery.tinycarousel.min.js" />
+    <Content Include="html-default\js\menu_html_block.js" />
+    <Content Include="html-default\js\nivo-slider\jquery.nivo.slider.js" />
+    <Content Include="html-default\js\nivo-slider\jquery.nivo.slider.pack.js" />
+    <Content Include="html-default\js\photogrid\jquery.photogrid.js" />
+    <Content Include="html-default\js\prototype.js" />
+    <Content Include="html-default\js\revolution\css\fullwidth.css" />
+    <Content Include="html-default\js\revolution\css\responsive.css" />
+    <Content Include="html-default\js\revolution\images\check.png" />
+    <Content Include="html-default\js\revolution\images\fish1.png" />
+    <Content Include="html-default\js\revolution\images\fish2.png" />
+    <Content Include="html-default\js\revolution\images\fish3.png" />
+    <Content Include="html-default\js\revolution\images\fish4.png" />
+    <Content Include="html-default\js\revolution\images\fish5.png" />
+    <Content Include="html-default\js\revolution\images\fish6.png" />
+    <Content Include="html-default\js\revolution\images\shadow3_large.png" />
+    <Content Include="html-default\js\revolution\images\slide1_a.jpg" />
+    <Content Include="html-default\js\revolution\images\slide2_a.jpg" />
+    <Content Include="html-default\js\revolution\images\slide2_b.gif" />
+    <Content Include="html-default\js\revolution\images\slide2_c.png" />
+    <Content Include="html-default\js\revolution\images\slide2_d.png" />
+    <Content Include="html-default\js\revolution\images\slide2_e.png" />
+    <Content Include="html-default\js\revolution\images\slide2_f.png" />
+    <Content Include="html-default\js\revolution\images\slide2_g.png" />
+    <Content Include="html-default\js\revolution\images\slide2_h.png" />
+    <Content Include="html-default\js\revolution\images\slide2_i.png" />
+    <Content Include="html-default\js\revolution\images\slide2_j.png" />
+    <Content Include="html-default\js\revolution\images\slide2_k.png" />
+    <Content Include="html-default\js\revolution\images\slide3_a.jpg" />
+    <Content Include="html-default\js\revolution\images\slide3_b.png" />
+    <Content Include="html-default\js\revolution\images\slide3_c.png" />
+    <Content Include="html-default\js\revolution\images\slide3_d.png" />
+    <Content Include="html-default\js\revolution\images\slide4_a.jpg" />
+    <Content Include="html-default\js\revolution\images\slide5_a.jpg" />
+    <Content Include="html-default\js\revolution\images\slides\coloredbg.png" />
+    <Content Include="html-default\js\revolution\images\slides\thumb1.jpg" />
+    <Content Include="html-default\js\revolution\images\slides\thumb2.jpg" />
+    <Content Include="html-default\js\revolution\images\slides\thumb3.jpg" />
+    <Content Include="html-default\js\revolution\images\slides\thumb4.jpg" />
+    <Content Include="html-default\js\revolution\images\slides\transparent.png" />
+    <Content Include="html-default\js\revolution\images\thumbs\regular_thumb1.jpg" />
+    <Content Include="html-default\js\revolution\images\thumbs\regular_thumb2.jpg" />
+    <Content Include="html-default\js\revolution\images\thumbs\regular_thumb3.jpg" />
+    <Content Include="html-default\js\revolution\images\thumbs\regular_thumb4.jpg" />
+    <Content Include="html-default\js\revolution\images\thumbs\regular_thumb5.jpg" />
+    <Content Include="html-default\js\revolution\images\thumbs\regular_thumb6.jpg" />
+    <Content Include="html-default\js\revolution\images\thumbs\regular_thumb7.jpg" />
+    <Content Include="html-default\js\revolution\images\thumbs\thumb1.jpg" />
+    <Content Include="html-default\js\revolution\images\thumbs\thumb2.jpg" />
+    <Content Include="html-default\js\revolution\images\vimeo.jpg" />
+    <Content Include="html-default\js\revolution\images\youtube.jpg" />
+    <Content Include="html-default\js\revolution\images\youtube.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\arrowleft.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\arrowright.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\arrow_large_left.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\arrow_large_right.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\arrow_left.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\arrow_left2.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\arrow_right.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\arrow_right2.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\black50.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\bullets.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\bullets2.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\grain.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\navigdots.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\navigdots_bgtile.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\shadow1.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\shadow2.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\shadow3.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\timer.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\timerdot.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\assets\white50.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\css\settings.css" />
+    <Content Include="html-default\js\revolution\rs-plugin\images\decor_inside.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\images\decor_inside_white.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\images\decor_testimonial.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\images\gradient\g30.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\images\gradient\g40.png" />
+    <Content Include="html-default\js\revolution\rs-plugin\js\jquery.dcodes.plugins.min.js" />
+    <Content Include="html-default\js\revolution\rs-plugin\js\jquery.dcodes.revolution.js" />
+    <Content Include="html-default\js\scripts.js" />
+    <Content Include="html-default\js\selectnav.min.js" />
+    <Content Include="html-default\js\selectnav\selectnav.js" />
+    <Content Include="html-default\js\superfish-1.4.8\changelog.txt" />
+    <Content Include="html-default\js\superfish-1.4.8\css\superfish-navbar.css" />
+    <Content Include="html-default\js\superfish-1.4.8\css\superfish-vertical.css" />
+    <Content Include="html-default\js\superfish-1.4.8\css\superfish.css" />
+    <Content Include="html-default\js\superfish-1.4.8\example.html" />
+    <Content Include="html-default\js\superfish-1.4.8\images\arrows-ffffff.png" />
+    <Content Include="html-default\js\superfish-1.4.8\images\shadow.png" />
+    <Content Include="html-default\js\superfish-1.4.8\js\hoverIntent.js" />
+    <Content Include="html-default\js\superfish-1.4.8\js\jquery-1.2.6.min.js" />
+    <Content Include="html-default\js\superfish-1.4.8\js\jquery.bgiframe.min.js" />
+    <Content Include="html-default\js\superfish-1.4.8\js\superfish.js" />
+    <Content Include="html-default\js\superfish-1.4.8\js\supersubs.js" />
+    <Content Include="html-default\js\swfobject\expressinstall.swf" />
+    <Content Include="html-default\js\swfobject\swfobject.js" />
+    <Content Include="html-default\js\tinynav.min.js" />
+    <Content Include="html-default\nivo-slider\css\dark.css" />
+    <Content Include="html-default\nivo-slider\css\default.css" />
+    <Content Include="html-default\nivo-slider\css\nivo-slider.css" />
+    <Content Include="html-default\nivo-slider\images\arrows.png" />
+    <Content Include="html-default\nivo-slider\images\bullets.png" />
+    <Content Include="html-default\nivo-slider\images\loading.gif" />
+    <Content Include="html-default\nivo-slider\js\jquery.nivo.slider.js" />
+    <Content Include="html-default\nivo-slider\js\jquery.nivo.slider.pack.js" />
+    <Content Include="html-default\piecemaker\css\piecemaker.css" />
+    <Content Include="html-default\piecemaker\images\1.gif" />
+    <Content Include="html-default\piecemaker\images\2.gif" />
+    <Content Include="html-default\piecemaker\images\3.gif" />
+    <Content Include="html-default\piecemaker\images\4.gif" />
+    <Content Include="html-default\piecemaker\piecemaker.swf" />
+    <Content Include="html-default\piecemaker\piecemaker.xml" />
+    <Content Include="html-default\portfolio-1.html" />
+    <Content Include="html-default\portfolio-2.html" />
+    <Content Include="html-default\portfolio-3.html" />
+    <Content Include="html-default\portfolio-4.html" />
+    <Content Include="html-default\portfolio_iso.html" />
+    <Content Include="html-default\portfolio_tile.html" />
+    <Content Include="html-default\preloader\css\preloader.css" />
+    <Content Include="html-default\preloader\images\preloader-gallery.gif" />
+    <Content Include="html-default\preloader\js\jquery.preloader.js" />
+    <Content Include="html-default\prettyPhoto\css\prettyPhoto.css" />
+    <Content Include="html-default\prettyPhoto\images\fullscreen\high.gif" />
+    <Content Include="html-default\prettyPhoto\images\fullscreen\huge.gif" />
+    <Content Include="html-default\prettyPhoto\images\fullscreen\wide.gif" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\default\loader.gif" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\default\sprite.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="html-default\prettyPhoto\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="html-default\prettyPhoto\images\thumbnails\flash-logo.png" />
+    <Content Include="html-default\prettyPhoto\images\thumbnails\quicktime-logo.gif" />
+    <Content Include="html-default\prettyPhoto\js\jquery.min.js" />
+    <Content Include="html-default\prettyPhoto\js\jquery.prettyPhoto.js" />
+    <Content Include="html-default\pricing-tables.html" />
+    <Content Include="html-default\products.html" />
+    <Content Include="html-default\services.html" />
+    <Content Include="html-default\sliders\broken-glass\jquery.mousewheel.js" />
+    <Content Include="html-default\sliders\broken-glass\jquery.RotateImageMenu.js" />
+    <Content Include="html-default\sliders\broken-glass\jquery.transform-0.9.3.min_.js" />
+    <Content Include="html-default\sliders\camera\css\camera.css" />
+    <Content Include="html-default\sliders\camera\images\blank.gif" />
+    <Content Include="html-default\sliders\camera\images\camera-loader.gif" />
+    <Content Include="html-default\sliders\camera\images\camera_skins.png" />
+    <Content Include="html-default\sliders\camera\images\patterns\overlay1.png" />
+    <Content Include="html-default\sliders\camera\images\patterns\overlay10.png" />
+    <Content Include="html-default\sliders\camera\images\patterns\overlay2.png" />
+    <Content Include="html-default\sliders\camera\images\patterns\overlay3.png" />
+    <Content Include="html-default\sliders\camera\images\patterns\overlay4.png" />
+    <Content Include="html-default\sliders\camera\images\patterns\overlay5.png" />
+    <Content Include="html-default\sliders\camera\images\patterns\overlay6.png" />
+    <Content Include="html-default\sliders\camera\images\patterns\overlay7.png" />
+    <Content Include="html-default\sliders\camera\images\patterns\overlay8.png" />
+    <Content Include="html-default\sliders\camera\images\patterns\overlay9.png" />
+    <Content Include="html-default\sliders\camera\images\thumbs\header_bg.png" />
+    <Content Include="html-default\sliders\camera\js\camera.js" />
+    <Content Include="html-default\sliders\camera\js\camera.min.js" />
+    <Content Include="html-default\sliders\camera\js\jquery.easing.1.3.js" />
+    <Content Include="html-default\sliders\camera\js\jquery.min.js" />
+    <Content Include="html-default\sliders\camera\js\jquery.mobile.customized.min.js" />
+    <Content Include="html-default\sliders\carousel\css\feature-carousel.css" />
+    <Content Include="html-default\sliders\carousel\images\arrow-l.png" />
+    <Content Include="html-default\sliders\carousel\images\arrow-r.png" />
+    <Content Include="html-default\sliders\carousel\images\bg-carousel.png" />
+    <Content Include="html-default\sliders\carousel\jquery.featureCarousel.js" />
+    <Content Include="html-default\sliders\carousel\js\jquery.easing.1.3.js" />
+    <Content Include="html-default\sliders\carousel\js\jquery.featureCarousel.js" />
+    <Content Include="html-default\sliders\coin-slider\css\coin-slider-styles.css" />
+    <Content Include="html-default\sliders\coin-slider\js\coin-slider.min.js" />
+    <Content Include="html-default\sliders\flick\css\flick.css" />
+    <Content Include="html-default\sliders\flick\images\arrow-l.png" />
+    <Content Include="html-default\sliders\flick\images\arrow-r.png" />
+    <Content Include="html-default\sliders\flick\images\ps_album-bg.png" />
+    <Content Include="html-default\sliders\flick\js\flick.js" />
+    <Content Include="html-default\sliders\flick\js\jquery.easing.1.3.js" />
+    <Content Include="html-default\sliders\focused\css\focused-slider.css" />
+    <Content Include="html-default\sliders\focused\images\a01.jpg" />
+    <Content Include="html-default\sliders\focused\images\a02.jpg" />
+    <Content Include="html-default\sliders\focused\images\a03.jpg" />
+    <Content Include="html-default\sliders\focused\images\a04.jpg" />
+    <Content Include="html-default\sliders\focused\images\b01.jpg" />
+    <Content Include="html-default\sliders\focused\images\c01.jpg" />
+    <Content Include="html-default\sliders\focused\images\c02.jpg" />
+    <Content Include="html-default\sliders\focused\images\c03.jpg" />
+    <Content Include="html-default\sliders\focused\images\c04.jpg" />
+    <Content Include="html-default\sliders\focused\images\d01.jpg" />
+    <Content Include="html-default\sliders\focused\js\focused-slider.js" />
+    <Content Include="html-default\sliders\jfancytile\jquery.jfancytile.js" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\bg\black25.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\bg\black50.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\bg\black65.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\bg\grain.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\bg\thumbs_bg.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\bg\white25.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\bg\white50.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\button\arrowleft.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\button\arrowright.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\button\btn_light.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\button\button_dark.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\button\button_light.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\button\close.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\button\close_dark.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\button\navigdots.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\button\navigdots_bgtile.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\button\play_small.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\loader\preloader.gif" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\player\play.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\player\play_small.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\shadows\thumbshadow_left.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\shadows\thumbshadow_repeat.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\assets\shadows\thumbshadow_right.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\css\kenburns-caption-settings.css" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\bannershadow.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\bannershadow1.png" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image1.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image1_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image2.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image2_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image3.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image3_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image4.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image4_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image5.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image5_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image6.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image6_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image7.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\image7_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb1.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb1_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb2.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb2_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb3.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb3_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb4.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb4_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb5.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb5_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb6.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb6_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb7.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\images\thumb7_blur.jpg" />
+    <Content Include="html-default\sliders\kbcaption-slider\js\jquery.cssAnimate.mini.js" />
+    <Content Include="html-default\sliders\kbcaption-slider\js\jquery.dcodes.kenburns-caption.min.js" />
+    <Content Include="html-default\sliders\kbcaption-slider\js\jquery.dcodes.plugins.min.js" />
+    <Content Include="html-default\sliders\kbcaption-slider\js\jquery.easing.1.3.js" />
+    <Content Include="html-default\sliders\kbcaption-slider\js\jquery.googlefonts.js" />
+    <Content Include="html-default\sliders\kbcaption-slider\js\jquery.touchwipe.min.js" />
+    <Content Include="html-default\sliders\kbcaption-slider\js\jquery.waitforimages.js" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\bg\black25.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\bg\black50.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\bg\black65.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\bg\grain.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\bg\thumbs_bg.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\bg\white25.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\bg\white50.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\button\arrowleft.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\button\arrowright.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\button\btn_light.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\button\button_dark.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\button\button_light.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\button\close.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\button\close_dark.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\button\navigdots.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\button\navigdots_bgtile.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\button\play_small.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\loader\preloader.gif" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\player\play.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\player\play_small.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\shadows\thumbshadow_left.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\shadows\thumbshadow_repeat.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\assets\shadows\thumbshadow_right.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\css\kenburns-panel-settings.css" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\bannershadow.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\bannershadow1.png" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image1.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image1_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image2.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image2_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image3.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image3_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image4.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image4_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image5.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image5_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image6.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image6_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image7.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\image7_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb1.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb1_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb2.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb2_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb3.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb3_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb4.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb4_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb5.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb5_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb6.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb6_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb7.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\images\thumb7_blur.jpg" />
+    <Content Include="html-default\sliders\kbpanel-slider\js\jquery.cssAnimate.mini.js" />
+    <Content Include="html-default\sliders\kbpanel-slider\js\jquery.dcodes.kenburns-panel.min.js" />
+    <Content Include="html-default\sliders\kbpanel-slider\js\jquery.dcodes.plugins.min.js" />
+    <Content Include="html-default\sliders\kbpanel-slider\js\jquery.easing.1.3.js" />
+    <Content Include="html-default\sliders\kbpanel-slider\js\jquery.googlefonts.js" />
+    <Content Include="html-default\sliders\kbpanel-slider\js\jquery.touchwipe.min.js" />
+    <Content Include="html-default\sliders\kbpanel-slider\js\jquery.waitforimages.js" />
+    <Content Include="html-default\sliders\layered\css\layered-slider.css" />
+    <Content Include="html-default\sliders\layered\images\add-large-images-here.txt" />
+    <Content Include="html-default\sliders\layered\images\ajax-loader.gif" />
+    <Content Include="html-default\sliders\layered\images\bg1.png" />
+    <Content Include="html-default\sliders\layered\images\bg2.png" />
+    <Content Include="html-default\sliders\layered\images\bg3.png" />
+    <Content Include="html-default\sliders\layered\images\next.png" />
+    <Content Include="html-default\sliders\layered\images\prev.png" />
+    <Content Include="html-default\sliders\layered\images\thumbs\add-thumbnail-images-here.txt" />
+    <Content Include="html-default\sliders\layered\js\jquery.easing.1.3.js" />
+    <Content Include="html-default\sliders\layered\js\layered-slider.js" />
+    <Content Include="html-default\sliders\media-slider\css\jquery.mediaslider.0.3.css" />
+    <Content Include="html-default\sliders\media-slider\images\banner1.jpg" />
+    <Content Include="html-default\sliders\media-slider\images\carousel_bg_arrow.jpg" />
+    <Content Include="html-default\sliders\media-slider\images\carousel_download_bg.gif" />
+    <Content Include="html-default\sliders\media-slider\images\carousel_next_bg.gif" />
+    <Content Include="html-default\sliders\media-slider\images\carousel_panel_bg.gif" />
+    <Content Include="html-default\sliders\media-slider\images\carousel_pause_bg.gif" />
+    <Content Include="html-default\sliders\media-slider\images\carousel_play_bg.gif" />
+    <Content Include="html-default\sliders\media-slider\images\carousel_previous_bg.gif" />
+    <Content Include="html-default\sliders\media-slider\images\columns_bg.png" />
+    <Content Include="html-default\sliders\media-slider\js\jquery.mediaslider.0.1.js" />
+    <Content Include="html-default\sliders\media-slider\js\jquery.mediaslider.0.3.js" />
+    <Content Include="html-default\sliders\media-slider\js\jquery.mediaslider.0.3.min.js" />
+    <Content Include="html-default\sliders\media-slider\js\jquery.timers-1.2.js" />
+    <Content Include="html-default\sliders\nivo-slider\css\nivo-slider.css" />
+    <Content Include="html-default\sliders\nivo-slider\images\overlay.png" />
+    <Content Include="html-default\sliders\nivo-slider\js\jquery.nivo.slider.pack.js" />
+    <Content Include="html-default\sliders\onebyone\css\animate.css" />
+    <Content Include="html-default\sliders\onebyone\css\animate.min.css" />
+    <Content Include="html-default\sliders\onebyone\css\jquery.onebyone.css" />
+    <Content Include="html-default\sliders\onebyone\images\assets\circlebutton.png" />
+    <Content Include="html-default\sliders\onebyone\images\assets\next.png" />
+    <Content Include="html-default\sliders\onebyone\images\assets\prev.png" />
+    <Content Include="html-default\sliders\onebyone\images\backdrop.jpg" />
+    <Content Include="html-default\sliders\onebyone\images\slider1_element_1.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider1_element_bg.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider2_button.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider2_element_1.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider2_element_2.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider2_element_3.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider2_tablet.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider2_tabletasd.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider3_element_2.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider3_element_3.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider3_element_4.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider3_element_5.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider4_element_1.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider4_element_2.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider4_element_3.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider4_element_4.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider4_element_5.png" />
+    <Content Include="html-default\sliders\onebyone\images\slider4_element_6.png" />
+    <Content Include="html-default\sliders\onebyone\js\jquery.onebyone.js" />
+    <Content Include="html-default\sliders\onebyone\js\jquery.touchwipe.js" />
+    <Content Include="html-default\sliders\onebyone\js\jquery.touchwipe.min.js" />
+    <Content Include="html-default\sliders\panel\panel_slider.css" />
+    <Content Include="html-default\sliders\parallax\css\nojs.css" />
+    <Content Include="html-default\sliders\parallax\css\style.css" />
+    <Content Include="html-default\sliders\parallax\css\tsc_parallax.css" />
+    <Content Include="html-default\sliders\parallax\images\1.png" />
+    <Content Include="html-default\sliders\parallax\images\2.png" />
+    <Content Include="html-default\sliders\parallax\images\3.png" />
+    <Content Include="html-default\sliders\parallax\images\4.png" />
+    <Content Include="html-default\sliders\parallax\images\arrows.png" />
+    <Content Include="html-default\sliders\parallax\images\New folder\1.png" />
+    <Content Include="html-default\sliders\parallax\images\New folder\2.png" />
+    <Content Include="html-default\sliders\parallax\images\New folder\3.png" />
+    <Content Include="html-default\sliders\parallax\images\New folder\4.png" />
+    <Content Include="html-default\sliders\parallax\images\wallpaper.png" />
+    <Content Include="html-default\sliders\parallax\js\jquery.cslider.js" />
+    <Content Include="html-default\sliders\parallax\js\jquery.min.js" />
+    <Content Include="html-default\sliders\parallax\js\modernizr.custom.js" />
+    <Content Include="html-default\sliders\photogrid\css\jquery.photogrid.css" />
+    <Content Include="html-default\sliders\photogrid\js\jquery.easing.1.3.js" />
+    <Content Include="html-default\sliders\photogrid\js\jquery.photogrid.js" />
+    <Content Include="html-default\sliders\responsive-grid\css\dc_responsive_grid.css" />
+    <Content Include="html-default\sliders\responsive-grid\css\fallback.css" />
+    <Content Include="html-default\sliders\responsive-grid\css\normalize.css" />
+    <Content Include="html-default\sliders\responsive-grid\images\add-large-images-here.txt" />
+    <Content Include="html-default\sliders\responsive-grid\images\loading.gif" />
+    <Content Include="html-default\sliders\responsive-grid\js\jquery.gridrotator-preview.js" />
+    <Content Include="html-default\sliders\responsive-grid\js\jquery.gridrotator.js" />
+    <Content Include="html-default\sliders\responsive-grid\js\jquery.transit.min.js" />
+    <Content Include="html-default\sliders\responsive-grid\js\modernizr.custom.26887.js" />
+    <Content Include="html-default\sliders\showcase\jquery.aw-showcase.js" />
+    <Content Include="html-default\sliders\showcase\jquery.aw-showcase.min.js" />
+    <Content Include="html-default\sliders\skitter\jquery.animate-colors-min.js" />
+    <Content Include="html-default\sliders\skitter\jquery.skitter.js" />
+    <Content Include="html-default\sliders\skitter\jquery.skitter.min.js" />
+    <Content Include="html-default\sliders\slidorion\jquery.slidorion.js" />
+    <Content Include="html-default\sliders\slidorion\jquery.slidorion.min.js" />
+    <Content Include="html-default\sliders\touchswipe\assets\button\arrowleft.png" />
+    <Content Include="html-default\sliders\touchswipe\assets\button\arrowright.png" />
+    <Content Include="html-default\sliders\touchswipe\assets\button\btn_light.png" />
+    <Content Include="html-default\sliders\touchswipe\assets\button\close.png" />
+    <Content Include="html-default\sliders\touchswipe\assets\button\navigdots.png" />
+    <Content Include="html-default\sliders\touchswipe\assets\button\navigdots_bgtile.png" />
+    <Content Include="html-default\sliders\touchswipe\assets\loader\preloader.gif" />
+    <Content Include="html-default\sliders\touchswipe\assets\player\play.png" />
+    <Content Include="html-default\sliders\touchswipe\assets\player\play_small.png" />
+    <Content Include="html-default\sliders\touchswipe\assets\shadows\shadow_left.png" />
+    <Content Include="html-default\sliders\touchswipe\assets\shadows\shadow_right.png" />
+    <Content Include="html-default\sliders\touchswipe\assets\shadows\shadow_thumb_repeater.png" />
+    <Content Include="html-default\sliders\touchswipe\css\settings.css" />
+    <Content Include="html-default\sliders\touchswipe\images\slide1.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\slide2.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\slide3.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\thumb1.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\thumb1_bw.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\thumb2.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\thumb2_bw.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\thumb3.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\thumb3_bw.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\thumb_vimeo.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\thumb_vimeo_bw.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\thumb_youtube.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\thumb_youtube_bw.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\vimeo.jpg" />
+    <Content Include="html-default\sliders\touchswipe\images\youtube.jpg" />
+    <Content Include="html-default\sliders\touchswipe\js\jquery.cssAnimate.mini.js" />
+    <Content Include="html-default\sliders\touchswipe\js\jquery.dcodes.touchswipe.js" />
+    <Content Include="html-default\sliders\touchswipe\js\jquery.easing.1.3.js" />
+    <Content Include="html-default\sliders\touchswipe\js\jquery.touchwipe.min.js" />
+    <Content Include="html-default\sliders\touchswipe\js\jquery.waitforimages.js" />
+    <Content Include="html-default\sliders\zoomfly\css\normalize.css" />
+    <Content Include="html-default\sliders\zoomfly\css\style.css" />
+    <Content Include="html-default\sliders\zoomfly\css\style_alt.css" />
+    <Content Include="html-default\sliders\zoomfly\css\style_ie.css" />
+    <Content Include="html-default\sliders\zoomfly\images\1.png" />
+    <Content Include="html-default\sliders\zoomfly\images\2.png" />
+    <Content Include="html-default\sliders\zoomfly\images\3.png" />
+    <Content Include="html-default\sliders\zoomfly\images\4.png" />
+    <Content Include="html-default\sliders\zoomfly\images\5.png" />
+    <Content Include="html-default\sliders\zoomfly\images\arrow_left.png" />
+    <Content Include="html-default\sliders\zoomfly\images\arrow_right.png" />
+    <Content Include="html-default\sliders\zoomfly\js\jmpress.js" />
+    <Content Include="html-default\sliders\zoomfly\js\jmpress.min.js" />
+    <Content Include="html-default\sliders\zoomfly\js\jquery.jmslideshow.js" />
+    <Content Include="html-default\sliders\zoomfly\js\modernizr.js" />
+    <Content Include="html-default\slidy\css\slidy.css" />
+    <Content Include="html-default\slidy\images\16 Uyuni Salt Flats - 61 - Banner.jpg" />
+    <Content Include="html-default\slidy\images\2 Shanghai - 38 - Banner.jpg" />
+    <Content Include="html-default\slidy\images\arrows-small.png" />
+    <Content Include="html-default\slidy\images\arrows.png" />
+    <Content Include="html-default\slidy\js\slidy.js" />
+    <Content Include="html-default\store.html" />
+    <Content Include="html-default\superfish\css\superfish.css" />
+    <Content Include="html-default\superfish\js\superfish-1.4.8\changelog.txt" />
+    <Content Include="html-default\superfish\js\superfish-1.4.8\css\superfish-navbar.css" />
+    <Content Include="html-default\superfish\js\superfish-1.4.8\css\superfish-vertical.css" />
+    <Content Include="html-default\superfish\js\superfish-1.4.8\css\superfish.css" />
+    <Content Include="html-default\superfish\js\superfish-1.4.8\example.html" />
+    <Content Include="html-default\superfish\js\superfish-1.4.8\images\arrows-ffffff.png" />
+    <Content Include="html-default\superfish\js\superfish-1.4.8\images\shadow.png" />
+    <Content Include="html-default\superfish\js\superfish-1.4.8\js\hoverIntent.js" />
+    <Content Include="html-default\superfish\js\superfish-1.4.8\js\jquery-1.2.6.min.js" />
+    <Content Include="html-default\superfish\js\superfish-1.4.8\js\jquery.bgiframe.min.js" />
+    <Content Include="html-default\superfish\js\superfish-1.4.8\js\superfish.js" />
+    <Content Include="html-default\superfish\js\superfish-1.4.8\js\supersubs.js" />
+    <Content Include="html-default\team.html" />
+    <Content Include="html-default\testimonials.html" />
+    <Content Include="html-default\twitter_tweet\jquery.tweet.css" />
+    <Content Include="html-default\twitter_tweet\jquery.tweet.js" />
+    <Content Include="html-default\twitter_tweet\LICENSE.txt" />
+    <Content Include="html-default\ui_totop\css\ui.totop.css" />
+    <Content Include="html-default\ui_totop\images\ui.totop.png" />
+    <Content Include="html-default\ui_totop\js\jquery.ui.totop.js" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\checked.gif" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\unchecked.gif" />
+    <Content Include="packages.config" />
+    <Content Include="html-default\animate_slider\js\jquery.gridrotator.js.bak" />
+    <Content Include="html-default\contact.php" />
+    <Content Include="html-default\dcodes\webstore\authorize.net.php" />
+    <Content Include="html-default\gallery\multimedia-gallery\php\image_resize.php" />
+    <Content Include="html-default\gallery\multimedia-gallery\swf\soundmanager2_flash_xdomain.zip" />
+    <Content Include="html-default\images\Thumbs.db" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-2.0.2.js" />
+    <Content Include="Scripts\jquery-2.0.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.password.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Success.aspx" />
+    <Content Include="ViewPostedAd.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ActivateUser.aspx.cs">
+      <DependentUpon>ActivateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ActivateUser.aspx.designer.cs">
+      <DependentUpon>ActivateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ViewAds.aspx.cs">
+      <DependentUpon>ViewAds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ViewAds.aspx.designer.cs">
+      <DependentUpon>ViewAds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\CreateAdpost.aspx.cs">
+      <DependentUpon>CreateAdpost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\CreateAdpost.aspx.designer.cs">
+      <DependentUpon>CreateAdpost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Yarde.Master.cs">
+      <DependentUpon>Yarde.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yarde.Master.designer.cs">
+      <DependentUpon>Yarde.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Success.aspx.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Success.aspx.designer.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPostedAd.aspx.cs">
+      <DependentUpon>ViewPostedAd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewPostedAd.aspx.designer.cs">
+      <DependentUpon>ViewPostedAd.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="html-default\animate_slider\images\medium\" />
+    <Folder Include="html-default\gallery\multimedia-gallery\data\audio\1\" />
+    <Folder Include="html-default\gallery\multimedia-gallery\data\audio\2\" />
+    <Folder Include="html-default\js\dream-accordion\data\images\" />
+    <Folder Include="html-default\sliders\coin-slider\images\" />
+    <Folder Include="html-default\sliders\photogrid\images\area1\" />
+    <Folder Include="html-default\sliders\photogrid\images\area2\" />
+    <Folder Include="html-default\sliders\photogrid\images\area3\" />
+    <Folder Include="html-default\sliders\photogrid\images\area4\" />
+    <Folder Include="html-default\sliders\photogrid\images\area5\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Yarde.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YardeCart.Business\YardeCart.Business.csproj">
+      <Project>{fc716869-7e63-461e-b65b-b4dc3f248b44}</Project>
+      <Name>YardeCart.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YardeCart.Common\YardeCart.Common.csproj">
+      <Project>{76f4469c-657e-4f82-896b-4aa74190c468}</Project>
+      <Name>YardeCart.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YardeCart.Data\YardeCart.Data.csproj">
+      <Project>{0decac71-e8dd-465b-9b78-fac4269e98bb}</Project>
+      <Name>YardeCart.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YardeCart.Entity\YardeCart.Entity.csproj">
+      <Project>{19518063-5c5e-4547-b8f4-00dd9a02bebb}</Project>
+      <Name>YardeCart.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\App_LocalResources\Register.aspx.resx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1066</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/YardeCart</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

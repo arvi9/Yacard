@@ -1,0 +1,739 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnRegisterResource1.Text" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="btnRegisterResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkYardecartResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkYardecartResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlCityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlCountryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ddlStateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="errPwdResource1.Text" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="errPwdResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgAvailableResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgAvailableResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgNotAvailableResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imgNotAvailableResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LinkButton1Resource1.Text" xml:space="preserve">
+    <value>Check avaiilablity</value>
+  </data>
+  <data name="LinkButton1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="ListItemResource1.Value" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="ListItemResource2.Value" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>Rather not say</value>
+  </data>
+  <data name="ListItemResource3.Value" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PageResource1.Title" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="RadioButtonList1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Table1Resource1.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Table1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell10Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="txtPassword"&gt;Password&lt;/label&gt;
+                 
+                </value>
+  </data>
+  <data name="TableCell10Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell11Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell11Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell12Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;div class="password-meter"&gt;
+	  					&lt;div class="password-meter-message"&gt;&amp;nbsp;&lt;/div&gt;
+	  					&lt;div class="password-meter-bg"&gt;
+		  					&lt;div class="password-meter-bar"&gt;&lt;/div&gt;
+	  					&lt;/div&gt;
+	  				&lt;/div&gt;
+    	
+                </value>
+  </data>
+  <data name="TableCell12Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell13Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="txtRePassword"&gt;Confirm Password&lt;/label&gt;
+                 
+                </value>
+  </data>
+  <data name="TableCell13Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell14Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell14Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell15Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell15Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell16Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="txtEmail"&gt;Email Address&lt;/label&gt;
+                 
+                </value>
+  </data>
+  <data name="TableCell16Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell17Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell17Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell18Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span2"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="Span4"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell18Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell19Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="txtMobile"&gt;Mobile&lt;/label&gt;
+                 
+                </value>
+  </data>
+  <data name="TableCell19Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell1Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="txtFirstname"&gt;First Name&lt;/label&gt;
+                 
+                </value>
+  </data>
+  <data name="TableCell1Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell20Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell20Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell21Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span11"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="Span12"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell21Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell22Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="txtAddress"&gt;Address&lt;/label&gt;
+                 
+                </value>
+  </data>
+  <data name="TableCell22Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell23Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell23Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell24Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span13"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="Span14"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell24Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell25Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="txtStreetname"&gt;Street name&lt;/label&gt;
+                 
+                </value>
+  </data>
+  <data name="TableCell25Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell26Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell26Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell27Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span15"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="Span16"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell27Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell28Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="ddlCountry"&gt;Country&lt;/label&gt;
+                 
+                </value>
+  </data>
+  <data name="TableCell28Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell29Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell29Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell2Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell30Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span17"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="Span18"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell30Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell31Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="ddlState"&gt;State&lt;/label&gt;
+                 
+                </value>
+  </data>
+  <data name="TableCell31Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell32Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell32Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell33Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span19"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="Span20"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell33Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell34Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="ddlCity"&gt;City&lt;/label&gt;
+                 
+                </value>
+  </data>
+  <data name="TableCell34Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell35Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell35Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell36Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span21"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="Span22"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell36Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell37Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="txtZipcode"&gt;Zip code&lt;/label&gt;
+                 
+                </value>
+  </data>
+  <data name="TableCell37Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell38Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell38Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell39Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span23"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="Span24"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell39Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell3Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span1"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="first-name-error"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell3Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell40Resource1.Text" xml:space="preserve">
+    <value>
+                 &amp;nbsp;
+                </value>
+  </data>
+  <data name="TableCell40Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell41Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell41Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell42Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span25"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="Span26"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell42Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell43Resource1.Text" xml:space="preserve">
+    <value>
+                 &amp;nbsp;
+                </value>
+  </data>
+  <data name="TableCell43Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell44Resource1.Text" xml:space="preserve">
+    <value>
+                 &amp;nbsp;
+                </value>
+  </data>
+  <data name="TableCell44Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell45Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span27"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="Span28"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell45Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell46Resource1.Text" xml:space="preserve">
+    <value>
+                 &amp;nbsp;
+                </value>
+  </data>
+  <data name="TableCell46Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell47Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell47Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell48Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span29"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="Span30"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell48Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell4Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="txtLastname"&gt;Last Name&lt;/label&gt;
+                 
+                </value>
+  </data>
+  <data name="TableCell4Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell5Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell5Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell6Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span3"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="last-name-error"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell6Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell7Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="gender"&gt;Gender&lt;/label&gt;
+                 
+                </value>
+  </data>
+  <data name="TableCell7Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell8Resource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell8Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCell9Resource1.Text" xml:space="preserve">
+    <value>
+                    &lt;span class="inline-notice" id="Span5"&gt;
+                 &lt;/span&gt;
+                 &lt;span class="inline-input-error-message" id="Span6"&gt;&lt;/span&gt;
+             
+                </value>
+  </data>
+  <data name="TableCell9Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCellResource1.Text" xml:space="preserve">
+    <value>
+                    &lt;label for="txtUsername"&gt;User Name&lt;/label&gt;
+                </value>
+  </data>
+  <data name="TableCellResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCellResource2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCellResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCellResource3.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableCellResource3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TableRow2Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trAddressResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trCheckResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trCityResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trCountryResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trEmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trFirstnameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trGenderResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trLastnameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trMobileResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trPasswordResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trRegisterResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trRePasswordResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trStateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trStreetnameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trUsernameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="trZipcodeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAddressResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAddressResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtEmailResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtEmailResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFirstnameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtFirstnameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLastnameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLastnameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMobileResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtMobileResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPasswordResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPasswordResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRePasswordResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRePasswordResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtStreetnameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtStreetnameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtUsernameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtUsernameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtZipcodeResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtZipcodeResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+</root>

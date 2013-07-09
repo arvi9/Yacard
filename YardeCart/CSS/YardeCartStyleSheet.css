@@ -1,0 +1,44 @@
+﻿body {
+        background-color: crimson;
+    }
+.divHeadForm {
+
+    background-color:darkkhaki;
+    font-size:large;
+    text-align:center;
+    text-decoration:solid;
+}
+    .divHeaderTable
+        {
+            width: 100%;
+            padding-bottom:5px;
+            display:block;
+        }
+    .divHeaderRow
+        {
+            width: 100%; /* add extra that you want to for header column */
+            display:block;
+            height:105px;
+        }
+    .divMenu {
+         font-family: 'Britannic Bold'; 
+         font-size: x-large; 
+         font-weight: 300; 
+         font-style: oblique; 
+         font-variant: normal; 
+         text-transform: capitalize; 
+         text-underline-position:left;
+         color: #FF0000; 
+         background-color: #FFCCCC; 
+         background-position: center center; 
+         background-attachment: scroll; 
+         list-style-type: square; 
+         list-style-position: inside; 
+    }
+    .divOption {
+        outline-width:medium;
+        word-break:keep-all;
+        overflow-x:initial;
+    
+    }
+        

@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>(Pro) Responsive Template</title>
+<meta name="description" content="Enter Your Website Description Here">
+<meta name="keywords" content="website, business, store" />
+<meta name="robots" content="index, follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="Animated Responsive Image Grid - Cycling through a set of images in a responsive grid." />
+<meta name="keywords" content="grid, images, thumbnails, responsive, css3, jquery, javascript, random, transition, 3d, perspective" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/respon.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.min.js"></script>
+<!--<script src="js/scripts.js"></script>-->
+<script type="text/javascript">
+$(function () {
+	
+
+	//##########################################
+	// Superfish
+	//##########################################
+	$("ul.sf-menu").superfish({ 
+        animation: {height:'show'},   // slide-down effect without fade-in 
+        delay:     200 ,              // 1.2 second delay on mouseout 
+        autoArrows:  false,
+        speed: 200
+    });
+	
+	var arr_links = location.href.split('/');
+	var length = arr_links.length;
+	$('ul.sf-menu li').each(function () {
+		if ($(this).children('a').attr('href') == arr_links[(length-1)]) {
+			$(this).addClass('active');
+			$(this).children('a').addClass('active');
+			$(this).parents('li').addClass('active');
+			$(this).parents('li').children('a').addClass('active');
+		}
+	})
+	
+	
+	$().UItoTop();
+	//##########################################
+	// Mobile nav
+	//##########################################
+	selectnav('nav');
+	
+	//##########################################
+	// preloader Photo
+	//##########################################
+	
+	$("a[rel^='prettyPhoto']").prettyPhoto({
+			social_tools: false,
+		});
+	
+});
+</script>
+<!-- slides START -->
+
+<!-- slides END -->
+<!--ui_totop START -->
+
+<link href="ui_totop/css/ui.totop.css" rel="stylesheet" />
+<script src="ui_totop/js/jquery.ui.totop.js" charset="utf-8"></script>
+<!-- ui_totop END -->
+<!-- DC Twitter Starts -->
+<link href="twitter_tweet/jquery.tweet.css" rel="stylesheet" />
+<script src="twitter_tweet/jquery.tweet.js" charset="utf-8"></script>
+<!-- DC Twitter End -->
+<!-- DC jflickrfeed Starts -->
+<link href="flickr/css/dc_jflickrfeed.css" type="text/css" rel="stylesheet" />
+<script src="flickr/js/jflickrfeed.js"></script>
+<!-- DC jflickrfeed: Colorbox Lightbox -->
+<link href="flickr/js/colorbox/colorbox.css" rel="stylesheet" type="text/css" media="screen" />
+<script src="flickr/js/colorbox/jquery.colorbox-min.js"></script>
+<!-- DC jflickrfeed Ends -->
+<!-- preloader Start -->
+<link href="preloader/css/preloader.css" rel="stylesheet" />
+<script src="preloader/js/jquery.preloader.js" charset="utf-8"></script>
+<!-- preloader END -->
+<!-- prettyPhoto Start -->
+<link rel="stylesheet" type="text/css" href="prettyPhoto/css/prettyPhoto.css" />
+<script type="text/javascript" src="prettyPhoto/js/jquery.prettyPhoto.js"></script>
+<!-- prettyPhoto END -->
+<!-- superfish -->
+<link rel="stylesheet" media="screen" href="superfish/css/superfish.css" />
+<script  src="superfish/js/superfish-1.4.8/js/hoverIntent.js"></script>
+<script  src="superfish/js/superfish-1.4.8/js/superfish.js"></script>
+<script  src="superfish/js/superfish-1.4.8/js/supersubs.js"></script>
+<script  src="js/selectnav.min.js"></script>
+<!-- ENDS superfish -->
+
+<!-- Config User Intarface Box Import START -->
+<script type="text/javascript" src="js/head_html_default_block.js"></script>
+<script type="text/javascript" src="js/head_html_block.js"></script>
+<!-- Config User Intarface Box Import END -->
+<!-- Gallery Starts -->
+<script type="text/javascript" src="js/gallery-masonry/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="js/gallery-masonry/gallery-masonry.js"></script>
+<!-- Gallery Ends -->
+</head>
+<body>
+<div class="body_pattern">
+  <div class="header_res">
+    <div class="main_resize">
+      <div class="logo"><a href="index.html"><span>Tru</span>gen</a></div>
+      <div class="menu">
+        <nav> 
+          <script type="text/javascript" src="js/menu_html_block.js"></script> 
+        </nav>
+      </div>
+      <!-- /menu -->
+      <div class="clr"></div>
+      <div class="top_text"> Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris <br />
+        <small>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor</small> </div>
+      <div class="RSS"> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss4" /></a> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss1" /></a> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss2" /></a> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss3" /></a> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss5" /></a> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss6" /></a> <a href="#"><img src="images/spacer.gif" alt="f" width="32" height="32" border="0" class="rss7" /></a> </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+    <br />
+    <br />
+    <br />
+    <!--main_resize end  --> 
+  </div>
+  <div class="main_resize" id="gallery"> 
+    <!--Slider Script--> 
+    <!--start slider scripts DC Broken Glass Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="css/broken-glass/slider-brokenglass-style.css" />
+    <script type="text/javascript" src="sliders/broken-glass/jquery.transform-0.9.3.min_.js"></script> 
+    <script type="text/javascript" src="sliders/broken-glass/jquery.mousewheel.js"></script> 
+    <script type="text/javascript" src="sliders/broken-glass/jquery.RotateImageMenu.js"></script> 
+    <script type="text/javascript">
+    $(window).resize(function(){
+        var rwidth=$(this).width();
+         if(rwidth >959)
+         { 
+            $('#panel-1').attr('data-rotation','-12');
+            $('#panel-2').attr('data-rotation','-5');
+            $('#panel-3').attr('data-rotation','5');
+            $('#panel-4').attr('data-rotation','12');
+         }
+        else if(rwidth >= 480 && rwidth <= 767)
+        {
+            //420
+            $('#panel-1').attr('data-rotation','-10');
+            $('#panel-2').attr('data-rotation','-3');
+            $('#panel-3').attr('data-rotation','3');
+            $('#panel-4').attr('data-rotation','10');
+        }
+    
+        else if(rwidth <= 479) 
+        {
+            //300
+            $('#panel-1').attr('data-rotation','-10');
+            $('#panel-2').attr('data-rotation','-3');
+            $('#panel-3').attr('data-rotation','3');
+            $('#panel-4').attr('data-rotation','10');
+        }
+        else if(rwidth >= 768 && rwidth <= 959)
+        {
+            //768
+        $('#panel-1').attr('data-rotation','-10');
+            $('#panel-2').attr('data-rotation','-3');
+            $('#panel-3').attr('data-rotation','3');
+            $('#panel-4').attr('data-rotation','10');
+        }
+         })
+      .resize();//trigger resize on page load<br>
+    
+    
+    </script> 
+    <!--end slider scripts DC Broken Glass Slider CSS -->
+    
+    <div style="width:100%; margin:0 auto; padding:0; position:relative;"> <!-- define slider container width (strict enforce) -->
+      <div id="rm_container" class="rm_container">
+        <ul>
+          
+          <!-- local sample image: 
+                    <li data-images="rm_container_1" data-rotation="-15"><img src="dcodes/sliders/images/broken-glass/379x470-image.jpg" width="379" height="470" /> -->
+          
+          <li id="panel-1" data-images="rm_container_1" data-rotation="-12"><img src="http://cdn.pimg.co/p/379x470/555/fff/img.png" width="379" height="470" /></li>
+          <li id="panel-2" data-images="rm_container_2" data-rotation="-5"><img src="http://cdn.pimg.co/p/379x470/44/fff/img.png" width="379" height="470" /></li>
+          <li id="panel-3" data-images="rm_container_3" data-rotation="5"><img src="http://cdn.pimg.co/p/379x470/333/fff/img.png" width="379" height="470" /></li>
+          <li id="panel-4" data-images="rm_container_4" data-rotation="12"><img src="http://cdn.pimg.co/p/379x470/222/fff/img.png" width="379" height="470" /></li>
+        </ul>
+        
+        <!-- shattered glass effect, remove this to show full glass: start -->
+        <div id="rm_mask_left" class="rm_mask_left"></div>
+        <div id="rm_mask_right" class="rm_mask_right"></div>
+        <div id="rm_corner_left" class="rm_corner_left"></div>
+        <div id="rm_corner_right" class="rm_corner_right"></div>
+        <!-- shattered glass effect, remove this to show full glass: end --> 
+        
+        <!-- Slider Caption -->
+        <h2>dCodes</h2>
+        <div style="display:none;">
+          <div id="rm_container_1"> <img src="http://cdn.pimg.co/p/379x470/555/fff/img.png" width="379" height="470" /> <img src="http://cdn.pimg.co/p/379x470/123321/fff/img.png" width="379" height="470" /> </div>
+          <div id="rm_container_2"> <img src="http://cdn.pimg.co/p/379x470/444/fff/img.png" width="379" height="470" /> <img src="http://cdn.pimg.co/p/379x470/321321/fff/img.png" width="379" height="470" /> </div>
+          <div id="rm_container_3"> <img src="http://cdn.pimg.co/p/379x470/333/fff/img.png" width="379" height="470" /> <img src="http://cdn.pimg.co/p/379x470/777ggg/fff/img.png" width="379" height="470" /> </div>
+          <div id="rm_container_4"> <img src="http://cdn.pimg.co/p/379x470/222/fff/img.png" width="379" height="470" /> <img src="http://cdn.pimg.co/p/379x470/789987/fff/img.png" width="379" height="470" /> </div>
+        </div>
+      </div>
+      <!-- /rm_container --> 
+      
+      <!-- navigation controls -->
+      <div class="rm_nav"> <a id="rm_next" href="#" class="rm_next"></a> <a id="rm_prev" href="#" class="rm_prev"></a> </div>
+      <div class="rm_controls"> <a id="rm_play" href="#" class="rm_play">Play</a> <a id="rm_pause" href="#" class="rm_pause">Pause</a> </div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <!--main_resize end  -->
+  <div class="bg"></div>
+  <div class="main_resize">
+    <div class="small_box"> <img src="images/h2_img_1.png" alt="Image" width="35" height="35" class="fl" />
+      <h3>Super Clean Design</h3>
+      <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros </p>
+    </div>
+    <div class="small_box"> <img src="images/h2_img_2.png" alt="Image" width="35" height="35" class="fl" />
+      <h3>Full Documentation</h3>
+      <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros </p>
+    </div>
+    <div class="small_box"> <img src="images/h2_img_3.png" alt="Image" width="35" height="35" class="fl" />
+      <h3>Unlimited Colors</h3>
+      <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros </p>
+    </div>
+    <div class="small_box"> <img src="images/h2_img_4.png" alt="Image" width="35" height="35" class="fl" />
+      <h3>Responsive Design</h3>
+      <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros </p>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <!--main_resize end  --> 
+</div>
+<div class="prefooter">
+  <div class="main_resize">
+    <div class="columns">
+      <div class="pref_blog">
+        <h2 class="not_font_color">Our Commitment</h2>
+        <p>We strive to deliver a level of service that exceeds the expectations of our customers. <br />
+          <br />
+          If you have any questions about our products or services, please do not hesitate to contact us. We have friendly, knowledgeable representatives available seven days a week to assist you.</p>
+        <div class="clr"></div>
+        <hr noshade color="#666666" size="1" width="96%">
+        <p>Subscribe to our mailing list for offers, news updates and more!</p>
+        
+        <!-- Mailing List Form -->
+        <div id="mailform-subscribe">
+          <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+            <input type="email" size="15" value="Your Email" name="EMAIL" class="required email" id="mce-EMAIL" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>
+            <div class="clear">
+              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </div>
+          </form>
+        </div>
+        <!-- Mailing List Form End -->
+        
+        <div class="clr"></div>
+      </div>
+      <div class="Flickr">
+        <h2 class="not_font_color">Latest Tweets</h2>
+        <!-- DC Twitter Start -->
+        <div id="ticker" class="query" style="width:100%;"></div>
+        <!-- DC Twitter End --> 
+      </div>
+      <div class="pref_blog">
+        <h2 class="not_font_color">Keep Updated</h2>
+        <p> 123 Example Way<br />
+          San Francisco, CA 94108<br />
+          USA <br />
+          <br />
+          Phone: (888) 123-4567 <br />
+          Fax: (887) 123-4567 <br />
+          contact&#64;example.com <br />
+          <br />
+          <!-- DC Facebook Likes Start -->
+          <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.facebook.com/DreamTemplate&send=false&layout=standard&width=200&show_faces=false&action=like&colorscheme=dark&font&height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:45px;" allowTransparency="true"></iframe>
+          <!-- DC Facebook Likes End --> 
+        </p>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <!--main_resize end  -->
+  <div class="clr"></div>
+</div>
+<div class="footer">
+  <div class="main_resize"> &copy; Copyright SiteName. All Rights Reserved. Design: [<a href="http://www.dreamtemplate.com/" target="_blank" title="DreamTemplate">dt</a>] </div>
+  <!--main_resize end  -->
+  <div class="clr"></div>
+</div>
+</div>
+</body>
+</html>
