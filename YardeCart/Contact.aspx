@@ -1,12 +1,10 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="YardeCart.Contact" %>
+﻿<%@ Page Title="Yard eCart Contact" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="YardeCart.Contact" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <hgroup class="title">
-        <h1><%: Title %>.</h1>
-        <h2>Yard e-Cart contact</h2>
-    </hgroup>
-
-    <section class="contact">
+    <div style="text-align:center; padding-left:25em">
+        <h1>Yard e-Cart contact</h1>
+        </div>
+    <section class="contact"  style="text-align:left;padding-left:25EM">
         <header>
             <h3>Phone:</h3>
         </header>
@@ -20,7 +18,7 @@
         </p>
     </section>
 
-    <section class="contact">
+    <section class="contact" style="text-align:left;padding-left:25EM">
         <header>
             <h3>Email:</h3>
         </header>
@@ -38,7 +36,7 @@
         </p>
     </section>
 
-    <section class="contact">
+    <section class="contact" style="text-align:left;padding-left:25EM">
         <header>
             <h3>Address:</h3>
         </header>

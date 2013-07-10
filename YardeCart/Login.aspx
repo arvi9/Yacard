@@ -23,7 +23,7 @@
                             <asp:Label ID="Label1" runat="server" AssociatedControlID="UserName">User name</asp:Label>
                         </li>
                         <li>
-                            <asp:TextBox ID="UserName" runat="server" Height="27px" Width="287px"></asp:TextBox>
+                            <asp:TextBox ID="UserName" runat="server" Height="27px" Width="287px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
                             &nbsp;&nbsp;&nbsp;
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="UserName" CssClass="field-validation-error" ErrorMessage="The user name field is required." />
                         </li>
@@ -31,7 +31,7 @@
                             <asp:Label ID="Label2" runat="server" AssociatedControlID="Password">Password</asp:Label>
                         </li>
                         <li>
-                            <asp:TextBox ID="Password" runat="server" Height="27px" TextMode="Password" Width="287px" />
+                            <asp:TextBox ID="Password" runat="server" Height="27px" TextMode="Password" Width="287px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" />
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Password" CssClass="field-validation-error" ErrorMessage="The password field is required." />
                         </li>

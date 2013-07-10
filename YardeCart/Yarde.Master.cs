@@ -7,6 +7,7 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using YardeCart.Business;
+using YardeCart.Common;
 
 namespace YardeCart
 {
@@ -16,11 +17,21 @@ namespace YardeCart
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            string s = this.Page.Title.ToString();
-            if (s.Contains("Register") != true && s.Contains("Log") != true)
+            if (Request.QueryString.Count > 0)
             {
                 if (Session["UserId"] == null)
                 {
+                    if (this.Page.Title.Contains("Activa") == false)
+                    Session.Add("UserId", Request.QueryString["uid"].ToString());
+                }
+            }
+            else if (Request.Cookies["Username"] != null && Request.Cookies["Password"] != null && Request.Cookies["UserId"] != null)
+            {
+                Session.Add("UserId", Request.Cookies["UserId"].Value.ToString());
+            }
+
+            if (Session["UserId"] == null)
+            {
                     welcomeMessage.InnerText = "Welcome Guest";
                 }
                 else
@@ -32,13 +43,7 @@ namespace YardeCart
                         welcomeMessage.InnerText = "Welcome " + dt.Rows[0]["UserName"].ToString();
                     }
                 }
-            }
-            else
-            {
-
-                //lblUsername.Visible = false;
-            }
-
+          
             if (welcomeMessage.InnerText.Contains("Guest") || string.IsNullOrWhiteSpace(welcomeMessage.InnerText))
             {
                 isShowHideControl = "True";
@@ -48,9 +53,6 @@ namespace YardeCart
                 isShowHideControl = "False";
 
             }
-   
         }
-
-      
     }
 }

@@ -5,60 +5,59 @@
     <link href="CSS/jquery.validate.password.css" rel="stylesheet" type="text/css" />
     
       <div style="vertical-align:central; padding-left:200px;">
-        <div >Registeration form<br />
+        <div ><h3 >Registeration form</h3><br />
             <br />
             <br />
         </div>
-        <asp:Table ID="Table1" runat="server" HorizontalAlign="Justify" GridLines="Horizontal"  Height="510px" Width="856px" style="font-size: small; font-family: Calibri">
-            <asp:TableRow runat="server" ID="trUsername">
-                <asp:TableCell ID="TableCell1" Width="300" runat="server">
+        <table ID="Table1" runat="server" HorizontalAlign="Justify" GridLines="Horizontal"  Height="510px" Width="856px" style="font-size: small; font-family: Calibri">
+            <tr runat="server" ID="trUsername">
+                <td ID="TableCell1" Width="300" runat="server">
                     <label style="width:300px" for="txtUsername">User Name</label>
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell2" runat="server">
-                    <asp:TextBox ID="txtUsername" runat="server" Height="24" Width="300" ></asp:TextBox>
+                </td>
+                <td ID="TableCell2" runat="server" class="auto-style1">
+                    <asp:TextBox ID="txtUsername" runat="server" Height="24" Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsername" ForeColor="Red"
                          ErrorMessage="must enter username"></asp:RequiredFieldValidator>    
                     
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell3" runat="server">
+                </td>
+                <td ID="TableCell3" runat="server">
                         <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" ValidateRequestMode="Disabled" CausesValidation="False">Check avaiilablity</asp:LinkButton>
                         <asp:Image ID="imgNotAvailable" runat="server"  Visible="false" ImageAlign="Left" ImageUrl="~/Images/unchecked.gif" />
                         <asp:Image ID="imgAvailable" runat="server"  Visible="false" ImageAlign="Left" ImageUrl="~/Images/checked.gif" />
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="trFirstname" runat="server">
-                <asp:TableCell ID="TableCell4" runat="server">
+                </td>
+            </tr>
+            <tr ID="trFirstname" runat="server">
+                <td ID="TableCell4" runat="server">
                     <label for="txtFirstname">First Name</label>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell5" runat="server">
-                    <asp:TextBox ID="txtFirstname" runat="server" Height="24" Width="300"></asp:TextBox>
+                </td>
+                <td ID="TableCell5" runat="server" class="auto-style1">
+                    <asp:TextBox ID="txtFirstname" runat="server" Height="24" Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell6" runat="server">
+                </td>
+                <td ID="TableCell6" runat="server">
                     <asp:RequiredFieldValidator ID="valtxtFirstname" runat="server" ForeColor="Red" ControlToValidate="txtFirstname" ErrorMessage="must enter your First name"></asp:RequiredFieldValidator>
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="trLastname" runat="server">
-                <asp:TableCell ID="TableCell7" runat="server">
+                </td>
+            </tr>
+            <tr ID="trLastname" runat="server">
+                <td ID="TableCell7" runat="server">
                     <label for="txtLastname">Last Name</label>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell8" runat="server">
-                    <asp:TextBox ID="txtLastname" runat="server" Height="24" Width="300"></asp:TextBox>
+                </td>
+                <td ID="TableCell8" runat="server" class="auto-style1">
+                    <asp:TextBox ID="txtLastname" runat="server" Height="24" Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell9" runat="server">
+                </td>
+                <td ID="TableCell9" runat="server">
                     <asp:RequiredFieldValidator ID="valtxtLastname" runat="server" ForeColor="Red" ControlToValidate="txtLastname" ErrorMessage="must enter your Last name"></asp:RequiredFieldValidator>
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="trGender" runat="server">
-                <asp:TableCell ID="TableCell10" runat="server">
+                </td>
+            </tr>
+            <tr ID="trGender" runat="server">
+                <td ID="TableCell10" runat="server">
                     <label for="gender">Gender</label>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell11" Width="200
-                    px" runat="server" >
+                </td>
+                <td ID="TableCell11" runat="server" class="auto-style1" >
                     <div class="divOption" style="width:554px;"  >
                         <asp:RadioButtonList ID="RadioButtonList1" runat="server" TextAlign="right" RepeatDirection="Horizontal" >
                                         <asp:ListItem Selected="True" Value="1">Male</asp:ListItem>
@@ -69,27 +68,27 @@
                     <%--<asp:RadioButton ID="rdoFemale" runat="server" Text="Female"  TextAlign="Left" />
                     <asp:RadioButton ID="rdoMale" runat="server" Text="Male" TextAlign="Right" />
                     <asp:RadioButton ID="rdoRather" runat="server" Text="Rather not say" TextAlign="Right" />--%>
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell12" runat="server">
+                </td>
+                <td ID="TableCell12" runat="server">
                     <span class="inline-notice" id="Span5">
                  </span>
                  <span class="inline-input-error-message" id="Span6"></span>
              
-                </asp:TableCell>
+                </td>
             
-            </asp:TableRow>
-            <asp:TableRow ID="trPassword" runat="server">
-                <asp:TableCell ID="TableCell13" runat="server">
+            </tr>
+            <tr ID="trPassword" runat="server">
+                <td ID="TableCell13" runat="server">
                     <label for="txtPassword">Password</label>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell14" runat="server">
-                    <asp:TextBox ID="txtPassword" runat="server" Height="24" Width="300" TextMode="Password"></asp:TextBox>
+                </td>
+                <td ID="TableCell14" runat="server" class="auto-style1">
+                    <asp:TextBox ID="txtPassword" runat="server" Height="24" Width="300" TextMode="Password" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell15" runat="server">
-                    <asp:RequiredFieldValidator ID="valtxtPassword" runat="server" ForeColor="Red" ControlToValidate="txtPassword" ErrorMessage="must enter your Password"></asp:RequiredFieldValidator>
-
+                </td>
+                <td ID="TableCell15" runat="server">
+                    <asp:RequiredFieldValidator ID="valtxtPassword" runat="server"  ForeColor="Red" ControlToValidate="txtPassword" 
+                        ErrorMessage="must enter your Password"></asp:RequiredFieldValidator>
                     <div class="password-meter">
 	  					<div class="password-meter-message">&nbsp;</div>
 	  					<div class="password-meter-bg">
@@ -97,187 +96,194 @@
 	  					</div>
 	  				</div>
     	
-                </asp:TableCell>
+                </td>
             
-            </asp:TableRow>
-            <asp:TableRow ID="trRePassword" runat="server">
-                <asp:TableCell ID="TableCell16" runat="server">
+            </tr>
+            <tr ID="trRePassword" runat="server">
+                <td ID="TableCell16" runat="server">
                     <label for="txtRePassword">Confirm Password</label>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell17" runat="server">
-                    <asp:TextBox ID="txtRePassword" runat="server" Height="24"  Width="300" TextMode="Password"></asp:TextBox>
+                </td>
+                <td ID="TableCell17" runat="server" class="auto-style1">
+                    <asp:TextBox ID="txtRePassword" runat="server" Height="24"  Width="300" TextMode="Password" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell18" runat="server">
+                </td>
+                <td ID="TableCell18" runat="server">
                     <asp:Label ID="errPwd" ForeColor="Red" runat="server" Visible="false"></asp:Label>
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="trEmail" runat="server">
-                <asp:TableCell ID="TableCell19" runat="server">
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtRePassword" ControlToCompare="txtPassword"
+                         ForeColor="Red" ErrorMessage="Password mismatch"></asp:CompareValidator>
+                </td>
+            </tr>
+            <tr ID="trEmail" runat="server">
+                <td ID="TableCell19" runat="server">
                     <label for="txtEmail">Email Address</label>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell20" runat="server">
-                    <asp:TextBox ID="txtEmail" runat="server" Height="24"  Width="300" TextMode="Email"></asp:TextBox>
+                </td>
+                <td ID="TableCell20" runat="server" class="auto-style1">
+                    <asp:TextBox ID="txtEmail" runat="server" Height="24"  Width="300" TextMode="Email" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell21" runat="server">
+                    <asp:Label ID="lblErrorEmail" runat="server" ForeColor="Red" Text="Already exists" Visible="False"></asp:Label>
+                 
+                </td>
+                <td ID="TableCell21" runat="server">
                     <asp:RequiredFieldValidator ID="valtxtEmail" runat="server" ForeColor="Red" ControlToValidate="txtEmail" ErrorMessage="must enter your Email" SetFocusOnError="True"></asp:RequiredFieldValidator>
 
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="trMobile" runat="server">
-                <asp:TableCell ID="TableCell22" runat="server">
+                </td>
+            </tr>
+            <tr ID="trMobile" runat="server">
+                <td ID="TableCell22" runat="server">
                     <label for="txtMobile">Mobile</label>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell23" runat="server">
-                    <asp:TextBox ID="txtMobile" runat="server" Height="24"  Width="300"></asp:TextBox>
-                 
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell24" runat="server">
-                    <span class="inline-notice" id="Span11">
-                 </span>
-                 <span class="inline-input-error-message" id="Span12"></span>
-             
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="trAddress" runat="server">
-                <asp:TableCell ID="TableCell25" runat="server">
+                </td>
+                <td ID="TableCell23" runat="server" class="auto-style1">
+                    <asp:TextBox ID="txtMobile" runat="server" Height="24"  Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtMobile" ForeColor="Red"
+ErrorMessage="Please Enter Only Numbers"  ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
+                </td>
+                <td ID="TableCell24" runat="server">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtMobile" ForeColor="Red"
+                        ErrorMessage="must enter mobile no"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr ID="trAddress" runat="server">
+                <td ID="TableCell25" runat="server">
                     <label for="txtAddress">Address</label>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell26" runat="server">
-                    <asp:TextBox ID="txtAddress" runat="server" Height="24"  Width="300"></asp:TextBox>
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell27" runat="server">
+                </td>
+                <td ID="TableCell26" runat="server" class="auto-style1">
+                    <asp:TextBox ID="txtAddress" runat="server" Height="24"  Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+                </td>
+                <td ID="TableCell27" runat="server">
                     <span class="inline-notice" id="Span13">
                  </span>
                  <span class="inline-input-error-message" id="Span14"></span>
              
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="trStreetname" runat="server">
-                <asp:TableCell ID="TableCell28" runat="server">
+                </td>
+            </tr>
+            <tr ID="trStreetname" runat="server">
+                <td ID="TableCell28" runat="server">
                     <label for="txtStreetname">Street name</label>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell29" runat="server">
-                    <asp:TextBox ID="txtStreetname" runat="server" Height="24"  Width="300"></asp:TextBox>
+                </td>
+                <td ID="TableCell29" runat="server" class="auto-style1">
+                    <asp:TextBox ID="txtStreetname" runat="server" Height="24"  Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell30" runat="server">
+                </td>
+                <td ID="TableCell30" runat="server">
                     <span class="inline-notice" id="Span15">
                  </span>
                  <span class="inline-input-error-message" id="Span16"></span>
              
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="trCountry" runat="server">
-                <asp:TableCell ID="TableCell31" runat="server">
+                </td>
+            </tr>
+            <tr ID="trCountry" runat="server">
+                <td ID="TableCell31" runat="server">
                     <label for="ddlCountry">Country</label>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell32" runat="server">
+                </td>
+                <td ID="TableCell32" runat="server" class="auto-style1">
                     <asp:DropDownList ID="ddlCountry" Height="24px" Width="300" style="border:solid 1px"  runat="server"></asp:DropDownList>
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell33" runat="server">
+                </td>
+                <td ID="TableCell33" runat="server">
                     <span class="inline-notice" id="Span17">
                  </span>
                  <span class="inline-input-error-message" id="Span18"></span>
              
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="trState" runat="server">
-                <asp:TableCell ID="TableCell34" runat="server">
+                </td>
+            </tr>
+            <tr ID="trState" runat="server">
+                <td ID="TableCell34" runat="server">
                     <label for="ddlState">State</label>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell35" runat="server">
+                </td>
+                <td ID="TableCell35" runat="server" class="auto-style1">
                     <asp:DropDownList ID="ddlState" Height="24px" Width="300" style="border:solid 1px"  runat="server"></asp:DropDownList>
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell36" runat="server">
+                </td>
+                <td ID="TableCell36" runat="server">
                     <span class="inline-notice" id="Span19">
                  </span>
                  <span class="inline-input-error-message" id="Span20"></span>
              
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="trCity" runat="server">
-                <asp:TableCell ID="TableCell37" runat="server">
+                </td>
+            </tr>
+            <tr ID="trCity" runat="server">
+                <td ID="TableCell37" runat="server">
                     <label for="ddlCity">City</label>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell38" runat="server">
+                </td>
+                <td ID="TableCell38" runat="server" class="auto-style1">
                     <asp:DropDownList ID="ddlCity" Height="24px" Width="300" style="border:solid 1px" runat="server"></asp:DropDownList>
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell39" runat="server">
+                </td>
+                <td ID="TableCell39" runat="server">
                     <span class="inline-notice" id="Span21">
                  </span>
                  <span class="inline-input-error-message" id="Span22"></span>
              
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="trZipcode" runat="server">
-                <asp:TableCell ID="TableCell40" runat="server">
+                </td>
+            </tr>
+            <tr ID="trZipcode" runat="server">
+                <td ID="TableCell40" runat="server">
                     <label for="txtZipcode">Zip code</label>
                  
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell41" runat="server">
-                    <asp:TextBox ID="txtZipcode" Height="24px" Width="300" runat="server"></asp:TextBox>
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell42" runat="server">
+                </td>
+                <td ID="TableCell41" runat="server" class="auto-style1">
+                    <asp:TextBox ID="txtZipcode" Height="24px" Width="300" runat="server" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
+                </td>
+                <td ID="TableCell42" runat="server">
                     <span class="inline-notice" id="Span23">
                  </span>
                  <span class="inline-input-error-message" id="Span24"></span>
              
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="trCheck" runat="server">
-                <asp:TableCell ID="TableCell43" runat="server">
+                </td>
+            </tr>
+            <tr ID="trCheck" runat="server">
+                <td ID="TableCell43" runat="server">
                  &nbsp;
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell44" runat="server">
+                </td>
+                <td ID="TableCell44" runat="server" class="auto-style1">
                     <asp:CheckBox ID="chkYardecart" runat="server" />
                     <label for="etsy_finds">Sign up for the YardeCart.</label>
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell45" runat="server">
-                    <span class="inline-notice" id="Span25">
-                 </span>
-                 <span class="inline-input-error-message" id="Span26"></span>
-             
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="TableRow2" runat="server">
-                <asp:TableCell ID="TableCell46" runat="server">
+                </td>
+                <td ID="TableCell45" runat="server">
+                    <asp:Label runat="server" ID="ErrCheck" Visible="false" ForeColor="Red"></asp:Label>
+                </td>
+            </tr>
+            <tr ID="TableRow2" runat="server">
+                <td ID="TableCell46" runat="server">
                  &nbsp;
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell47" runat="server">
+                </td>
+                <td ID="TableCell47" runat="server" class="auto-style1">
                  &nbsp;
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell48" runat="server">
+                </td>
+                <td ID="TableCell48" runat="server">
                     <span class="inline-notice" id="Span27">
                  </span>
                  <span class="inline-input-error-message" id="Span28"></span>
              
-                </asp:TableCell>
-            </asp:TableRow>
-            <asp:TableRow ID="trRegister" runat="server">
-                <asp:TableCell ID="TableCell49" runat="server">
+                </td>
+            </tr>
+            <tr ID="trRegister" runat="server">
+                <td ID="TableCell49" runat="server">
                  &nbsp;
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell50" runat="server">
-                    <asp:Button ID="btnRegister" Width="100" runat="server" Text="Register" BorderStyle="Groove" BorderWidth="1px"  OnClick="btnRegister_Click" />
-                </asp:TableCell>
-                <asp:TableCell ID="TableCell51" runat="server">
+                </td>
+                <td ID="TableCell50" runat="server" class="auto-style1">
+                    <asp:Button ID="btnRegister" Width="100" runat="server" Text="Register" BorderStyle="Groove" BorderWidth="1px" Height="28px" style="font-weight: 700" OnClick="btnRegister_Click" />
+                </td>
+                <td ID="TableCell51" runat="server">
                    <asp:Label ID="lblError" runat="server" Text="Label" ForeColor="Red" Font-Bold="true"></asp:Label>
                      <span class="inline-notice" id="Span29">
                  </span>
                  <span class="inline-input-error-message" id="Span30"></span>
              
-                </asp:TableCell>
-            </asp:TableRow>
-        </asp:Table>
+                </td>
+            </tr>
+        </table>
         </div>
+</asp:Content>
+<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+        .auto-style1 {
+            width: 455px;
+        }
+    </style>
 </asp:Content>

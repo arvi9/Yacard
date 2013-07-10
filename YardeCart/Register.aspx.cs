@@ -26,6 +26,7 @@ namespace YardeCart
         protected void Page_Load(object sender, EventArgs e)
         {
             lblError.Visible = false;
+            lblErrorEmail.Visible = false;
 
             if (!IsPostBack)
             {
@@ -69,12 +70,30 @@ namespace YardeCart
 
                 if (txtPassword.Text != txtRePassword.Text)
                 {
-                    errPwd.Text = "mismatch";
+                    errPwd.Text = "Password mismatch";
                     errPwd.Visible = true;
                     intErrorCount++;
                 }
                 else
                     errPwd.Visible = false;
+
+                if (chkYardecart.Checked==false)
+                {
+                    ErrCheck.Text = "Please check signup";
+                    ErrCheck.Visible = true;
+                    intErrorCount++;
+                }
+                else
+                    ErrCheck.Visible = false;
+
+                MailCheck();
+                if (intMailAvail == 1)
+                {
+                    intErrorCount++;
+                    lblErrorEmail.Visible = true;
+                }
+                else
+                    lblErrorEmail.Visible = false;
 
                 if (chkYardecart.Checked == true && intErrorCount == 0)
                 {

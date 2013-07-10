@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Yard-eCart View Ad" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="ViewAds.aspx.cs" Inherits="YardeCart.ViewAds" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <div>  
         <table>
             <tr>
                 <td class="auto-style2" colspan="3" style="font-family: 'Arial Black'; color: #CC3300; font-size: xx-large; vertical-align: top" >
@@ -56,10 +57,11 @@
             
             <tr>
                 <td class="auto-style2" colspan="3">
-                    <asp:Button ID="btnBuy" runat="server" Text="BUY" OnClick="btnBuy_Click"/>
+                    <asp:Button ID="btnBuy" Width="100" runat="server" Text="BUY" BorderStyle="Groove" BorderWidth="1px"  OnClick="btnBuy_Click" />
 
                 </td>
             </tr>
         </table>
+    </div>
 
 </asp:Content>

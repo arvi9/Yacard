@@ -13,7 +13,20 @@
         </div>
     </section>
     <p></p>
-    <p></p>
+    <p></p><div class="main_resize">
+            <div class="clr">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                </div>
+          </div>
     <p></p>
     <p></p>
     <p></p>

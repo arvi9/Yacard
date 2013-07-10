@@ -32,9 +32,6 @@ namespace YardeCart
                     //login.Password = Request.Cookies["Password"].Value.ToString();
                 
                 login.RememberMeSet = true;
-
-                Session.Abandon();
-                this.SetFocus(login.UserName);
             }   
         }
       
@@ -54,7 +51,12 @@ namespace YardeCart
                 }
                 else
                 {
+                    Session.Abandon();
+                    Session.RemoveAll();
+
                     if (Session["UserId"] == null)
+                        Session.Add("UserId", userId.ToString());
+                    else
                         Session.Add("UserId", userId.ToString());
 
                     Session.Add("IsLoginUser", "true");
@@ -67,11 +69,15 @@ namespace YardeCart
                     
                     if (login.RememberMeSet == true)
                     {
+                        Response.Cookies.Clear();
+                        HttpCookie cUserId = new HttpCookie("UserId", userId.ToString());
                         HttpCookie cUsername = new HttpCookie("UserName", login.UserName.ToString());
                         HttpCookie cPassword = new HttpCookie("Password", login.Password.ToString());
+                        cUserId.Expires = DateTime.Now.AddDays(5);
                         cUsername.Expires = DateTime.Now.AddDays(5);
                         cPassword.Expires = DateTime.Now.AddDays(5);
 
+                        Response.Cookies.Add(cUserId);
                         Response.Cookies.Add(cUsername);
                         Response.Cookies.Add(cPassword);
                     }
@@ -90,7 +96,7 @@ namespace YardeCart
             }
         
             if(intErr==0)
-            Response.Redirect("~/Default.aspx?uid="+Session["UserId"].ToString());
+            Response.Redirect("Default.aspx?uid="+Session["UserId"].ToString());
         }
     }
 }

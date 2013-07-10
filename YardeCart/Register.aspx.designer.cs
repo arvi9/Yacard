@@ -19,7 +19,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table Table1;
+        protected global::System.Web.UI.HtmlControls.HtmlTable Table1;
         
         /// <summary>
         /// trUsername control.
@@ -28,7 +28,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trUsername;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trUsername;
         
         /// <summary>
         /// TableCell1 control.
@@ -37,7 +37,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell1;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell1;
         
         /// <summary>
         /// TableCell2 control.
@@ -46,7 +46,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell2;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell2;
         
         /// <summary>
         /// txtUsername control.
@@ -73,7 +73,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell3;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell3;
         
         /// <summary>
         /// LinkButton1 control.
@@ -109,7 +109,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trFirstname;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trFirstname;
         
         /// <summary>
         /// TableCell4 control.
@@ -118,7 +118,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell4;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell4;
         
         /// <summary>
         /// TableCell5 control.
@@ -127,7 +127,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell5;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell5;
         
         /// <summary>
         /// txtFirstname control.
@@ -145,7 +145,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell6;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell6;
         
         /// <summary>
         /// valtxtFirstname control.
@@ -163,7 +163,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trLastname;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trLastname;
         
         /// <summary>
         /// TableCell7 control.
@@ -172,7 +172,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell7;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell7;
         
         /// <summary>
         /// TableCell8 control.
@@ -181,7 +181,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell8;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell8;
         
         /// <summary>
         /// txtLastname control.
@@ -199,7 +199,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell9;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell9;
         
         /// <summary>
         /// valtxtLastname control.
@@ -217,7 +217,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trGender;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trGender;
         
         /// <summary>
         /// TableCell10 control.
@@ -226,7 +226,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell10;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell10;
         
         /// <summary>
         /// TableCell11 control.
@@ -235,7 +235,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell11;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell11;
         
         /// <summary>
         /// RadioButtonList1 control.
@@ -253,7 +253,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell12;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell12;
         
         /// <summary>
         /// trPassword control.
@@ -262,7 +262,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trPassword;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trPassword;
         
         /// <summary>
         /// TableCell13 control.
@@ -271,7 +271,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell13;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell13;
         
         /// <summary>
         /// TableCell14 control.
@@ -280,7 +280,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell14;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell14;
         
         /// <summary>
         /// txtPassword control.
@@ -298,7 +298,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell15;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell15;
         
         /// <summary>
         /// valtxtPassword control.
@@ -316,7 +316,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trRePassword;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trRePassword;
         
         /// <summary>
         /// TableCell16 control.
@@ -325,7 +325,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell16;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell16;
         
         /// <summary>
         /// TableCell17 control.
@@ -334,7 +334,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell17;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell17;
         
         /// <summary>
         /// txtRePassword control.
@@ -352,7 +352,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell18;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell18;
         
         /// <summary>
         /// errPwd control.
@@ -364,13 +364,22 @@ namespace YardeCart {
         protected global::System.Web.UI.WebControls.Label errPwd;
         
         /// <summary>
+        /// CompareValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+        
+        /// <summary>
         /// trEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trEmail;
         
         /// <summary>
         /// TableCell19 control.
@@ -379,7 +388,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell19;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell19;
         
         /// <summary>
         /// TableCell20 control.
@@ -388,7 +397,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell20;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell20;
         
         /// <summary>
         /// txtEmail control.
@@ -400,13 +409,22 @@ namespace YardeCart {
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
+        /// lblErrorEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorEmail;
+        
+        /// <summary>
         /// TableCell21 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell21;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell21;
         
         /// <summary>
         /// valtxtEmail control.
@@ -424,7 +442,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trMobile;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trMobile;
         
         /// <summary>
         /// TableCell22 control.
@@ -433,7 +451,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell22;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell22;
         
         /// <summary>
         /// TableCell23 control.
@@ -442,7 +460,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell23;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell23;
         
         /// <summary>
         /// txtMobile control.
@@ -454,13 +472,31 @@ namespace YardeCart {
         protected global::System.Web.UI.WebControls.TextBox txtMobile;
         
         /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        
+        /// <summary>
         /// TableCell24 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell24;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell24;
+        
+        /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// trAddress control.
@@ -469,7 +505,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trAddress;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trAddress;
         
         /// <summary>
         /// TableCell25 control.
@@ -478,7 +514,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell25;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell25;
         
         /// <summary>
         /// TableCell26 control.
@@ -487,7 +523,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell26;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell26;
         
         /// <summary>
         /// txtAddress control.
@@ -505,7 +541,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell27;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell27;
         
         /// <summary>
         /// trStreetname control.
@@ -514,7 +550,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trStreetname;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trStreetname;
         
         /// <summary>
         /// TableCell28 control.
@@ -523,7 +559,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell28;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell28;
         
         /// <summary>
         /// TableCell29 control.
@@ -532,7 +568,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell29;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell29;
         
         /// <summary>
         /// txtStreetname control.
@@ -550,7 +586,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell30;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell30;
         
         /// <summary>
         /// trCountry control.
@@ -559,7 +595,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trCountry;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trCountry;
         
         /// <summary>
         /// TableCell31 control.
@@ -568,7 +604,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell31;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell31;
         
         /// <summary>
         /// TableCell32 control.
@@ -577,7 +613,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell32;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell32;
         
         /// <summary>
         /// ddlCountry control.
@@ -595,7 +631,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell33;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell33;
         
         /// <summary>
         /// trState control.
@@ -604,7 +640,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trState;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trState;
         
         /// <summary>
         /// TableCell34 control.
@@ -613,7 +649,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell34;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell34;
         
         /// <summary>
         /// TableCell35 control.
@@ -622,7 +658,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell35;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell35;
         
         /// <summary>
         /// ddlState control.
@@ -640,7 +676,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell36;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell36;
         
         /// <summary>
         /// trCity control.
@@ -649,7 +685,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trCity;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trCity;
         
         /// <summary>
         /// TableCell37 control.
@@ -658,7 +694,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell37;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell37;
         
         /// <summary>
         /// TableCell38 control.
@@ -667,7 +703,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell38;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell38;
         
         /// <summary>
         /// ddlCity control.
@@ -685,7 +721,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell39;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell39;
         
         /// <summary>
         /// trZipcode control.
@@ -694,7 +730,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trZipcode;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trZipcode;
         
         /// <summary>
         /// TableCell40 control.
@@ -703,7 +739,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell40;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell40;
         
         /// <summary>
         /// TableCell41 control.
@@ -712,7 +748,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell41;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell41;
         
         /// <summary>
         /// txtZipcode control.
@@ -730,7 +766,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell42;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell42;
         
         /// <summary>
         /// trCheck control.
@@ -739,7 +775,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trCheck;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trCheck;
         
         /// <summary>
         /// TableCell43 control.
@@ -748,7 +784,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell43;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell43;
         
         /// <summary>
         /// TableCell44 control.
@@ -757,7 +793,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell44;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell44;
         
         /// <summary>
         /// chkYardecart control.
@@ -775,7 +811,16 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell45;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell45;
+        
+        /// <summary>
+        /// ErrCheck control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ErrCheck;
         
         /// <summary>
         /// TableRow2 control.
@@ -784,7 +829,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow TableRow2;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow TableRow2;
         
         /// <summary>
         /// TableCell46 control.
@@ -793,7 +838,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell46;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell46;
         
         /// <summary>
         /// TableCell47 control.
@@ -802,7 +847,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell47;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell47;
         
         /// <summary>
         /// TableCell48 control.
@@ -811,7 +856,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell48;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell48;
         
         /// <summary>
         /// trRegister control.
@@ -820,7 +865,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow trRegister;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trRegister;
         
         /// <summary>
         /// TableCell49 control.
@@ -829,7 +874,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell49;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell49;
         
         /// <summary>
         /// TableCell50 control.
@@ -838,7 +883,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell50;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell50;
         
         /// <summary>
         /// btnRegister control.
@@ -856,7 +901,7 @@ namespace YardeCart {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableCell TableCell51;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell51;
         
         /// <summary>
         /// lblError control.
