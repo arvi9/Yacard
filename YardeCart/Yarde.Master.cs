@@ -17,23 +17,19 @@ namespace YardeCart
         protected void Page_Load(object sender, EventArgs e)
         {
             string s = this.Page.Title.ToString();
-            lblUsername.Visible = false;
             if (s.Contains("Register") != true && s.Contains("Log") != true)
             {
                 if (Session["UserId"] == null)
                 {
-                    //lblUsername.Text = "Welcome Guest";
                     welcomeMessage.InnerText = "Welcome Guest";
                 }
                 else
                 {
-                    //lblUsername.Visible = true;
                     UserInfoBll usr = new UserInfoBll();
                     DataTable dt = usr.SelectProfile(Convert.ToInt32(Session["UserId"].ToString()));
                     if (dt.Rows.Count > 0)
                     {
                         welcomeMessage.InnerText = "Welcome " + dt.Rows[0]["UserName"].ToString();
-                        //lblUsername.Text = "Welcome " + dt.Rows[0]["UserName"].ToString();
                     }
                 }
             }

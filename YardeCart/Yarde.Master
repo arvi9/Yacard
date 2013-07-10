@@ -112,14 +112,7 @@
           </div>
             </header>
           <!--main_resize end  -->
-            <script type="text/javascript">
-
-            </script>
             <div>
-                 <div style="font-size:large;padding-left:6em">
-                    <asp:Label ID="lblUsername" runat="server" Text="Label"></asp:Label>
-                </div>
-                <br/>
                 <asp:ContentPlaceHolder runat="server" ID="MainContent" />
             </div>
               <br />
@@ -156,8 +149,14 @@
     var ishide="<%= isShowHideControl %>";
     if (ishide == "True") {
         document.getElementById("admintidli").style.display = "block";
+        document.getElementById("registeridli").style.display = "block";
+        document.getElementById("loginidli").style.display = "block";
+        document.getElementById("logoutidli").style.display = "none";
     }
     else {
         document.getElementById("admintidli").style.display = "none";
+        document.getElementById("registeridli").style.display = "none";
+        document.getElementById("loginidli").style.display = "none";
+        document.getElementById("logoutidli").style.display = "block";
     }
 </script>

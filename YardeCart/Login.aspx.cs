@@ -24,6 +24,18 @@ namespace YardeCart
             {
                 RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
             }
+
+            if (Request.Cookies["Username"] != null)
+            {
+                login.UserName = Request.Cookies["Username"].Value.ToString();
+                //if (Request.Cookies["Password"] != null)
+                    //login.Password = Request.Cookies["Password"].Value.ToString();
+                
+                login.RememberMeSet = true;
+
+                Session.Abandon();
+                this.SetFocus(login.UserName);
+            }   
         }
       
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -37,8 +49,8 @@ namespace YardeCart
                 if (string.IsNullOrEmpty(userId.ToString().Trim()))
                 {
                     intErr = 1;
-                    lblError.Text = "Invalid User and Password! Please try again.";
-                    lblError.Visible = true;
+                    lblError.Text = "Invalid Username and Password! Please try again.";
+                    lblError.Visible = false;
                 }
                 else
                 {
@@ -53,18 +65,16 @@ namespace YardeCart
                     // How long will cookie exist on client hard disk
                     Response.Cookies["TIS"].Expires = DateTime.Now.AddDays(10);
                     
-                    //if (chkRemember.Checked == true)
-                    //{
-                    //    HttpCookie cUsername = new HttpCookie("UserName", txtUsername.Text.ToString());
-                    //    HttpCookie cPassword = new HttpCookie("Password", txtPassword.Text.ToString());
-                    //    cUsername.Expires = DateTime.Now.AddDays(2);
-                    //    cPassword.Expires = DateTime.Now.AddDays(2);
+                    if (login.RememberMeSet == true)
+                    {
+                        HttpCookie cUsername = new HttpCookie("UserName", login.UserName.ToString());
+                        HttpCookie cPassword = new HttpCookie("Password", login.Password.ToString());
+                        cUsername.Expires = DateTime.Now.AddDays(5);
+                        cPassword.Expires = DateTime.Now.AddDays(5);
 
-                    //    Response.Cookies.Add(cUsername);
-                    //    Response.Cookies.Add(cPassword);
-                    //}
-
-//                    Response.Redirect("myhome.aspx");
+                        Response.Cookies.Add(cUsername);
+                        Response.Cookies.Add(cPassword);
+                    }
                 }
             }
             catch (System.Threading.ThreadAbortException)
@@ -72,10 +82,11 @@ namespace YardeCart
             }
             catch (Exception ex)
             {
+                login.FailureText = ex.Message.ToString();
 
                 intErr = 1;
                 lblError.Text = ex.Message.ToString();
-                lblError.Visible = true;
+                lblError.Visible = false;
             }
         
             if(intErr==0)
