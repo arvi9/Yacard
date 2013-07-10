@@ -17,11 +17,11 @@ namespace YardeCart
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString.Count > 0)
-            {
-                if (Session["UserId"] == null)
+            if (Request.QueryString.Count == 1)
                 {
                     if (this.Page.Title.Contains("Activa") == false)
+                {
+                        if (Session["UserId"] == null)
                     Session.Add("UserId", Request.QueryString["uid"].ToString());
                 }
             }

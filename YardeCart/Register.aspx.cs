@@ -98,10 +98,10 @@ namespace YardeCart
                 if (chkYardecart.Checked == true && intErrorCount == 0)
                 {
                     int x = userBll.CreateUserInfo(userProfile);
-                    HttpContext.Current.Session.Add("UserId", x);
+                    //HttpContext.Current.Session.Add("UserId", x);
 
                     SendMailtoUser(x);
-                    Response.Redirect("~/Success.aspx");
+                    Response.Redirect("Success.aspx");
                 }
 
             }
