@@ -37,9 +37,9 @@ namespace YardeCart.Account
         public string ReturnUrl { get; set; }
 
 
-        public IEnumerable<ProviderDetails> GetProviderNames()
-        {
-            return OpenAuth.AuthenticationClients.GetAll();
-        }
+        //public IEnumerable<ProviderDetails> GetProviderNames()
+        //{
+        //    return OpenAuth.AuthenticationClients.GetAll();
+        //}
     }
 }

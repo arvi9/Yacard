@@ -11,6 +11,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls.WebParts;
+using System.Globalization;
 //using Microsoft.AspNet.Membership.OpenAuth;
 using YardeCart.Business;
 using YardeCart.Common;
@@ -24,7 +25,11 @@ namespace YardeCart
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.DatePicker1.Culture = CultureInfo.GetCultureInfo("en-US");
+            this.DatePicker1.SelectedDateChanged += new EventHandler(DatePicker1_DateChanged);
+
             ErrCategory.Visible = false;
+            ErrDate.Visible = false;
 
             string str = "";
             if (!IsPostBack)
@@ -34,6 +39,11 @@ namespace YardeCart
 
         }
 
+        void DatePicker1_DateChanged(object sender, EventArgs e)
+        {
+            string s = DatePicker1.SelectedDate.ToString();
+        }
+    
         #region .. LOAD COMBO BOX ..
 
         void LoadCategory()
@@ -67,12 +77,25 @@ namespace YardeCart
             }
             else
             {
+                #region .. VALIDATION ..
+
+                int intError = 0;
+                if (DatePicker1.SelectedDate.ToString() == "1/1/0001 12:00:00 AM")
+                {
+                    intError++;
+                    ErrDate.Visible = true;
+                    ErrDate.Text = "Select Date";
+                }
                 if (ddlCategory.SelectedIndex == 0)
                 {
+                    intError++;
                     ErrCategory.Text = "Select Category";
                     ErrCategory.Visible = true;
                 }
-                else
+
+                #endregion
+
+                if (intError == 0)
                 {
                 AdDetailsBll adbll = new AdDetailsBll();
 
@@ -80,6 +103,7 @@ namespace YardeCart
                 DataTable dt = usrinfo.SelectProfile(Convert.ToInt32(Session["UserId"].ToString())); // userid
                 try
                 {
+
                     #region .. CREATE AD POST ..
 
                     int intAdpostId = adbll.CreateAdPost(
@@ -94,7 +118,7 @@ namespace YardeCart
                         Convert.ToInt32(dt.Rows[0]["CityId"].ToString()),
                         Convert.ToInt32(dt.Rows[0]["CountryId"].ToString()),
                         dt.Rows[0]["ZipCode"].ToString(),
-                        Convert.ToDateTime(txtTillDate.Text.ToString()),
+                            Convert.ToDateTime(DatePicker1.SelectedDate.ToString()),
                         "NEW",
                         0
                         );

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Yard-eCart Ad post" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="CreateAdpost.aspx.cs" Inherits="YardeCart.CreateAdpost" %>
+<%@ Register Assembly="SlimeeLibrary" Namespace="SlimeeLibrary" TagPrefix="cc1" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
         <link href="CSS/FormValidation.css" rel="stylesheet" type="text/css" />
@@ -51,13 +52,24 @@
 
             </tr>
             <tr>
-                <td class="auto-style13"><label class="label" for="txtTillDate">Show Till Date</label></td>
+                <td class="auto-style13"><label class="label" for="DatePicker1">Show Till Date</label></td>
                 <td class="auto-style14">
-                    <asp:TextBox class="input" ID="txtTillDate" runat="server" TextMode="Date" BorderWidth="1px" Height="22px" TabIndex="5"></asp:TextBox>
-
+                    <%--<asp:TextBox class="input" ID="txtTillDate" runat="server" TextMode="Date" BorderWidth="1px" Height="22px" TabIndex="5"></asp:TextBox>--%>
+                    <cc1:DatePicker ID="DatePicker1" runat="server" Width="100px" PaneWidth="200px" EnableViewState="true" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" Height="20px" TabIndex="5">
+            <PaneTableStyle BorderColor="#707070" BorderWidth="1px" BorderStyle="Solid" />
+            <PaneHeaderStyle BackColor="#0099FF" />
+            <TitleStyle ForeColor="White" Font-Bold="true" />
+            <NextPrevMonthStyle ForeColor="White" Font-Bold="true" />
+            <NextPrevYearStyle ForeColor="#E0E0E0" Font-Bold="true" />
+            <DayHeaderStyle BackColor="#E8E8E8" />
+            <TodayStyle BackColor="#FFFFCC" ForeColor="#000000" Font-Underline="false" BorderColor="#FFCC99"/>
+            <AlternateMonthStyle BackColor="#F0F0F0" ForeColor="#707070" Font-Underline="false"/>
+            <MonthStyle BackColor="" ForeColor="#000000" Font-Underline="false"/>
+        </cc1:DatePicker>
                 </td>
                 <td class="auto-style14">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="Red" ControlToValidate="txtTillDate" runat="server" ErrorMessage="Select Till date"></asp:RequiredFieldValidator>
+                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="Red" ControlToValidate="txtTillDate" runat="server" ErrorMessage="Select Till date"></asp:RequiredFieldValidator>--%>
+                    <asp:Label ID="ErrDate" ForeColor="Red" runat="server" ></asp:Label>
                 </td>
 
             </tr>
