@@ -173,7 +173,7 @@ FormColumnError {
                  
                 </td>
                 <td ID="TableCell20" runat="server"  >
-                    <asp:TextBox ID="txtEmail" runat="server" Height="24"  Width="300" TextMode="Email" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="30" TabIndex="7"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" Height="24"  Width="300"  BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="30" TabIndex="7"></asp:TextBox>
                  <asp:RequiredFieldValidator ID="valtxtEmail" runat="server" ForeColor="Red" ControlToValidate="txtEmail" ErrorMessage="must enter your Email" SetFocusOnError="True"></asp:RequiredFieldValidator>
                     <asp:Label ID="lblErrorEmail" runat="server" ForeColor="Red" Text="Already exists" Visible="False"></asp:Label>
                  
