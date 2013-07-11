@@ -90,8 +90,8 @@
             <header>
           <div class="header_res">
             <div class="main_resize">
-              <div class="logo"><a href="Register.aspx"><span>YARD</span>eCART</a><br />
-                  <div style="color:white; height: 19px; padding-left:140px; padding-top:10px"><label id="welcomeMessage" runat="server">Welcome Guest</label></div></div>
+              <div class="logo"><a href="Contact.aspx"><span>YARD</span>eCART</a><br />
+                  <div style="color:white; height: 19px; padding-left:50px; padding-top:10px"><label id="welcomeMessage" runat="server">Welcome Guest</label></div></div>
               <div class="menu">
                 <nav> 
                   <script type="text/javascript" src="html-default/js/menu_html_block.js"></script> 
@@ -134,12 +134,12 @@
                 </div>
           </div>
           <!--main_resize end  -->
-    
         <div class="footer">
         <div class="main_resize"> &copy; Copyright YARDeCART. All Rights Reserved. 2013</div>
         <!--main_resize end  -->
         <div class="clr"></div>
         </div>
+        
         </div>
     </form>
 </body>

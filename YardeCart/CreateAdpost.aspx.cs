@@ -11,7 +11,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls.WebParts;
-using Microsoft.AspNet.Membership.OpenAuth;
+//using Microsoft.AspNet.Membership.OpenAuth;
 using YardeCart.Business;
 using YardeCart.Common;
 using YardeCart.Entity;

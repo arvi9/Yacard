@@ -51,7 +51,7 @@ namespace YardeCart
                 string imageUrl = appPath + strImgpath[0];
                 adimage1.InnerHtml = string.Format(
                     "<a align=center href='{0}'><br/><img  align=center src='{0}' " +
-                    "width=350px  height=450px  alt='' border=5></a>",
+                    "width=350px  height=450px  alt='' border=2 bordorcolor='black'></a>",
                     imageUrl);
                 for (int intCnt = 1; strImgpath.Length > intCnt;intCnt++ )
                 {
@@ -63,7 +63,7 @@ namespace YardeCart
                     imageUrl = appPath + strImgpath[1];
                     adimage2.InnerHtml = string.Format(
                                         "<a align=center href='{0}'><br/><img  align=center src='{0}' " +
-                                        "width=150px  height=200px  alt='' border=2></a>",
+                                        "width=200px  height=200px  alt='' border=2 bordorcolor='black'></a>",
                                         imageUrl);
                 }
                 if (strImgpath.Length >= 3)
@@ -71,7 +71,7 @@ namespace YardeCart
                     imageUrl = appPath + strImgpath[2];
                     adimage3.InnerHtml = string.Format(
                                         "<a align=center href='{0}'><br/><img  align=center src='{0}' " +
-                                        "width=150px  height=200px  alt='' border=2></a>",
+                                        "width=200px  height=200px  alt='' border=2 bordorcolor='black'></a>",
                                         imageUrl);
                 }
                 if (strImgpath.Length >= 4)
@@ -79,7 +79,7 @@ namespace YardeCart
                     imageUrl = appPath + strImgpath[3];
                     adimage4.InnerHtml = string.Format(
                                         "<a align=center href='{0}'><br/><img  align=center src='{0}' " +
-                                        "width=150px  height=200px  alt='' border=2></a>",
+                                        "width=200px  height=200px  alt='' border=2 bordorcolor='black'></a>",
                                         imageUrl);
                 }
                 if (strImgpath.Length == 5)
@@ -87,7 +87,7 @@ namespace YardeCart
                     imageUrl = appPath + strImgpath[4];
                     adimage5.InnerHtml = string.Format(
                                         "<a align=center href='{0}'><br/><img  align=center src='{0}' " +
-                                        "width=150px  height=200px  alt='' border=2></a>",
+                                        "width=200px  height=200px  alt='' border=2 bordorcolor='black'></a>",
                                         imageUrl);
                 }
                 spnVideo.InnerHtml = BindUrl(strVideolink);

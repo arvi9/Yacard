@@ -2,7 +2,8 @@
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <div>  
-        <table>
+      <table style="table-layout: fixed; border-spacing: 10px; padding-left: 25px; padding-top: 10px"
+           contenteditable="false" border="1" role="article" runat="server" id="Adtable" >
             <tr>
                 <td class="auto-style2" colspan="3" style="font-family: 'Arial Black'; color: #CC3300; font-size: xx-large; vertical-align: top" >
                     <asp:Label ID="lblCategory" runat="server" ></asp:Label>
@@ -48,7 +49,7 @@
             
             
             <tr>
-                <td class="auto-style2" colspan="3">
+                <td class="auto-style2" colspan="3" style="vertical-align:central;text-align:center;">
                     <span id="spnVideo" runat="server"></span>
 
 
@@ -56,7 +57,7 @@
             </tr>
             
             <tr>
-                <td class="auto-style2" colspan="3">
+                <td class="auto-style2" colspan="3" style="vertical-align:central;text-align:center;">
                     <asp:Button ID="btnBuy" Width="100" runat="server" Text="BUY" BorderStyle="Groove" BorderWidth="1px"  OnClick="btnBuy_Click" />
 
                 </td>

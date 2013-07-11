@@ -123,10 +123,10 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="ActivateUser.aspx" />
+    <Content Include="AdminSection.aspx" />
     <Content Include="BuyAdpost.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
-    <Content Include="Manage.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Register.aspx" />
     <Content Include="ViewAds.aspx" />
@@ -2038,6 +2038,13 @@
     <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
     </Compile>
+    <Compile Include="AdminSection.aspx.cs">
+      <DependentUpon>AdminSection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSection.aspx.designer.cs">
+      <DependentUpon>AdminSection.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BuyAdpost.aspx.cs">
       <DependentUpon>BuyAdpost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2074,13 +2081,6 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Manage.aspx.cs">
-      <DependentUpon>Manage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Manage.aspx.designer.cs">
-      <DependentUpon>Manage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

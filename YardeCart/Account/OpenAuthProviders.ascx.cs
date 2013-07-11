@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Microsoft.AspNet.Membership.OpenAuth;
+//using Microsoft.AspNet.Membership.OpenAuth;
 
 namespace YardeCart.Account
 {
@@ -28,7 +28,7 @@ namespace YardeCart.Account
                     redirectUrl += "?ReturnUrl=" + HttpUtility.UrlEncode(resolvedReturnUrl);
                 }
 
-                OpenAuth.RequestAuthentication(provider, redirectUrl);
+                //OpenAuth.RequestAuthentication(provider, redirectUrl);
             }
         }
 
