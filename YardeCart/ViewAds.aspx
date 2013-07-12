@@ -2,8 +2,8 @@
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <div>  
-      <table style="table-layout: fixed; border-spacing: 10px; padding-left: 25px; padding-top: 10px"
-           contenteditable="false" border="1" role="article" runat="server" id="Adtable" >
+      <table style="border-spacing: 10px; padding-left: 25px; padding-top: 10px;width:500px"
+           contenteditable="false" border="1" runat="server" id="Adtable" >
             <tr>
                 <td class="auto-style2" colspan="3" style="font-family: 'Arial Black'; color: #CC3300; font-size: xx-large; vertical-align: top" >
                     <asp:Label ID="lblCategory" runat="server" ></asp:Label>

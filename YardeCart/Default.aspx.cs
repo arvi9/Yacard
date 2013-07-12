@@ -95,7 +95,7 @@ namespace YardeCart
 
             string path = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + strImgpath[0];
             string strViewlink = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/ViewAds.aspx?aid=" + aid + "&uid=" + userid;
-            string strBuylink = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/BuyAdpost.aspx";
+            string strBuylink = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/BuyAdpost.aspx?aid=" + aid + "&uid=" + userid;
 
 
             string htmlSText = @"<table>
