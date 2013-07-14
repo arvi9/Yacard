@@ -40,6 +40,15 @@ namespace YardeCart {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl welcomeMessage;
         
         /// <summary>
+        /// currentLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl currentLocation;
+        
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

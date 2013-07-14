@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Hammock">
+      <HintPath>..\External-Dlls\Hammock.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="SlimeeLibrary">
       <HintPath>..\External-Dlls\SlimeeLibrary.dll</HintPath>
@@ -91,13 +94,15 @@
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="WorldDomination.Net.IPAddressExtensions">
+      <HintPath>..\External-Dlls\WorldDomination.Net.IPAddressExtensions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="ActivateUser.aspx" />
     <Content Include="AdminSection.aspx" />
     <Content Include="BuyAdpost.aspx" />
-    <Content Include="BuyAdslist.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
@@ -2026,13 +2031,6 @@
     <Compile Include="BuyAdpost.aspx.designer.cs">
       <DependentUpon>BuyAdpost.aspx</DependentUpon>
     </Compile>
-    <Compile Include="BuyAdslist.aspx.cs">
-      <DependentUpon>BuyAdslist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BuyAdslist.aspx.designer.cs">
-      <DependentUpon>BuyAdslist.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2178,7 +2176,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>1066</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/YardeCart</IISUrl>
+          <IISUrl>http://192.168.0.102/YardeCart</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

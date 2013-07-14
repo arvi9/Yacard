@@ -86,17 +86,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="body_pattern">
+        <div class="body_pattern" style="background-color:white">
             <header>
           <div class="header_res">
             <div class="main_resize">
               <div class="logo"><a href="Contact.aspx"><span>YARD</span>eCART</a><br />
-                  <div style="color:white; height: 19px; padding-left:50px; padding-top:10px"><label id="welcomeMessage" runat="server">Welcome Guest</label></div></div>
+                  <div style="color:white; height: 19px; padding-left:30px; padding-top:10px;">
+                      <label id="welcomeMessage" runat="server">Welcome Guest</label>
+                      <label id="currentLocation" runat="server"> / Current Location:</label>
+                  </div></div>
               <div class="menu">
                 <nav> 
                   <script type="text/javascript" src="html-default/js/menu_html_block.js"></script> 
-                    
-                    
                  </nav>
               </div>
               <!-- /menu -->
