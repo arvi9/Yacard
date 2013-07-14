@@ -58,9 +58,11 @@ namespace YardeCart
                 {
                     fileSlide = @"<li><img src='";
 
-                    fileSlide += strImgpath[i] +"' /></li>";
+                    //appPath = appPath+strImgpath[i];
+                    fileSlide += appPath + strImgpath[i] + "' /></li>";
 
                     divSlider += fileSlide;
+                    break;
                 }
 
                 divImageSlider.InnerHtml = divSlider + "</ul>";

@@ -95,7 +95,7 @@ namespace YardeCart
                 //Response.Write(dynamicResult["latitude"].ToString());
                 //Response.Write(dynamicResult["longitude"].ToString());
 
-                currentLocation.InnerText = string.Format("Country: {0}/{1}, City: {2}/{3} ",
+                currentLocation.InnerText = string.Format(" / Country: {0}/{1}, City: {2}/{3} ",
                     dynamicResult["countryName"].ToString(), dynamicResult["countryCode"].ToString(),dynamicResult["city"].ToString(),
                     dynamicResult["region"].ToString());
 

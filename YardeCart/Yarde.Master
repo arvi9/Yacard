@@ -9,6 +9,21 @@
     .footer1, .push {
     height: 4em;
 }
+
+        .auto-style1
+        {
+            font-size: xx-small;
+        }
+        .auto-style2
+        {
+            font-size: xx-small;
+            font-weight: normal;
+        }
+        .auto-style3
+        {
+            font-weight: normal;
+        }
+
         </style>
 
     <meta name="description" content="Enter Your Website Description Here">
@@ -98,7 +113,9 @@
               <div class="menu">
                 <nav> 
                   <script type="text/javascript" src="html-default/js/menu_html_block.js"></script> 
+                   
                  </nav>
+                 
               </div>
               <!-- /menu -->
               <div class="clr"></div>
