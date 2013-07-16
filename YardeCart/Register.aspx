@@ -176,7 +176,8 @@ FormColumnError {
                     <asp:TextBox ID="txtEmail" runat="server" Height="24"  Width="300"  BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="30" TabIndex="7"></asp:TextBox>
                  <asp:RequiredFieldValidator ID="valtxtEmail" runat="server" ForeColor="Red" ControlToValidate="txtEmail" ErrorMessage="must enter your Email" SetFocusOnError="True"></asp:RequiredFieldValidator>
                     <asp:Label ID="lblErrorEmail" runat="server" ForeColor="Red" Text="Already exists" Visible="False"></asp:Label>
-                 
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtEmail" ForeColor="Red"
+                        ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"   EnableClientScript="true" ErrorMessage="Invalid Email"></asp:RegularExpressionValidator>
                 </td>
                 <td ID="TableCell21" runat="server">
                     

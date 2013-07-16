@@ -12,9 +12,45 @@ namespace YardeCart.Business
     {
         public DataTable SelectCategory()
         {
-            DALComponent dalCom = new DALComponent();
-            dalCom.SqlCommandText = "SelectCategory";
-            return dalCom.SelectRecord();
+            DALComponent dalComponent = new DALComponent();
+            dalComponent.SqlCommandText = "SelectCategory";
+            return dalComponent.SelectRecord();
         }
+
+        public int CategoryUpdate(int catid,string catname)
+        {
+            try
+            {
+                DALComponent dalComponent = new DALComponent();
+
+                dalComponent.SetParameters("@categoryId", SqlDbType.Int, 4, catid);
+                dalComponent.SetParameters("@categoryName", SqlDbType.VarChar, 50, catname);
+                dalComponent.SqlCommandText = "CategoryEdit";
+                int x = dalComponent.CreateRecord();
+                return x;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return 0;
+        }
+
+        public void CategoryDelete(int catid)
+        {
+            try
+            {
+                DALComponent dalComponent = new DALComponent();
+                dalComponent.SetParameters("@categoryId", SqlDbType.Int, 4, catid);
+                dalComponent.SqlCommandText = "CategoryDelete";
+                int x = dalComponent.DeleteRecord();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
     }
 }

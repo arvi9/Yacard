@@ -10,7 +10,7 @@ document.writeln('  <li id="viewadid"><a href="ViewPostedAd.aspx" class="menu_na
 document.writeln('  </li>');
 
 
-document.writeln('  <li id="admintidli"><a href="Login.aspx" class="menu_navigation"><span>Admin</span></a>');
+document.writeln('  <li id="admintidli"><a href="AdminLogin.aspx" class="menu_navigation"><span>Admin</span></a>');
 document.writeln('  </li>');
 
 

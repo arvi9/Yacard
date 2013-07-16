@@ -427,6 +427,15 @@ namespace YardeCart {
         protected global::System.Web.UI.WebControls.Label lblErrorEmail;
         
         /// <summary>
+        /// RegularExpressionValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
+        
+        /// <summary>
         /// TableCell21 control.
         /// </summary>
         /// <remarks>

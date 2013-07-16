@@ -103,5 +103,35 @@ namespace YardeCart.Business
             return dalComponent.SelectRecord();
         }
 
+        public void UpdateAdDeleteStatus(int adpostId, int delVal)
+        {
+            try
+            {
+                dalComponent.SetParameters("@adpostid", SqlDbType.Int, 4, adpostId);
+                dalComponent.SetParameters("@delvalue", SqlDbType.Int, 4, delVal);
+                dalComponent.SqlCommandText = "UpdateAdDeleteStatus";
+                int x = dalComponent.CreateRecord();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public void UpdateAdBlockStatus(int adpostId, int blockVal)
+        {
+            try
+            {
+                dalComponent.SetParameters("@adpostid", SqlDbType.Int, 4, adpostId);
+                dalComponent.SetParameters("@blockvalue", SqlDbType.Int, 4, blockVal);
+                dalComponent.SqlCommandText = "UpdateAdBlockStatus";
+                int x = dalComponent.CreateRecord();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
     }
 }

@@ -47,19 +47,19 @@ namespace YardeCart
             {
                 string ErrorMsg = "";
                 userProfile.UserId = 0;
-                userProfile.FirstName = txtFirstname.Text.ToString();
-                userProfile.LastName = txtLastname.Text.ToString();
-                userProfile.Email = txtEmail.Text.ToString();
-                userProfile.UserName = txtUsername.Text.ToString();
-                userProfile.UserPasswrod = txtPassword.Text.ToString();
-                userProfile.Address = txtAddress.Text.ToString();
-                userProfile.Mobile = txtMobile.Text.ToString();
-                userProfile.StreetName = txtStreetname.Text.ToString();
-                userProfile.CityId = Convert.ToInt32(ddlCity.SelectedItem.Value.ToString());
-                userProfile.StateId = Convert.ToInt32(ddlState.SelectedItem.Value.ToString());
-                userProfile.ZipCode = txtZipcode.Text.ToString();
-                userProfile.CountryId = Convert.ToInt32(ddlCountry.SelectedItem.Value.ToString());
-                userProfile.Gender = int.Parse(RadioButtonList1.SelectedIndex.ToString());
+                userProfile.FirstName = txtFirstname.Text.ToString().Trim();
+                userProfile.LastName = txtLastname.Text.ToString().Trim();
+                userProfile.Email = txtEmail.Text.ToString().Trim();
+                userProfile.UserName = txtUsername.Text.ToString().Trim();
+                userProfile.UserPasswrod = txtPassword.Text.ToString().Trim();
+                userProfile.Address = txtAddress.Text.ToString().Trim();
+                userProfile.Mobile = txtMobile.Text.ToString().Trim();
+                userProfile.StreetName = txtStreetname.Text.ToString().Trim();
+                userProfile.CityId = Convert.ToInt32(ddlCity.SelectedItem.Value.ToString().Trim());
+                userProfile.StateId = Convert.ToInt32(ddlState.SelectedItem.Value.ToString().Trim());
+                userProfile.ZipCode = txtZipcode.Text.ToString().Trim();
+                userProfile.CountryId = Convert.ToInt32(ddlCountry.SelectedItem.Value.ToString().Trim());
+                userProfile.Gender = int.Parse(RadioButtonList1.SelectedIndex.ToString().Trim());
                 ErrorMsg = "Error:";
                 int intErrorCount = 0;
                 

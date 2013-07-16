@@ -42,7 +42,7 @@ namespace YardeCart
 
             try
             {
-                int userId = userInfoBll.ValidateUser(login.UserName,login.Password);
+                int userId = userInfoBll.ValidateUser(login.UserName.Trim(), login.Password.Trim());
                 if (string.IsNullOrEmpty(userId.ToString().Trim()))
                 {
                     intErr = 1;
@@ -70,9 +70,9 @@ namespace YardeCart
                     if (login.RememberMeSet == true)
                     {
                         Response.Cookies.Clear();
-                        HttpCookie cUserId = new HttpCookie("UserId", userId.ToString());
-                        HttpCookie cUsername = new HttpCookie("UserName", login.UserName.ToString());
-                        HttpCookie cPassword = new HttpCookie("Password", login.Password.ToString());
+                        HttpCookie cUserId = new HttpCookie("UserId", userId.ToString().Trim());
+                        HttpCookie cUsername = new HttpCookie("UserName", login.UserName.ToString().Trim());
+                        HttpCookie cPassword = new HttpCookie("Password", login.Password.ToString().Trim());
                         cUserId.Expires = DateTime.Now.AddDays(5);
                         cUsername.Expires = DateTime.Now.AddDays(5);
                         cPassword.Expires = DateTime.Now.AddDays(5);

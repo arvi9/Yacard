@@ -110,23 +110,47 @@ namespace YardeCart.Business
             return null;
         }
 
-        #endregion
-
-        public void UpdateImage(string imageURL, int userId)
+        public DataTable SelectAllProfile()
         {
             try
             {
-
-                dalComponent.SetParameters("@avatarURL", SqlDbType.VarChar, 100, imageURL);
-                dalComponent.SetParameters("@UserId", SqlDbType.Int, 4, userId);
-                dalComponent.SqlCommandText = "UpdateImage";
-                int x = dalComponent.CreateRecord();
+                DataTable dt = new DataTable();
+                UserProfile userProfile = new UserProfile();
+                dalComponent.SqlCommandText = "SelectAllProfile";
+                return dt = dalComponent.SelectRecord();
             }
             catch (Exception ex)
             {
                 throw;
             }
         }
+
+        #endregion
+
+        #region .. FOR LOGIN, VALIDATE USERNAME & PASSWORD ..
+
+        public int ValidateAdmin(string AdminName, string AdminPassword)
+        {
+            try
+            {
+                dalComponent.SetParameters("@adminName", SqlDbType.VarChar, 50, AdminName);
+                dalComponent.SetParameters("@adminPassword", SqlDbType.VarChar, 50, AdminPassword);
+                dalComponent.SqlCommandText = "ValidateAdmin";
+                object y = dalComponent.SelectRecordValue();
+                if (int.Parse(y.ToString()) > 0)
+                    return int.Parse(y.ToString());
+                else
+                    return 0;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+            return 0;
+        }
+
+        #endregion
 
         #region .. FOR LOGIN, VALIDATE USERNAME & PASSWORD ..
 
@@ -189,6 +213,36 @@ namespace YardeCart.Business
         }
 
         #endregion
+
+        public void UpdateUserDeleteStatus(int userId, int delVal)
+        {
+            try
+            {
+                dalComponent.SetParameters("@userid", SqlDbType.Int, 4, userId);
+                dalComponent.SetParameters("@delvalue", SqlDbType.Int, 4, delVal);
+                dalComponent.SqlCommandText = "UpdateUserDeleteStatus";
+                int x = dalComponent.CreateRecord();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public void UpdateUserBlockStatus(int userId, int blockVal)
+        {
+            try
+            {
+                dalComponent.SetParameters("@userid", SqlDbType.Int, 4, userId);
+                dalComponent.SetParameters("@blockvalue", SqlDbType.Int, 4, blockVal);
+                dalComponent.SqlCommandText = "UpdateUserBlockStatus";
+                int x = dalComponent.CreateRecord();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
 
         public void UpdateActivation(int userId)
         {
