@@ -22,7 +22,9 @@ namespace YardeCart
         {
             if (!IsPostBack)
             {
-                LoadUsers();
+                tblUser.Visible = false;
+                lblMessage.Visible = false;
+                lblError.Visible = false;
 
                 btnBlock.Attributes.Add("onclick",
          "return confirm('Are you sure you want to block selected User(s) ?');");
@@ -32,9 +34,24 @@ namespace YardeCart
         void LoadUsers()
         {
             objUser = new UserInfoBll();
+            if (txtSearch.Text.ToString().Trim()=="")
             dt = objUser.SelectAllProfile();
+            else
+                dt = objUser.SearchUsers(txtSearch.Text.ToString().Trim());
             GridView1.DataSource = dt;
             GridView1.DataBind();
+
+            if (dt.Rows.Count > 0)
+            {
+                tblUser.Visible = true;
+                lblError.Visible = false;
+            }
+            else
+            {
+                tblUser.Visible = false;
+                lblError.Visible = true;
+                lblError.Text = "No Users";
+            }
         }
 
         protected void btnBlock_Click(object sender, EventArgs e)
@@ -52,7 +69,11 @@ namespace YardeCart
 
                 objUser = new UserInfoBll();
                 objUser.UpdateUserBlockStatus(Convert.ToInt32(sUserId), intBlockVal);
+
             }
+
+            lblMessage.Visible = true;
+            lblMessage.Text = "Selected users are blocked";
         }
 
         protected void btnCheckAll_Click(object sender, EventArgs e)
@@ -77,6 +98,12 @@ namespace YardeCart
         {
             GridView1.PageIndex = e.NewPageIndex;
             LoadUsers();
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadUsers();
+            
         }
     }
 }

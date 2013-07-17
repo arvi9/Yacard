@@ -17,7 +17,7 @@ namespace YardeCart
     {
         DataTable dt = null;
         Category objCategory = null;
-        int PageSize = 15;
+        int PageSize = 50;
 
         protected void Page_Load(object sender, EventArgs e)
         {

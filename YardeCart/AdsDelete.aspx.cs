@@ -22,7 +22,9 @@ namespace YardeCart
         {
             if (!IsPostBack)
             {
-                LoadAds();
+                tblAdpost.Visible = false;
+                lblError.Visible = false;
+                lblMessage.Visible = false;
 
                 btnBlock.Attributes.Add("onclick",
          "return confirm('Are you sure you want to delete selected Ad(s) ?');");
@@ -32,7 +34,26 @@ namespace YardeCart
         void LoadAds()
         {
             objAd = new AdDetailsBll();
-            dt = objAd.GetAllAdDetails();
+
+            if (rdoSearch.SelectedItem.Value.ToString() == "0")
+            {
+                dt = objAd.SearchAdsByAdtitle(txtSearch.Text.ToString().Trim());    //GetAllAdDetails();
+            }
+            else
+            {
+                dt = objAd.SearchAdsByUsername(txtSearch.Text.ToString().Trim());
+            }
+            if (dt.Rows.Count > 0)
+            {
+                tblAdpost.Visible = true;
+                lblError.Visible = false;
+            }
+            else
+            {
+                tblAdpost.Visible = false;
+                lblError.Visible = true;
+                lblError.Text = "No Ads";
+            }
             GridView1.DataSource = dt;
             GridView1.DataBind();
         }
@@ -53,6 +74,9 @@ namespace YardeCart
                 objAd = new AdDetailsBll();
                 objAd.UpdateAdDeleteStatus(Convert.ToInt32(sAdId), intBlockVal);
             }
+            lblMessage.Visible = true;
+            lblMessage.Text = "Selected Ads are deleted";
+        
         }
 
         protected void btnCheckAll_Click(object sender, EventArgs e)
@@ -76,6 +100,11 @@ namespace YardeCart
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             GridView1.PageIndex = e.NewPageIndex;
+            LoadAds();
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
             LoadAds();
         }
     }

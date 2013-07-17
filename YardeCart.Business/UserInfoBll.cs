@@ -272,5 +272,20 @@ namespace YardeCart.Business
             }
         }
 
+        public DataTable SearchUsers(string Keyword)
+        {
+            try
+            {
+                dalComponent = new DALComponent();
+                dalComponent.SetParameters("@Keyword", SqlDbType.VarChar, 200, Keyword);
+                dalComponent.SqlCommandText = "SearchUsers";
+                return dalComponent.SelectRecord();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
     }
 }

@@ -133,5 +133,35 @@ namespace YardeCart.Business
             }
         }
 
+        public DataTable SearchAdsByAdtitle(string Keyword)
+        {
+            try
+            {
+                dalComponent = new DALComponent();
+                dalComponent.SetParameters("@Keyword", SqlDbType.VarChar, 200, Keyword);
+                dalComponent.SqlCommandText = "SearchAdsByAdtitle";
+                return dalComponent.SelectRecord();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public DataTable SearchAdsByUsername(string Keyword)
+        {
+            try
+            {
+                dalComponent = new DALComponent();
+                dalComponent.SetParameters("@Keyword", SqlDbType.VarChar, 200, Keyword);
+                dalComponent.SqlCommandText = "SearchAdsByUsername";
+                return dalComponent.SelectRecord();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
     }
 }

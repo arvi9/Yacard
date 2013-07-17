@@ -126,6 +126,8 @@
           </div>
             </header>
           <!--main_resize end  -->
+            <div class="main_resize">
+
                         <div>
                         <table border="1" style="border: thin solid #336699">
                             <tr style="border:solid;vertical-align:top;" aria-readonly="False" aria-sort="none">
@@ -161,6 +163,7 @@
                                 </td>
                             </tr>
                         </table>
+                        </div>
                         </div>
               <br />
           <br />
