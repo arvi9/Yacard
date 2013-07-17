@@ -101,12 +101,21 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="ActivateUser.aspx" />
+    <Content Include="AdminLogin.aspx" />
+    <Content Include="AdminPage.aspx" />
     <Content Include="AdminSection.aspx" />
+    <Content Include="AdsBlock.aspx" />
+    <Content Include="AdsDelete.aspx" />
+    <Content Include="AdsList.aspx" />
     <Content Include="BuyAdpost.aspx" />
+    <Content Include="BuyAdslist.aspx" />
+    <Content Include="CategoryList.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Register.aspx" />
+    <Content Include="UsersBlock.aspx" />
+    <Content Include="UsersDelete.aspx" />
     <Content Include="ViewAds.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
@@ -2001,6 +2010,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Bundle.config" />
+    <Content Include="YardeAdmin.Master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivateUser.aspx.cs">
@@ -2017,12 +2027,47 @@
     <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
       <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
     </Compile>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminSection.aspx.cs">
       <DependentUpon>AdminSection.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminSection.aspx.designer.cs">
       <DependentUpon>AdminSection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdsBlock.aspx.cs">
+      <DependentUpon>AdsBlock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdsBlock.aspx.designer.cs">
+      <DependentUpon>AdsBlock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdsDelete.aspx.cs">
+      <DependentUpon>AdsDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdsDelete.aspx.designer.cs">
+      <DependentUpon>AdsDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdsList.aspx.cs">
+      <DependentUpon>AdsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdsList.aspx.designer.cs">
+      <DependentUpon>AdsList.aspx</DependentUpon>
     </Compile>
     <Compile Include="BuyAdpost.aspx.cs">
       <DependentUpon>BuyAdpost.aspx</DependentUpon>
@@ -2031,12 +2076,39 @@
     <Compile Include="BuyAdpost.aspx.designer.cs">
       <DependentUpon>BuyAdpost.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BuyAdslist.aspx.cs">
+      <DependentUpon>BuyAdslist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BuyAdslist.aspx.designer.cs">
+      <DependentUpon>BuyAdslist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryList.aspx.cs">
+      <DependentUpon>CategoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CategoryList.aspx.designer.cs">
+      <DependentUpon>CategoryList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersBlock.aspx.cs">
+      <DependentUpon>UsersBlock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersBlock.aspx.designer.cs">
+      <DependentUpon>UsersBlock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UsersDelete.aspx.cs">
+      <DependentUpon>UsersDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UsersDelete.aspx.designer.cs">
+      <DependentUpon>UsersDelete.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewAds.aspx.cs">
       <DependentUpon>ViewAds.aspx</DependentUpon>
@@ -2093,13 +2165,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Yarde.Master.cs">
       <DependentUpon>Yarde.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2121,6 +2186,13 @@
     <Compile Include="ViewPostedAd.aspx.designer.cs">
       <DependentUpon>ViewPostedAd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="YardeAdmin.Master.cs">
+      <DependentUpon>YardeAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YardeAdmin.Master.designer.cs">
+      <DependentUpon>YardeAdmin.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2137,7 +2209,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
-    <Content Include="WebForm1.aspx" />
     <Content Include="Yarde.Master" />
   </ItemGroup>
   <ItemGroup>
