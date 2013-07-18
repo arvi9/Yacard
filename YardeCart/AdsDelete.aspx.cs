@@ -74,8 +74,8 @@ namespace YardeCart
                 objAd = new AdDetailsBll();
                 objAd.UpdateAdDeleteStatus(Convert.ToInt32(sAdId), intBlockVal);
             }
-            lblMessage.Visible = true;
-            lblMessage.Text = "Selected Ads are deleted";
+            //lblMessage.Visible = true;
+            //lblMessage.Text = "Selected Ads are deleted";
         
         }
 

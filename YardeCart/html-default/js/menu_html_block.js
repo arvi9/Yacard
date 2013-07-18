@@ -10,7 +10,18 @@ document.writeln('  <li id="viewadid"><a href="ViewPostedAd.aspx" class="menu_na
 document.writeln('  </li>');
 
 
-document.writeln('  <li id="admintidli"><a href="AdminLogin.aspx" class="menu_navigation"><span>Admin</span></a>');
+document.writeln('  <li id="admintidli"><a href="#" class="sf-menu sf-vertical"><span>Admin</span></a>');
+document.writeln('  <ul id="adminsuball">');
+document.writeln('  <li><a href="AdminLogin.aspx" class="menu_navigation"><span>Login</span></a></li>');
+document.writeln('  </ul>');
+document.writeln('  <ul id="adminsubmenu">');
+document.writeln('  <li><a href="CategoryGroup.aspx" class="menu_navigation"><span>Category Group</span></a></li>');
+document.writeln('  <li><a href="CategoryList.aspx" class="menu_navigation"><span>Category</span></a></li>');
+document.writeln('  <li><a href="UsersBlock.aspx" class="menu_navigation"><span>Block Users</span></a></li>');
+document.writeln('  <li><a href="UsersDelete.aspx" class="menu_navigation"><span>Delete Users</span></a></li>');
+document.writeln('  <li><a href="AdsBlock.aspx" class="menu_navigation"><span>Block Adposts</span></a></li>');
+document.writeln('  <li><a href="AdsDelete.aspx" class="menu_navigation"><span>Delete Adposts</span></a></li>');
+document.writeln('  </ul>');
 document.writeln('  </li>');
 
 

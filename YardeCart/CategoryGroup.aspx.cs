@@ -13,7 +13,7 @@ using YardeCart.Business;
 
 namespace YardeCart
 {
-    public partial class CategoryList : System.Web.UI.Page
+    public partial class CategoryGroup : System.Web.UI.Page
     {
         DataTable dt = null;
         Category objCategory = null;
@@ -23,7 +23,6 @@ namespace YardeCart
         {
             if (!Page.IsPostBack)
             {
-                LoadCategoryGroup(ddlCategory);
                 LoadCategory();
             }
         }
@@ -31,7 +30,7 @@ namespace YardeCart
         void LoadCategory()
         {
             objCategory = new Category();
-            dt = objCategory.SelectCategory();
+            dt = objCategory.SelectCategoryGroup();
 
             if (dt.Rows.Count > PageSize)
                 tblPaging.Visible = true;
@@ -77,27 +76,13 @@ namespace YardeCart
             }
             else
                 PagingRow.Visible = false;
-        }
 
-        void LoadCategoryGroup(DropDownList ddl)
+        }
+        
+        private void BindList(DataTable dataTable)
         {
-            Category cat = new Category();
-            ddl.Items.Clear();
-            DataTable dt1 = cat.SelectCategoryGroup();
-            ListItem listItem = new ListItem();
-            listItem.Text = "<Select Category Group>";
-            listItem.Value = "0";
-            //listItem.Attributes.Add("style", "background-Black:white;color:White");
-            ddl.Items.Add(listItem);
-            for (int i = 0; i < dt1.Rows.Count; i++)
-            {
-                listItem = new ListItem();
-                listItem.Text = dt1.Rows[i]["CategoryGroupName"].ToString();
-                listItem.Value = dt1.Rows[i]["CategoryGroupId"].ToString();
-                //listItem.Attributes.Add("style", "background-color:Black;color:white");
-                ddl.Items.Add(listItem);
-            }
-            
+            DataList1.DataSource = dataTable;
+            DataList1.DataBind();
         }
 
         private void ReloadControl()
@@ -108,7 +93,6 @@ namespace YardeCart
                 BindList(ManagePaging((DataTable)ViewState["dataTable"]));
 
         }
-
 
         protected void LinkButtonFirst_Click(object sender, EventArgs e)
         {
@@ -157,14 +141,6 @@ namespace YardeCart
 
         }
 
-        private void BindList(DataTable dataTable)
-        {
-            DataList1.DataSource = dataTable;
-            DataList1.DataBind();
-        }
-
-
-
         private void BindList(PagedDataSource pageDataSource)
         {
 
@@ -174,10 +150,7 @@ namespace YardeCart
 
             ShowPagingLinks();
 
-        }  
-   
-
-
+        }
 
         private void ShowPagingLinks()
         {
@@ -222,8 +195,6 @@ namespace YardeCart
 
         }
 
-
-
         private void ShowTotalNumberOfRecords()
         {
 
@@ -252,8 +223,7 @@ namespace YardeCart
 
             }
 
-        }  
-
+        }
 
         private void ShowPageNumbers()
         {
@@ -356,9 +326,7 @@ namespace YardeCart
 
             }
 
-        }  
-
-
+        }
 
         private PagedDataSource ManagePaging(DataTable dTable)
         {
@@ -408,14 +376,14 @@ namespace YardeCart
 
             }
 
-        }  
+        }
 
         protected void DataList1_DeleteCommand(object source, DataListCommandEventArgs e)
         {
             objCategory = new Category();
             int catId = (int)DataList1.DataKeys[(int)e.Item.ItemIndex];
 
-            objCategory.CategoryDelete(catId);
+            objCategory.CategoryGroupDelete(catId);
 
             DataList1.EditItemIndex = -1;
             LoadCategory();
@@ -428,14 +396,7 @@ namespace YardeCart
         protected void DataList1_EditCommand(object source, DataListCommandEventArgs e)
         {
             DataList1.EditItemIndex = e.Item.ItemIndex;
-            DropDownList ddlCat = (DropDownList)e.Item.FindControl("ddlCat");
-            //LoadCategoryGroup(ddlCat);
-            //for (int i = 0; i < ddlCat.Items.Count; i++)
-            //{
-            //    if (ddlCat.Items[i].Text == e.Item.Attributes["CategoryGroupName"])
-            //        ddlCat.SelectedIndex = i;
-            //}
-            
+
             LoadCategory();
         }
         protected void DataList1_UpdateCommand(object source, DataListCommandEventArgs e)
@@ -448,18 +409,11 @@ namespace YardeCart
             txtId = (TextBox)e.Item.FindControl("txtId");
             TextBox txtCName;
             txtCName = (TextBox)e.Item.FindControl("txtCName");
-            DropDownList ddlCat = (DropDownList)e.Item.FindControl("ddlCat");
-            //LoadCategoryGroup(ddlCat);
-            //for (int i = 0; i < ddlCat.Items.Count; i++)
-            //{
-            //    if (ddlCat.Items[i].Text == e.Item.Attributes["CategoryGroupName"])
-            //        ddlCat.SelectedIndex = i;
-            //}
-            
+
             // string variable to store the connection string
             // retrieved from the connectionStrings section of web.config
             objCategory = new Category();
-            int r = objCategory.CategoryUpdate(Convert.ToInt32(txtId.Text.ToString().Trim()), txtCName.Text.ToString().Trim(),Convert.ToInt32(ddlCat.SelectedItem.Value.ToString()));
+            int r = objCategory.CategoryGroupUpdate(Convert.ToInt32(txtId.Text.ToString().Trim()), txtCName.Text.ToString().Trim());
             // reset the DataList mode back to its initial state  
             DataList1.EditItemIndex = -1;
             LoadCategory();
@@ -468,9 +422,8 @@ namespace YardeCart
         protected void btnSave_Click(object sender, EventArgs e)
         {
             objCategory = new Category();
-            int r = objCategory.CategoryUpdate(0, txtName.Text.ToString().Trim(),Convert.ToInt32(ddlCategory.SelectedItem.Value.ToString()));
+            int r = objCategory.CategoryGroupUpdate(0, txtName.Text.ToString().Trim());
             txtName.Text = "";
-            ddlCategory.SelectedIndex = 0;
             LoadCategory();
         }
     }

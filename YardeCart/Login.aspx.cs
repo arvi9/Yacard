@@ -67,17 +67,18 @@ namespace YardeCart
                     // How long will cookie exist on client hard disk
                     Response.Cookies["TIS"].Expires = DateTime.Now.AddDays(10);
                     
+                    HttpCookie cUserId = new HttpCookie("UserId", userId.ToString().Trim());
+                    cUserId.Expires = DateTime.Now.AddDays(5);
+                    Response.Cookies.Add(cUserId);
+
                     if (login.RememberMeSet == true)
                     {
-                        Response.Cookies.Clear();
-                        HttpCookie cUserId = new HttpCookie("UserId", userId.ToString().Trim());
+                        //Response.Cookies.Clear();
                         HttpCookie cUsername = new HttpCookie("UserName", login.UserName.ToString().Trim());
                         HttpCookie cPassword = new HttpCookie("Password", login.Password.ToString().Trim());
-                        cUserId.Expires = DateTime.Now.AddDays(5);
                         cUsername.Expires = DateTime.Now.AddDays(5);
                         cPassword.Expires = DateTime.Now.AddDays(5);
 
-                        Response.Cookies.Add(cUserId);
                         Response.Cookies.Add(cUsername);
                         Response.Cookies.Add(cPassword);
                     }

@@ -75,8 +75,8 @@ namespace YardeCart
                 objAd.UpdateAdBlockStatus(Convert.ToInt32(sAdId), intBlockVal);
             }
 
-            lblMessage.Visible = true;
-            lblMessage.Text = "Selected Ads are blocked";
+            //lblMessage.Visible = true;
+            //lblMessage.Text = "Selected Ads are blocked";
         
         }
 

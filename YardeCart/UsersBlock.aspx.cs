@@ -72,8 +72,8 @@ namespace YardeCart
 
             }
 
-            lblMessage.Visible = true;
-            lblMessage.Text = "Selected users are blocked";
+            //lblMessage.Visible = true;
+            //lblMessage.Text = "Selected users are blocked";
         }
 
         protected void btnCheckAll_Click(object sender, EventArgs e)

@@ -41,7 +41,14 @@ namespace YardeCart
 
                     if (Session["AdminID"] == null)
                         Session.Add("AdminID", adminId.ToString());
+                    //if (chkRememberMeSet == true)
+                    {
+                        Response.Cookies.Clear();
+                        HttpCookie cadminId = new HttpCookie("AdminID", adminId.ToString().Trim());
+                        cadminId.Expires = DateTime.Now.AddDays(5);
 
+                        Response.Cookies.Add(cadminId);
+                    }
                 }
             }
             catch (System.Threading.ThreadAbortException)
@@ -57,7 +64,7 @@ namespace YardeCart
             }
 
             if (intErr == 0)
-                Response.Redirect("AdminPage.aspx");
+                Response.Redirect("Default.aspx");
         }
 
     }

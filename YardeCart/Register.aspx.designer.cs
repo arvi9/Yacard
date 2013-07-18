@@ -85,15 +85,6 @@ namespace YardeCart {
         protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell3;
         
         /// <summary>
-        /// imgNotAvailable control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgNotAvailable;
-        
-        /// <summary>
         /// imgAvailable control.
         /// </summary>
         /// <remarks>
@@ -101,6 +92,15 @@ namespace YardeCart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgAvailable;
+        
+        /// <summary>
+        /// imgNotAvailable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgNotAvailable;
         
         /// <summary>
         /// trFirstname control.

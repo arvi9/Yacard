@@ -21,7 +21,11 @@ namespace YardeCart
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString.Count == 1)
+            if (Request.Cookies["AdminID"] != null)
+            {
+                Session.Add("AdminID", Request.Cookies["AdminID"].Value.ToString());
+            }
+            else if (Request.QueryString.Count == 1)
                 {
                     if (this.Page.Title.Contains("Activa") == false)
                 {
@@ -29,14 +33,21 @@ namespace YardeCart
                     Session.Add("UserId", Request.QueryString["uid"].ToString());
                 }
             }
-            else if (Request.Cookies["Username"] != null && Request.Cookies["Password"] != null && Request.Cookies["UserId"] != null)
+            else if (Request.Cookies["UserId"] != null)
             {
                 Session.Add("UserId", Request.Cookies["UserId"].Value.ToString());
             }
 
-            if (Session["UserId"] == null)
+
+            if (this.Page.Title.Contains("Admin") || Session["AdminID"] != null)
+            {
+                welcomeMessage.InnerText = "Welcome Admin";
+                isShowHideControl = "2";
+            }
+            else if (Session["UserId"] == null)
             {
                     welcomeMessage.InnerText = "Welcome Guest";
+                isShowHideControl = "0";
                 }
                 else
                 {
@@ -46,17 +57,21 @@ namespace YardeCart
                     {
                         welcomeMessage.InnerText = "Welcome " + dt.Rows[0]["UserName"].ToString();
                     }
+                isShowHideControl = "1";
                 }
           
-            if (welcomeMessage.InnerText.Contains("Guest") || string.IsNullOrWhiteSpace(welcomeMessage.InnerText))
-            {
-                isShowHideControl = "True";
-            }
-            else
-            {
-                isShowHideControl = "False";
-
-            }
+            //if (welcomeMessage.InnerText.Contains("Guest") || string.IsNullOrWhiteSpace(welcomeMessage.InnerText))
+            //{
+            //    isShowHideControl = "0";
+            //}
+            //else if (welcomeMessage.InnerText.Contains("Admin"))
+            //{
+            //    isShowHideControl = "2";
+            //}
+            //else
+            //{
+            //    isShowHideControl = "1";
+            //}
 
             //// To find IP address of a machine behind LAN you can use this code
             //string strHostName = Dns.GetHostName();

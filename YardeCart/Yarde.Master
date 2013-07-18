@@ -94,7 +94,9 @@
     <script src="Scripts/jquery.js" type="text/javascript"></script>
     <script src="Scripts/jquery.validate.js" type="text/javascript"></script>
     <script src="Scripts/jquery.validate.password.js" type="text/javascript"></script>
+    <script src="Scripts/csshorizontalmenu.js" type="text/javascript"></script>
 
+</script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
@@ -165,16 +167,31 @@
 
 <script type="text/javascript">
     var ishide="<%= isShowHideControl %>";
-    if (ishide == "True") {
+    if (ishide == "2")
+    {
         document.getElementById("admintidli").style.display = "block";
-        document.getElementById("registeridli").style.display = "block";
-        document.getElementById("loginidli").style.display = "block";
-        document.getElementById("logoutidli").style.display = "none";
-    }
-    else {
-        document.getElementById("admintidli").style.display = "none";
+        document.getElementById("adminsuball").style.display = "none";
+        document.getElementById("adminsubmenu").style.display = "block";
         document.getElementById("registeridli").style.display = "none";
         document.getElementById("loginidli").style.display = "none";
         document.getElementById("logoutidli").style.display = "block";
+    }
+    else if (ishide == "1")
+    {
+        document.getElementById("admintidli").style.display = "none";
+        document.getElementById("adminsubmenu").style.display = "none";
+        document.getElementById("registeridli").style.display = "none";
+        document.getElementById("loginidli").style.display = "none";
+        document.getElementById("logoutidli").style.display = "block";
+    }
+    else
+    {
+        
+        document.getElementById("admintidli").style.display = "block";
+        document.getElementById("adminsuball").style.display = "block";
+        document.getElementById("adminsubmenu").style.display = "none";
+        document.getElementById("registeridli").style.display = "block";
+        document.getElementById("loginidli").style.display = "block";
+        document.getElementById("logoutidli").style.display = "none";
     }
 </script>

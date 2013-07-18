@@ -21,8 +21,11 @@ namespace YardeCart
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
             //LoadAdDetails();
             BindAlbumGrid();
+        }
         }
 
         //void LoadAdDetails()
@@ -74,7 +77,10 @@ namespace YardeCart
 
             //gridpageIndex = 0;
             AdDetailsBll adbll = new AdDetailsBll();
+            if (txtSearch.Text.Trim() == "")
              dt = adbll.GetAllAdDetails();
+            else
+                dt = adbll.SearchAdsByKeyword(txtSearch.Text.Trim());
             if (dt.Rows.Count > 4)
             {
                 decimal dPageSize = (dt.Rows.Count / 4M);
@@ -177,6 +183,11 @@ namespace YardeCart
         {
             //BindAlbumGrid();
            int i= GridView1.PageIndex;
+        }
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            BindAlbumGrid();
+
         }
 
     }

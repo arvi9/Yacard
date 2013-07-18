@@ -71,8 +71,8 @@ namespace YardeCart
                 objUser.UpdateUserDeleteStatus(Convert.ToInt32(sUserId), intBlockVal);
             }
 
-            lblMessage.Visible = true;
-            lblMessage.Text = "Selected users are deleted";
+            //lblMessage.Visible = true;
+            //lblMessage.Text = "Selected users are deleted";
         }
 
         protected void btnCheckAll_Click(object sender, EventArgs e)

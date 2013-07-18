@@ -1,34 +1,26 @@
-﻿<%@ Page Title="Yard eCart Admin Page" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="CategoryList.aspx.cs" Inherits="YardeCart.CategoryList" %>
+﻿<%@ Page Title="Yard eCart Admin Page" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="CategoryGroup.aspx.cs" Inherits="YardeCart.CategoryGroup" %>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
 
-    <div style="font-family:Tahoma;padding-top:50px;" BorderColor="Tan" BorderWidth="1px">
+    <div style="font-family:Tahoma;padding-top:50px;" >
     <table style="font-size: large; height: 25px; width:900px; text-align: center;">
         <tr>
-            <td>List of Category</td>
+            <td>Category Group</td>
         </tr>
     </table>
     <table id="tblCategory" style="width:900px;">
-            <tr><td class="auto-style7">&nbsp;</td></tr>
+            <tr><td class="auto-style5">&nbsp;</td></tr>
         <tr>
-            <td align="center" class="auto-style8" valign="center" style="text-align: right; padding-right: 25px">
-                <asp:Label ID="Label1" runat="server" Text="Category Name"></asp:Label>
+            <td style="text-align:right; padding-right: 25px;" class="auto-style6">
+                <asp:Label ID="Label1" runat="server" Text="Category Group Name"></asp:Label>
             </td>
-            <td class="auto-style9">
-                <asp:TextBox ID="txtName" runat="server" Height="27px" Width="300px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
+            <td class="auto-style4">
+                <asp:TextBox ID="txtName" runat="server" Height="27px" Width="287px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
                 <%--<asp:RequiredFieldValidator ID="reqAlbum" EnableClientScript="true" ControlToValidate="txtName" ErrorMessage="Album name should not be empty" runat="server"></asp:RequiredFieldValidator>--%>
                 <asp:Label ID="ErrMsg" runat="server" Text=""  ForeColor="Red"></asp:Label>
             </td>
         </tr>
         <tr>
-            <td align="center" class="auto-style5" valign="center" style="padding-right: 20px; text-align: right">
-                <asp:Label ID="Label4" runat="server" Text="Category Group"></asp:Label>
-            </td>
-            <td class="auto-style6">
-                <asp:DropDownList ID="ddlCategory" Height="24px" Width="300" style="border:solid 1px; transform-style:flat;"  runat="server" TabIndex="11" CssClass=" "></asp:DropDownList>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style7">
+            <td class="auto-style5">
                 &nbsp;
             </td>
             <td>
@@ -40,8 +32,8 @@
     </table>
         </div>
     <p></p>
-    <asp:DataList ID="DataList1" runat="server" DataKeyField="CategoryId"
-     Width="750px" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" OnCancelCommand="DataList1_CancelCommand"
+    <asp:DataList ID="DataList1" runat="server" DataKeyField="CategoryGroupID"
+     Width="700px" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" OnCancelCommand="DataList1_CancelCommand"
 OnDeleteCommand="DataList1_DeleteCommand" OnEditCommand="DataList1_EditCommand"
 OnUpdateCommand="DataList1_UpdateCommand">
                 <HeaderTemplate>  
@@ -55,14 +47,9 @@ OnUpdateCommand="DataList1_UpdateCommand">
                                 &nbsp;
                             </th>  
 
-                            <th width="30%">  
+                            <th width="50%">  
 
-                                Category Name  
-
-                            </th>  
-                            <th width="30%">  
-
-                                Category Group  
+                                Category Group Name  
 
                             </th>  
 
@@ -80,13 +67,10 @@ OnUpdateCommand="DataList1_UpdateCommand">
                             <asp:label runat="server" ID="lblSNO"></asp:label>
                         </td>
                     <td>
-                    <%# DataBinder.Eval(Container.DataItem, "CategoryName") %>
-                    </td>
-                    <td>
                     <%# DataBinder.Eval(Container.DataItem, "CategoryGroupName") %>
                     </td>
                     <td style="visibility:hidden;">
-                    <%# DataBinder.Eval(Container.DataItem, "CategoryId") %>
+                    <%# DataBinder.Eval(Container.DataItem, "CategoryGroupID") %>
                     </td>
                         <td>
 <asp:LinkButton ID="lnkEdit" runat="server" CommandName="edit"> Edit </asp:LinkButton>
@@ -98,17 +82,12 @@ OnUpdateCommand="DataList1_UpdateCommand">
               <EditItemTemplate>
                     <tr>
                         <td>
-                            <asp:TextBox ID="txtId" Visible="false" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "CategoryId") %>'>
+                            <asp:TextBox ID="txtId" Visible="false" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "CategoryGroupID") %>'>
                             </asp:TextBox>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtCName" runat="server" Height="22px" Width="150px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" Text='<%# DataBinder.Eval(Container.DataItem, "CategoryName") %>'>
+                            <asp:TextBox ID="txtCName" runat="server" Text='<%# DataBinder.Eval(Container.DataItem, "CategoryGroupName") %>'>
                             </asp:TextBox>
-                        </td>
-                        <td>
-                            <asp:DropDownList ID="ddlCat" runat="server" Height="22px" Width="150" DataTextField="CategoryGroupName" DataValueField="CategoryGroupId"
-                                DataSourceID="CategoriesDataSource">
-                            </asp:DropDownList>
                         </td>
                         
                         <td>
@@ -119,17 +98,11 @@ OnUpdateCommand="DataList1_UpdateCommand">
 </EditItemTemplate>
 <FooterTemplate>
 </table></FooterTemplate>
-<FooterStyle  />
-<SelectedItemStyle/> <AlternatingItemStyle />
-<HeaderStyle Font-Bold="True" />
+<FooterStyle BackColor="Tan" />
+<SelectedItemStyle  ForeColor="GhostWhite" /> <AlternatingItemStyle  />
+<HeaderStyle  Font-Bold="True" />
 </asp:DataList>
-     <br />
-    <asp:ObjectDataSource ID="CategoriesDataSource" runat="server"
-        OldValuesParameterFormatString="original_{0}" SelectMethod="SelectCategoryGroup"
-        TypeName="YardeCart.Business.Category">
-    </asp:ObjectDataSource>
-    
-<table width="750px" id="tblPaging" runat="server">  
+<table width="700px" id="tblPaging" runat="server">  
 
 <tr>  
 
@@ -189,23 +162,38 @@ OnUpdateCommand="DataList1_UpdateCommand">
 
 <td align="center" id="tdPageNumbers" runat="server" style="color: #FFFFFF">  
 
-<asp:LinkButton ID="LinkButtonFirst" runat="server" OnClick="LinkButtonFirst_Click" CssClass="PagerLinkStyle"> First </asp:LinkButton>  
+<asp:LinkButton ID="LinkButtonFirst" runat="server" ForeColor="White" OnClick="LinkButtonFirst_Click" CssClass="PagerLinkStyle">  
 
-<asp:LinkButton ID="LinkButtonPrevious" runat="server" CssClass="PagerLinkStyle" OnClick="LinkButtonPrevious_Click"> Prev </asp:LinkButton>  
+First  
 
-<asp:LinkButton ID="LinkButton1" runat="server" CssClass="PagerLinkStyle" OnClick="LinkButton1_Click">1</asp:LinkButton>  
+</asp:LinkButton>  
 
-<asp:LinkButton ID="LinkButton2" runat="server" CssClass="PagerLinkStyle" OnClick="LinkButton1_Click">2</asp:LinkButton>  
+<asp:LinkButton ID="LinkButtonPrevious" runat="server" ForeColor="White" CssClass="PagerLinkStyle" OnClick="LinkButtonPrevious_Click">  
 
-<asp:LinkButton ID="LinkButton3" runat="server" CssClass="PagerLinkStyle" OnClick="LinkButton1_Click">3</asp:LinkButton>  
+Prev
+</asp:LinkButton>  
 
-<asp:LinkButton ID="LinkButton4" runat="server" CssClass="PagerLinkStyle" OnClick="LinkButton1_Click">4</asp:LinkButton>  
+<asp:LinkButton ID="LinkButton1" runat="server" ForeColor="White" CssClass="PagerLinkStyle" OnClick="LinkButton1_Click">1</asp:LinkButton>  
 
-<asp:LinkButton ID="LinkButton5" runat="server" CssClass="PagerLinkStyle" OnClick="LinkButton1_Click">5</asp:LinkButton>  
+<asp:LinkButton ID="LinkButton2" runat="server" ForeColor="White" CssClass="PagerLinkStyle" OnClick="LinkButton1_Click">2</asp:LinkButton>  
 
-<asp:LinkButton ID="LinkButtonNext" runat="server" CssClass="PagerLinkStyle" OnClick="LinkButtonNext_Click"> Next </asp:LinkButton>  
+<asp:LinkButton ID="LinkButton3" runat="server" ForeColor="White" CssClass="PagerLinkStyle" OnClick="LinkButton1_Click">3</asp:LinkButton>  
 
-<asp:LinkButton ID="LinkButtonLast" runat="server" OnClick="LinkButtonLast_Click" CssClass="PagerLinkStyle"> Last </asp:LinkButton>  
+<asp:LinkButton ID="LinkButton4" runat="server" ForeColor="White" CssClass="PagerLinkStyle" OnClick="LinkButton1_Click">4</asp:LinkButton>  
+
+<asp:LinkButton ID="LinkButton5" runat="server" ForeColor="White" CssClass="PagerLinkStyle" OnClick="LinkButton1_Click">5</asp:LinkButton>  
+
+<asp:LinkButton ID="LinkButtonNext" runat="server" ForeColor="White" CssClass="PagerLinkStyle" OnClick="LinkButtonNext_Click">  
+
+    Next
+
+</asp:LinkButton>  
+
+<asp:LinkButton ID="LinkButtonLast" runat="server" ForeColor="White" OnClick="LinkButtonLast_Click" CssClass="PagerLinkStyle">  
+
+    Last
+
+</asp:LinkButton>  
 
 </td>  
 
@@ -247,22 +235,15 @@ OnUpdateCommand="DataList1_UpdateCommand">
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
     <style type="text/css">
+        .auto-style4 {
+            height: 68px;
+        }
         .auto-style5 {
-            width: 349px;
-            height: 37px;
+            width: 379px;
         }
         .auto-style6 {
-            height: 37px;
-        }
-        .auto-style7 {
-            width: 349px;
-        }
-        .auto-style8 {
-            width: 349px;
-            height: 20px;
-        }
-        .auto-style9 {
-            height: 20px;
+            height: 68px;
+            width: 379px;
         }
     </style>
 </asp:Content>

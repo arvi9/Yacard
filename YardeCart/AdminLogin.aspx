@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Yard eCart Admin" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="AdminLogin.aspx.cs" Inherits="YardeCart.AdminLogin" %>
+﻿<%@ Page Title="Yard eCart Login" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="AdminLogin.aspx.cs" Inherits="YardeCart.AdminLogin" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <section id="AdminloginForm" >
