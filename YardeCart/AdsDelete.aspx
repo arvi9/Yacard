@@ -23,8 +23,8 @@
     </div>
     <p></p>
     <div>
-        <table style="width:900px;border:groove;border-color:slategrey" id="Table2" runat="server" visible="false" border="1">
-            <tr><td>&nbsp;</td></tr>
+        <table style="width:900px;border:groove;border-color:slategrey" id="tblAdpost" runat="server" visible="false" border="1">
+            <tr><td class="auto-style4"></td></tr>
             <tr><td>
     <asp:Button ID="btnCheckAll" runat="server" Text="Check All Ads" Font-Bold="true" OnClick="btnCheckAll_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="3"  />&nbsp;&nbsp;
     <asp:Button ID="btnUncheckAll" runat="server" Text="Uncheck All Ads" Font-Bold="true" OnClick="btnUncheckAll_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="125px" TabIndex="3"  />
@@ -62,3 +62,10 @@
         </td></tr></table>
     </div>
 </asp:content>
+<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+        .auto-style4 {
+            height: 22px;
+        }
+    </style>
+</asp:Content>

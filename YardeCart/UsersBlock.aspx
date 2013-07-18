@@ -18,7 +18,7 @@
     </div>
     <p></p>
     <div>
-        <table style="width:900px;border:groove;border-color:slategrey" id="Table2" runat="server" visible="false" border="1">
+        <table style="width:900px;border:groove;border-color:slategrey" id="tblUser" runat="server" visible="false" border="1">
             <tr><td>&nbsp;</td></tr>
             <tr><td>
     <asp:Button ID="btnCheckAll" runat="server" Text="Check All Users" Font-Bold="true" OnClick="btnCheckAll_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="3"  />&nbsp;&nbsp;
