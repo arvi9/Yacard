@@ -70,12 +70,12 @@ namespace YardeCart
 
                 if (txtPassword.Text != txtRePassword.Text)
                 {
-                    errPwd.Text = "Password mismatch";
-                    errPwd.Visible = true;
+                    //errPwd.Text = "Password mismatch";
+                    //errPwd.Visible = true;
                     intErrorCount++;
                 }
-                else
-                    errPwd.Visible = false;
+                //else
+                    //errPwd.Visible = false;
 
                 if (chkYardecart.Checked==false)
                 {
@@ -222,7 +222,7 @@ namespace YardeCart
             //string sourcepath = "";
             UserInfoBll userBll = new UserInfoBll();
             DataTable dt = userBll.AvailableUser(txtUsername.Text.ToString().Trim());
-            if (dt.Rows.Count == 0)
+            if (dt.Rows.Count == 0 && txtUsername.Text.ToString().Trim() !=  "")
             {
                 intUserAvail = 0;
                 //checkUser.Visible = true;

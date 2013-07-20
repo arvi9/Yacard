@@ -5,6 +5,9 @@
     <link href="css/flexslider.css" rel="stylesheet" type="text/css" />
     <script src="Scripts/jquery-1.8.2-min.js" type="text/javascript"></script>
     <script type="text/javascript" src="Scripts/jquery.flexslider.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/rating.css" />
+    <script type="text/javascript" src="Scripts/rating.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             InitializeImageSlider();
@@ -19,6 +22,9 @@
                 width: 500
             });
         }
+        $(function () {                   // Start when document ready
+            $('#star-rating').rating(); // Call the rating plugin
+        });
     </script>
     <style type="text/css">
         .error, .notice, .success
@@ -89,7 +95,7 @@
             </tr>
             
         <tr>
-            <td colspan="3">
+            <td colspan="3" style="text-align:center;">
     <div class="banner1 grid_24 clearfix banner-1-chrome">
         <div id="divImageSlider" class="flexslider" runat="server">
     </div>
@@ -129,6 +135,19 @@
 
                 </td>
             </tr>
+            <tr>
+                <td class="auto-style2" colspan="3" style="vertical-align:central;text-align:center;">
+                    Vote Ad:<br />
+                    <div id="star-rating">
+                    <input type="radio" name="example" class="rating" value="1" />
+                    <input type="radio" name="example" class="rating" value="2" />
+                    <input type="radio" name="example" class="rating" value="3" />
+                    <input type="radio" name="example" class="rating" value="4" />
+                    <input type="radio" name="example" class="rating" value="5" />
+                </div>
+                </td>
+            </tr>
+
     </table>
 
                 </div>

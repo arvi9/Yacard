@@ -93,6 +93,62 @@ namespace YardeCart
                     ErrCategory.Visible = true;
                 }
 
+                if (FileUpload1.HasFile)
+                {
+                    if (FileUpload1.PostedFile.ContentLength > 4194304)
+                    {
+                        errFile1.Visible = true;
+                        errFile1.Text = "Exceeds maximum limit 4MB";
+                        intError++;
+                    }
+                    else
+                        errFile1.Visible = false;
+                }
+                if (FileUpload2.HasFile)
+                {
+                    if (FileUpload2.PostedFile.ContentLength > 4194304)
+                    {
+                        errFile2.Visible = true;
+                        errFile2.Text = "Exceeds maximum limit 4MB";
+                        intError++;
+                    }
+                    else
+                        errFile2.Visible = false;
+                }
+                if (FileUpload3.HasFile)
+                {
+                    if (FileUpload3.PostedFile.ContentLength > 4194304)
+                    {
+                        errFile3.Visible = true;
+                        errFile3.Text = "Exceeds maximum limit 4MB";
+                        intError++;
+                    }
+                    else
+                        errFile3.Visible = false;
+                }
+                if (FileUpload4.HasFile)
+                {
+                    if (FileUpload4.PostedFile.ContentLength > 4194304)
+                    {
+                        errFile4.Visible = true;
+                        errFile4.Text = "Exceeds maximum limit 4MB";
+                        intError++;
+                    }
+                    else
+                        errFile4.Visible = false;
+                }
+                if (FileUpload5.HasFile)
+                {
+                    if (FileUpload5.PostedFile.ContentLength > 4194304)
+                    {
+                        errFile5.Visible = true;
+                        errFile5.Text = "Exceeds maximum limit 4MB";
+                        intError++;
+                    }
+                    else
+                        errFile5.Visible = false;
+                }
+                
                 #endregion
 
                 if (intError == 0)

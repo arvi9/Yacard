@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Yard-eCart Register" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="YardeCart.Register" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+
     <link href="CSS/FormValidation.css" rel="stylesheet" type="text/css" />
     <link href="CSS/jquery.validate.password.css" rel="stylesheet" type="text/css" />
     <style>
@@ -65,38 +66,58 @@ FormColumnError {
     }
 
         .auto-style20 {
-            width: 613px;
+            width: 606px;
         }
         .auto-style21 {
             height: 33px;
-            width: 613px;
+            width: 606px;
         }
         .auto-style22 {
             height: 35px;
-            width: 613px;
+            width: 606px;
         }
         .auto-style23 {
             height: 34px;
-            width: 613px;
+            width: 606px;
         }
         .auto-style24 {
             height: 29px;
-            width: 613px;
+            width: 606px;
         }
         .auto-style25 {
             height: 58px;
-            width: 613px;
+            width: 606px;
         }
         .auto-style26 {
             width: 253px;
             height: 40px;
         }
         .auto-style27 {
-            width: 613px;
+            width: 606px;
             height: 40px;
         }
         .auto-style28 {
             height: 40px;
+        }
+
+        .auto-style30 {
+            height: 38px;
+            width: 606px;
+        }
+        .auto-style31 {
+            height: 38px;
+        }
+        .auto-style32 {
+            height: 38px;
+            width: 253px;
+        }
+
+        .auto-style34 {
+            height: 37px;
+            width: 606px;
+        }
+        .auto-style35 {
+            height: 37px;
         }
 
     </style>
@@ -110,10 +131,10 @@ FormColumnError {
                     <label style="width:250px" for="txtUsername">User Name</label>
                 </td>
                 <td ID="TableCell2" runat="server" class="auto-style20" >
-                    <asp:TextBox ID="txtUsername" runat="server" Height="24" Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsername" ForeColor="Red"
-                         ErrorMessage="enter username"></asp:RequiredFieldValidator>    
-                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" ValidateRequestMode="Disabled" 
+                    <asp:TextBox ID="txtUsername" runat="server" Height="24" Width="300" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
+                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsername" ForeColor="Red"
+                         ErrorMessage="enter username"></asp:RequiredFieldValidator>--%>    &nbsp;
+                    &nbsp;<asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" ValidateRequestMode="Disabled" 
                         CausesValidation="False" TabIndex="1">Check avaiilablity</asp:LinkButton>
               
                 </td>
@@ -123,29 +144,32 @@ FormColumnError {
         </td>
             </tr>
             <tr ID="trFirstname" runat="server">
-                <td ID="TableCell4" runat="server" class="auto-style8">
+                <td ID="TableCell4" runat="server" class="auto-style7">
                     <label for="txtFirstname">First Name</label>
                  
                 </td>
-                <td ID="TableCell5" runat="server" class="auto-style20"  >
-                    <asp:TextBox ID="txtFirstname" runat="server" Height="24" Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="valtxtFirstname" runat="server" ForeColor="Red" ControlToValidate="txtFirstname" ErrorMessage="must enter your First name"></asp:RequiredFieldValidator>
+                <td ID="TableCell5" runat="server" class="auto-style34"  >
+                    <asp:TextBox ID="txtFirstname" runat="server" Height="24" Width="300" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
+                    <%--<asp:RequiredFieldValidator ID="valtxtFirstname" runat="server" ForeColor="Red" ControlToValidate="txtFirstname" ErrorMessage="must enter your First name"></asp:RequiredFieldValidator>--%>
                  
                 </td>
-                <td ID="TableCell6" runat="server">
+                <td ID="TableCell6" runat="server" class="auto-style35">
+                    <%--<div align="center">
+        <a href="#" class="open_popup">Add Bank details</a>
+    </div>--%>
                 </td>
             </tr>
             <tr ID="trLastname" runat="server">
-                <td ID="TableCell7" runat="server" class="auto-style8">
+                <td ID="TableCell7" runat="server" class="auto-style32">
                     <label for="txtLastname">Last Name</label>
                  
                 </td>
-                <td ID="TableCell8" runat="server" class="auto-style20"  >
-                    <asp:TextBox ID="txtLastname" runat="server" Height="24" Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="3"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="valtxtLastname" runat="server" ForeColor="Red" ControlToValidate="txtLastname" ErrorMessage="must enter your Last name"></asp:RequiredFieldValidator>
+                <td ID="TableCell8" runat="server" class="auto-style30"  >
+                    <asp:TextBox ID="txtLastname" runat="server" Height="24" Width="300" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="3"></asp:TextBox>
+                    <%--<asp:RequiredFieldValidator ID="valtxtLastname" runat="server" ForeColor="Red" ControlToValidate="txtLastname" ErrorMessage="must enter your Last name"></asp:RequiredFieldValidator>--%>
                  
                 </td>
-                <td ID="TableCell9" runat="server">
+                <td ID="TableCell9" runat="server" class="auto-style31">
                 </td>
             </tr>
             <tr ID="trGender" runat="server">
@@ -153,8 +177,8 @@ FormColumnError {
                     <label for="gender">Gender</label>
                  
                 </td>
-                <td ID="TableCell11" runat="server" class="auto-style20"   >
-                    <div class="divOption" style="width:554px;"  >
+                <td ID="TableCell11" runat="server" class="auto-style20"  >
+                    <div class="divOption"  >
                         <asp:RadioButtonList ID="RadioButtonList1" runat="server" TextAlign="right" RepeatDirection="Horizontal" TabIndex="4" >
                                         <asp:ListItem Selected="True" Value="1">Male</asp:ListItem>
                                         <asp:ListItem Value="2">Female</asp:ListItem>
@@ -174,17 +198,17 @@ FormColumnError {
             
             </tr>
             <tr ID="trPassword" runat="server">
-                <td ID="TableCell13" runat="server" class="auto-style8">
+                <td ID="TableCell13" runat="server" class="auto-style32">
                     <label for="txtPassword">Password</label>
                  
                 </td>
-                <td ID="TableCell14" runat="server" class="auto-style20"  >
-                    <asp:TextBox ID="txtPassword" runat="server" Height="24" Width="300" TextMode="Password" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="25" TabIndex="5"></asp:TextBox>
-                      <asp:RequiredFieldValidator ID="valtxtPassword" runat="server"  ForeColor="Red" ControlToValidate="txtPassword" 
-                        ErrorMessage="must enter your Password"></asp:RequiredFieldValidator>
+                <td ID="TableCell14" runat="server" class="auto-style30"  >
+                    <asp:TextBox ID="txtPassword" runat="server" Height="24" Width="300" CssClass="validate[required]" TextMode="Password" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="25" TabIndex="5"></asp:TextBox>
+                      <%--<asp:RequiredFieldValidator ID="valtxtPassword" runat="server"  ForeColor="Red" ControlToValidate="txtPassword" 
+                        ErrorMessage="must enter your Password"></asp:RequiredFieldValidator>--%>
                
                 </td>
-                <td ID="TableCell15" runat="server">
+                <td ID="TableCell15" runat="server" class="auto-style31">
                 </td>
             
             </tr>
@@ -194,13 +218,13 @@ FormColumnError {
                  
                 </td>
                 <td ID="TableCell17" runat="server" class="auto-style20"  >
-                    <asp:TextBox ID="txtRePassword" runat="server" Height="24"  Width="300" TextMode="Password" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="25" TabIndex="6"></asp:TextBox>
+                    <asp:TextBox ID="txtRePassword" runat="server" Height="24"  Width="300" CssClass="validate[required]" TextMode="Password" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="25" TabIndex="6"></asp:TextBox>
                       <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtRePassword" ControlToCompare="txtPassword"
                          ForeColor="Red" ErrorMessage="Password mismatch"></asp:CompareValidator>
                
                 </td>
                 <td ID="TableCell18" runat="server">
-                    <asp:Label ID="errPwd" ForeColor="Red" runat="server" Visible="false"></asp:Label>
+                    <%--<asp:Label ID="errPwd" ForeColor="Red" runat="server" Visible="false"></asp:Label>--%>
                 </td>
             </tr>
             <tr ID="trEmail" runat="server">
@@ -209,41 +233,41 @@ FormColumnError {
                  
                 </td>
                 <td ID="TableCell20" runat="server" class="auto-style27"  >
-                    <asp:TextBox ID="txtEmail" runat="server" Height="24"  Width="300"  BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="30" TabIndex="7"></asp:TextBox>
-                 <asp:RequiredFieldValidator ID="valtxtEmail" runat="server" ForeColor="Red" ControlToValidate="txtEmail" ErrorMessage="must enter your Email" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtEmail" runat="server" Height="24"  Width="300" CssClass="validate[required,custom[email]]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="30" TabIndex="7"></asp:TextBox>
+                 <%--<asp:RequiredFieldValidator ID="valtxtEmail" runat="server" ForeColor="Red" ControlToValidate="txtEmail" ErrorMessage="must enter your Email" SetFocusOnError="True"></asp:RequiredFieldValidator>--%>
                     <asp:Label ID="lblErrorEmail" runat="server" ForeColor="Red" Text="Already exists" Visible="False"></asp:Label>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtEmail" ForeColor="Red"
-                        ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"   EnableClientScript="true" ErrorMessage="Invalid Email"></asp:RegularExpressionValidator>
+                    <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtEmail" ForeColor="Red"
+                        ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"   EnableClientScript="true" ErrorMessage="Invalid Email"></asp:RegularExpressionValidator>--%>
                 </td>
                 <td ID="TableCell21" runat="server" class="auto-style28">
                     
                 </td>
             </tr>
             <tr ID="trMobile" runat="server">
-                <td ID="TableCell22" runat="server" class="auto-style8">
+                <td ID="TableCell22" runat="server" class="auto-style14">
                     <label for="txtMobile">Mobile</label>
                  
                 </td>
-                <td ID="TableCell23" runat="server" class="auto-style20"  >
-                    <asp:TextBox ID="txtMobile" runat="server" Height="24"  Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="25" TabIndex="8"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtMobile" ForeColor="Red"
-                        ErrorMessage="must enter mobile no"></asp:RequiredFieldValidator>
-                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtMobile" ForeColor="Red"
-ErrorMessage="Please Only Numbers"  ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
+                <td ID="TableCell23" runat="server" class="auto-style22"  >
+                    <asp:TextBox ID="txtMobile" runat="server" Height="24"  Width="300" CssClass="validate[required,custom[phone]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="25" TabIndex="8"></asp:TextBox>
+                    <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtMobile" ForeColor="Red"
+                        ErrorMessage="must enter mobile no"></asp:RequiredFieldValidator>--%>
+                     <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtMobile" ForeColor="Red"
+ErrorMessage="Please Only Numbers"  ValidationExpression="^\d+$"></asp:RegularExpressionValidator>--%>
                    
                 </td>
-                <td ID="TableCell24" runat="server">
+                <td ID="TableCell24" runat="server" class="auto-style15">
                 </td>
             </tr>
             <tr ID="trAddress" runat="server">
-                <td ID="TableCell25" runat="server" class="auto-style8">
+                <td ID="TableCell25" runat="server" class="auto-style14">
                     <label for="txtAddress">Address</label>
                  
                 </td>
-                <td ID="TableCell26" runat="server" class="auto-style20"  >
+                <td ID="TableCell26" runat="server" class="auto-style22"  >
                     <asp:TextBox ID="txtAddress" runat="server" Height="24"  Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="9"></asp:TextBox>
                 </td>
-                <td ID="TableCell27" runat="server">
+                <td ID="TableCell27" runat="server" class="auto-style15">
                     <span class="inline-notice" id="Span13">
                  </span>
                  <span class="inline-input-error-message" id="Span14"></span>
@@ -251,15 +275,15 @@ ErrorMessage="Please Only Numbers"  ValidationExpression="^\d+$"></asp:RegularEx
                 </td>
             </tr>
             <tr ID="trStreetname" runat="server">
-                <td ID="TableCell28" runat="server" class="auto-style8">
+                <td ID="TableCell28" runat="server" class="auto-style14">
                     <label for="txtStreetname">Street name</label>
                  
                 </td>
-                <td ID="TableCell29" runat="server" class="auto-style20"  >
+                <td ID="TableCell29" runat="server" class="auto-style22"  >
                     <asp:TextBox ID="txtStreetname" runat="server" Height="24"  Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="10"></asp:TextBox>
                  
                 </td>
-                <td ID="TableCell30" runat="server">
+                <td ID="TableCell30" runat="server" class="auto-style15">
                     <span class="inline-notice" id="Span15">
                  </span>
                  <span class="inline-input-error-message" id="Span16"></span>
@@ -331,7 +355,7 @@ ErrorMessage="Please Only Numbers"  ValidationExpression="^\d+$"></asp:RegularEx
                  &nbsp;
                 </td>
                 <td ID="TableCell44" runat="server" class="auto-style23"  >
-                    <asp:CheckBox ID="chkYardecart" runat="server" TabIndex="15" />
+                    <asp:CheckBox ID="chkYardecart" runat="server" TabIndex="15" class="validate[required] checkbox"    />
                     <label for="etsy_finds">I agree to the Yard e-Cart Terms of Service and Privacy policy.</label>
                 </td>
                 <td ID="TableCell45" runat="server" class="auto-style19">
@@ -369,6 +393,5 @@ ErrorMessage="Please Only Numbers"  ValidationExpression="^\d+$"></asp:RegularEx
             </tr>
         </table>
         </div>
+
 </asp:Content>
-<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
-    </asp:Content>

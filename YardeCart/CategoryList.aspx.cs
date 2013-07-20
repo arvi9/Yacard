@@ -473,5 +473,12 @@ namespace YardeCart
             ddlCategory.SelectedIndex = 0;
             LoadCategory();
         }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtName.Text = "";
+            ddlCategory.SelectedIndex = 0;
+            
+        }
     }
 }

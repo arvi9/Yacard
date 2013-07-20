@@ -14,7 +14,7 @@
                 <asp:Label ID="Label1" runat="server" Text="Category Name"></asp:Label>
             </td>
             <td class="auto-style9">
-                <asp:TextBox ID="txtName" runat="server" Height="27px" Width="300px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
+                <asp:TextBox ID="txtName" runat="server" Height="27px" Width="300px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="1"></asp:TextBox>
                 <%--<asp:RequiredFieldValidator ID="reqAlbum" EnableClientScript="true" ControlToValidate="txtName" ErrorMessage="Album name should not be empty" runat="server"></asp:RequiredFieldValidator>--%>
                 <asp:Label ID="ErrMsg" runat="server" Text=""  ForeColor="Red"></asp:Label>
             </td>
@@ -24,7 +24,7 @@
                 <asp:Label ID="Label4" runat="server" Text="Category Group"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:DropDownList ID="ddlCategory" Height="24px" Width="300" style="border:solid 1px; transform-style:flat;"  runat="server" TabIndex="11" CssClass=" "></asp:DropDownList>
+                <asp:DropDownList ID="ddlCategory" Height="24px" Width="300" style="border:solid 1px; transform-style:flat;"  runat="server" TabIndex="2" CssClass=" "></asp:DropDownList>
             </td>
         </tr>
         <tr>
@@ -34,7 +34,7 @@
             <td>
                 <asp:Button ID="btnSave" runat="server" Text="Add" Font-Bold="true" OnClick="btnSave_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="3"  />
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" Font-Bold="true" CausesValidation="false" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="3"  />
+                <asp:Button ID="btnCancel" runat="server" Text="Cancel" Font-Bold="true" CausesValidation="false" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="4" OnClick="btnCancel_Click"  />
             </td> 
         </tr>
     </table>

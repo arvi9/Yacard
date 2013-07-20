@@ -23,25 +23,25 @@
                             <asp:Label ID="Label1" runat="server" AssociatedControlID="UserName">User name</asp:Label>
                         </li>
                         <li>
-                            <asp:TextBox ID="UserName" runat="server" Height="27px" Width="287px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
+                            <asp:TextBox ID="UserName" runat="server" Height="27px" Width="287px" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="1"></asp:TextBox>
                             &nbsp;&nbsp;&nbsp;
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="UserName" CssClass="field-validation-error" ErrorMessage="The user name field is required." />
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="UserName" CssClass="field-validation-error" ErrorMessage="The user name field is required." />--%>
                         </li>
                         <li>
                             <asp:Label ID="Label2" runat="server" AssociatedControlID="Password">Password</asp:Label>
                         </li>
                         <li>
-                            <asp:TextBox ID="Password" runat="server" Height="27px" TextMode="Password" Width="287px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="30" TabIndex="1" />
+                            <asp:TextBox ID="Password" runat="server" Height="27px" TextMode="Password" Width="287px" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="30" TabIndex="2" />
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Password" CssClass="field-validation-error" ErrorMessage="The password field is required." />
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="Password" CssClass="field-validation-error" ErrorMessage="The password field is required." />--%>
                         </li>
                         <li>
-                            <asp:CheckBox runat="server" ID="RememberMe" TabIndex="2"/>
+                            <asp:CheckBox runat="server" ID="RememberMe" TabIndex="3"/>
                             <asp:Label ID="Label3" runat="server" AssociatedControlID="RememberMe" CssClass="checkbox" ForeColor="#660066">Remember me?</asp:Label>
                         </li>
                         <li></li>
                     </ol>
-                    <asp:Button ID="btnLogin" runat="server" CommandName="Login" Text="Log in" Font-Bold="true" OnClick="btnLogin_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="3"  />
+                    <asp:Button ID="btnLogin" runat="server" CommandName="Login" Text="Log in" Font-Bold="true" OnClick="btnLogin_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="4"  />
                 </fieldset>
             </LayoutTemplate>
         </asp:Login>
@@ -50,7 +50,7 @@
                     <asp:Label runat="server" ID="lblError" Visible="false" />
                 </div>
      <p style="text-align:center; padding-right: 410px; padding-top:5px;">
-            <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled" TabIndex="4">Register</asp:HyperLink>
+            <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled" TabIndex="5">Register</asp:HyperLink>
             if you don't have an account.
         </p>
     </section>

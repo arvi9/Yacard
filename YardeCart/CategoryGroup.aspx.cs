@@ -426,5 +426,11 @@ namespace YardeCart
             txtName.Text = "";
             LoadCategory();
         }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtName.Text = "";
+            
+        }
     }
 }

@@ -22,15 +22,6 @@ namespace YardeCart {
         protected global::System.Web.UI.WebControls.TextBox txtTitle;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
-        /// <summary>
         /// txtDesc control.
         /// </summary>
         /// <remarks>
@@ -76,15 +67,6 @@ namespace YardeCart {
         protected global::System.Web.UI.WebControls.TextBox txtPrice;
         
         /// <summary>
-        /// RequiredFieldValidator5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
-        
-        /// <summary>
         /// DatePicker1 control.
         /// </summary>
         /// <remarks>
@@ -112,13 +94,13 @@ namespace YardeCart {
         protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
         
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// errFile1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.WebControls.Label errFile1;
         
         /// <summary>
         /// FileUpload2 control.
@@ -130,6 +112,15 @@ namespace YardeCart {
         protected global::System.Web.UI.WebControls.FileUpload FileUpload2;
         
         /// <summary>
+        /// errFile2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errFile2;
+        
+        /// <summary>
         /// FileUpload3 control.
         /// </summary>
         /// <remarks>
@@ -137,6 +128,15 @@ namespace YardeCart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUpload3;
+        
+        /// <summary>
+        /// errFile3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errFile3;
         
         /// <summary>
         /// FileUpload4 control.
@@ -148,6 +148,15 @@ namespace YardeCart {
         protected global::System.Web.UI.WebControls.FileUpload FileUpload4;
         
         /// <summary>
+        /// errFile4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errFile4;
+        
+        /// <summary>
         /// FileUpload5 control.
         /// </summary>
         /// <remarks>
@@ -155,6 +164,15 @@ namespace YardeCart {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUpload5;
+        
+        /// <summary>
+        /// errFile5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label errFile5;
         
         /// <summary>
         /// txtVidolink control.

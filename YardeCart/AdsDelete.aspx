@@ -9,13 +9,13 @@
                 <asp:Label ID="Label2" runat="server" Text="Delete Adposts" Font-Bold="True" Font-Size="Large"></asp:Label> </td></tr>
             <tr><td>&nbsp;</td></tr>
             <tr><td>
-                <asp:RadioButtonList ID="rdoSearch" runat="server" CausesValidation="false" TextAlign="Right" Height="16px" RepeatDirection="Horizontal" Width="110px">
+                <asp:RadioButtonList ID="rdoSearch" runat="server" CausesValidation="false" TextAlign="Right" Height="16px" RepeatDirection="Horizontal" Width="110px" TabIndex="1">
                     <asp:ListItem Value="0" Selected="True">Ads</asp:ListItem>
                     <asp:ListItem Value="1">Users</asp:ListItem>
                 </asp:RadioButtonList>
                 </td>
                 <td>&nbsp;&nbsp;
-                <asp:TextBox ID="txtSearch" runat="server" Height="27px" Width="287px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
+                <asp:TextBox ID="txtSearch" runat="server" Height="27px" Width="287px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="2"></asp:TextBox>
                 &nbsp;&nbsp;<asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" Font-Bold="true" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="3"  />&nbsp;&nbsp;
                 &nbsp;&nbsp;<asp:Label ID="lblError" runat="server" ForeColor="Red" Visible="false" Text="Label"></asp:Label></td>
             </tr>
