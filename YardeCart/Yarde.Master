@@ -67,6 +67,9 @@
     <link href="html-default/preloader/css/preloader.css" rel="stylesheet" />
     <script src="html-default/preloader/js/jquery.preloader.js" charset="utf-8"></script>
     <!-- preloader END -->
+    <link rel="stylesheet" type="text/css" href="html-default/box_setting/js/jquery.cookies.2.2.0.min.js" />
+    <link rel="stylesheet" type="text/css" href="html-default/box_setting/css/box-setting.css" />
+
     <!-- prettyPhoto Start -->
     <link rel="stylesheet" type="text/css" href="html-default/prettyPhoto/css/prettyPhoto.css" />
     <script type="text/javascript" src="html-default/prettyPhoto/js/jquery.prettyPhoto.js"></script>
@@ -139,7 +142,8 @@
           </div>
             </header>
           <!--main_resize end  -->
-            <div>
+                        <div class="main_resize">
+
                 <asp:ContentPlaceHolder runat="server" ID="MainContent" />
             </div>
               <br />
@@ -181,14 +185,19 @@
         document.getElementById("adminsubmenu").style.display = "block";
         document.getElementById("registeridli").style.display = "none";
         document.getElementById("loginidli").style.display = "none";
+        document.getElementById("myaccountidli").style.display = "none";
+        document.getElementById("myaccmenuli").style.display = "none";
         document.getElementById("logoutidli").style.display = "block";
     }
     else if (ishide == "1")
     {
         document.getElementById("admintidli").style.display = "none";
+        document.getElementById("adminsuball").style.display = "none";
         document.getElementById("adminsubmenu").style.display = "none";
         document.getElementById("registeridli").style.display = "none";
         document.getElementById("loginidli").style.display = "none";
+        document.getElementById("myaccountidli").style.display = "block";
+        document.getElementById("myaccmenuli").style.display = "block";
         document.getElementById("logoutidli").style.display = "block";
     }
     else
@@ -199,6 +208,8 @@
         document.getElementById("adminsubmenu").style.display = "none";
         document.getElementById("registeridli").style.display = "block";
         document.getElementById("loginidli").style.display = "block";
+        document.getElementById("myaccountidli").style.display = "none";
+        document.getElementById("myaccmenuli").style.display = "none";
         document.getElementById("logoutidli").style.display = "none";
     }
 </script>

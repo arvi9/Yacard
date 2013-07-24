@@ -41,13 +41,20 @@ namespace YardeCart
 
                     if (Session["AdminID"] == null)
                         Session.Add("AdminID", adminId.ToString());
-                    //if (chkRememberMeSet == true)
-                    {
                         Response.Cookies.Clear();
                         HttpCookie cadminId = new HttpCookie("AdminID", adminId.ToString().Trim());
                         cadminId.Expires = DateTime.Now.AddDays(5);
 
                         Response.Cookies.Add(cadminId);
+                    if (RememberMe.Checked == true)
+                    {
+                        HttpCookie cadminname = new HttpCookie("AdminName", UserName.ToString().Trim());
+                        HttpCookie cadminpwd = new HttpCookie("AdminPassword", Password.ToString().Trim());
+                        cadminname.Expires = DateTime.Now.AddDays(5);
+                        cadminpwd.Expires = DateTime.Now.AddDays(5);
+
+                        Response.Cookies.Add(cadminname);
+                        Response.Cookies.Add(cadminpwd);
                     }
                 }
             }

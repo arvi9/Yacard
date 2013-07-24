@@ -51,7 +51,7 @@ namespace YardeCart
                 userProfile.LastName = txtLastname.Text.ToString().Trim();
                 userProfile.Email = txtEmail.Text.ToString().Trim();
                 userProfile.UserName = txtUsername.Text.ToString().Trim();
-                userProfile.UserPasswrod = txtPassword.Text.ToString().Trim();
+                userProfile.UserPassword = txtPassword.Text.ToString().Trim();
                 userProfile.Address = txtAddress.Text.ToString().Trim();
                 userProfile.Mobile = txtMobile.Text.ToString().Trim();
                 userProfile.StreetName = txtStreetname.Text.ToString().Trim();
@@ -59,7 +59,7 @@ namespace YardeCart
                 userProfile.StateId = Convert.ToInt32(ddlState.SelectedItem.Value.ToString().Trim());
                 userProfile.ZipCode = txtZipcode.Text.ToString().Trim();
                 userProfile.CountryId = Convert.ToInt32(ddlCountry.SelectedItem.Value.ToString().Trim());
-                userProfile.Gender = int.Parse(RadioButtonList1.SelectedIndex.ToString().Trim());
+                userProfile.Gender = int.Parse(RadioButtonList1.SelectedItem.Value.ToString().Trim());
                 ErrorMsg = "Error:";
                 int intErrorCount = 0;
                 

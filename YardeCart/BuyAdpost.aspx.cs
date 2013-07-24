@@ -114,5 +114,18 @@ namespace YardeCart
 
         }
 
+        protected void btnAddCart_Click(object sender, EventArgs e)
+        {
+            if (Session["UserId"] == null)
+                Response.Redirect("Login.aspx");
+            else
+            {
+                CartDetails objCart = new CartDetails();
+                objCart.CreateUserCart(0, Convert.ToInt32(Session["UserId"].ToString()), Convert.ToInt32(strAdId));
+
+                Response.Redirect("MyCartDetail.aspx?uid=" + Session["UserId"].ToString());
+            }
+        }
+
     }
 }

@@ -42,10 +42,11 @@ namespace YardeCart.Business
                 int x = dalComponent.CreateRecord();
 
                 object y = dalComponent.GetParameters("@idvalue");
-                int adpost_id = Int32.Parse(y.ToString());
 
-                return adpost_id;
-
+                if (adpostId != 0)
+                    return adpostId;
+                else
+                    return Int32.Parse(y.ToString());
 
             }
             catch (Exception ex)
@@ -69,13 +70,26 @@ namespace YardeCart.Business
                 int x = dalComponent.CreateRecord();
 
                 object y = dalComponent.GetParameters("@idvalue");
-                int adpost_id = Int32.Parse(y.ToString());
+                //int adpost_id = Int32.Parse(y.ToString());
+
+                //if (imageId != 0)
+                //    return imageId;
+                //else
+                //    return Int32.Parse(y.ToString());
 
             }
             catch (Exception ex)
             {
                 throw;
             }
+        }
+
+        public DataTable SelectUserAds(int userId)
+        {
+            dalComponent = new DALComponent();
+            dalComponent.SetParameters("@userId", SqlDbType.Int, 4, userId);
+            dalComponent.SqlCommandText = "[SelectUserAds]";
+            return dalComponent.SelectRecord();
         }
 
         public DataTable GetAdDetails(int adpostId, int userId)
@@ -103,6 +117,20 @@ namespace YardeCart.Business
             return dalComponent.SelectRecord();
         }
 
+        public void UpdateAdImagePath(int imageid, string imagepath)
+        {
+            try
+            {
+                dalComponent.SetParameters("@imageid", SqlDbType.Int, 4, imageid);
+                dalComponent.SetParameters("@imagepath", SqlDbType.VarChar, 1000, imagepath);
+                dalComponent.SqlCommandText = "UpdateImagePath";
+                int x = dalComponent.CreateRecord();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
         public void UpdateAdDeleteStatus(int adpostId, int delVal)
         {
             try
@@ -174,6 +202,22 @@ namespace YardeCart.Business
             }
             catch (Exception ex)
             {
+                throw;
+            }
+        }
+
+        public void AdPostDeleteById(int adpostId)
+        {
+            try
+            {
+                dalComponent = new DALComponent();
+                dalComponent.SetParameters("@adpostId", SqlDbType.Int, 4, adpostId);
+                dalComponent.SqlCommandText = "AdPostDeleteById";
+                int x = dalComponent.DeleteRecord();
+            }
+            catch (Exception)
+            {
+
                 throw;
             }
         }

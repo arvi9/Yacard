@@ -26,21 +26,24 @@
         <table style="width:900px;border:groove;border-color:slategrey" id="tblAdpost" runat="server" visible="false" border="1">
             <tr><td class="auto-style4"></td></tr>
             <tr><td>
-    <asp:Button ID="btnCheckAll" runat="server" Text="Check All Ads" Font-Bold="true" OnClick="btnCheckAll_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="3"  />&nbsp;&nbsp;
-    <asp:Button ID="btnUncheckAll" runat="server" Text="Uncheck All Ads" Font-Bold="true" OnClick="btnUncheckAll_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="125px" TabIndex="3"  />
+    <asp:Button ID="btnCheckAll" runat="server" Text="Check All Ads" Font-Bold="true" OnClick="btnCheckAll_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="3" Visible="False"  />&nbsp;&nbsp;
+    <asp:Button ID="btnUncheckAll" runat="server" Text="Uncheck All Ads" Font-Bold="true" OnClick="btnUncheckAll_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="125px" TabIndex="3" Visible="False"  />
                </td></tr>
             <tr><td style="text-align:center;"><asp:Label ID="lblMessage" runat="server" Visible="false"></asp:Label>&nbsp;</td></tr>
              <tr><td>
-            <asp:GridView ID="GridView1" runat="server" DataKeyNames="AdPostId" BorderColor="Tan" BorderWidth="1px"
+            <asp:GridView ID="GridView1" runat="server" DataKeyNames="AdPostId" BorderColor="Tan" BorderWidth="1px" OnRowCreated="GridView1_RowCreated"
                 GridLines="Both"  AutoGenerateColumns="false" AllowPaging="true" OnPageIndexChanging="GridView1_PageIndexChanging"
                 PageSize="50" Width="750px" HeaderStyle-Height="30px" HeaderStyle-VerticalAlign="Top" HeaderStyle-HorizontalAlign="Center"
                 RowStyle-Height="30px" RowStyle-VerticalAlign="Top" RowStyle-HorizontalAlign="Center" HeaderStyle-Wrap="true" AlternatingRowStyle-Height="30px"
                 >
                 <Columns>
                     <asp:TemplateField HeaderText="Status" HeaderStyle-HorizontalAlign="Right">
+                       <HeaderTemplate>
+                        <asp:CheckBox ID="chkBoxSelectDeSelectAll" onclick="javascript:SelectDeSelectAll(this);" runat="server" />Select All
+                        </HeaderTemplate>
                         <ItemTemplate>
                             <asp:CheckBox ID="chkDeleteStatus" runat="server" 
-                            AutoPostBack="true"
+                            AutoPostBack="false"
                             Checked='<%# Convert.ToBoolean(Eval("AdDeleted")) %>'
                             />&nbsp;&nbsp;&nbsp;Deleted
                         </ItemTemplate>
@@ -61,6 +64,50 @@
     <asp:Button ID="btnBlock" runat="server" Text="Delete Ads" Font-Bold="true" OnClick="btnBlock_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="3"  />
         </td></tr></table>
     </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+    var TotalNoOfCheckBoxes;
+    var Counter;
+
+    $(document).ready(function () {
+        //Get total no. of CheckBoxes in side the GridView.
+        TotalNoOfCheckBoxes = parseInt('<%= this.GridView1.Rows.Count %>');
+        Counter = 0;
+    });
+
+    function SelectDeSelectAll(CheckBox) {
+        //Get all the control of the type INPUT inside the Gridview.
+        var Inputs = $("#<%= this.GridView1.ClientID %>").find("input");
+
+        //Checked/Unchecked all the checkBoxes in side the GridView.
+        for (var n = 0; n < Inputs.length; ++n) {
+            if (Inputs[n].type == 'checkbox' && Inputs[n].id.indexOf("chkDeleteStatus", 0) >= 0) {
+                Inputs[n].checked = CheckBox.checked;
+            }
+        }
+
+        //Reset Counter
+        Counter = CheckBox.checked ? TotalNoOfCheckBoxes : 0;
+    }
+
+    function ChildCheckBoxClick(CheckBox, HCheckBox) {
+        //get target control.
+        var HeaderCheckBox = document.getElementById(HCheckBox);
+
+        //Modifiy Counter; 
+        if (CheckBox.checked && Counter < TotalNoOfCheckBoxes)
+            Counter++;
+        else if (Counter > 0)
+            Counter--;
+
+        //Change state of the header CheckBox.
+        if (Counter < TotalNoOfCheckBoxes)
+            HeaderCheckBox.checked = false;
+        else if (Counter == TotalNoOfCheckBoxes)
+            HeaderCheckBox.checked = true;
+    }
+</script>
+
 </asp:content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
     <style type="text/css">
@@ -68,4 +115,5 @@
             height: 22px;
         }
     </style>
+
 </asp:Content>

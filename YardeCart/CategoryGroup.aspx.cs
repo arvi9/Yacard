@@ -421,15 +421,17 @@ namespace YardeCart
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            int r=0;
             objCategory = new Category();
-            int r = objCategory.CategoryGroupUpdate(0, txtName.Text.ToString().Trim());
-            txtName.Text = "";
+            if(txtcategory.Text.ToString().Trim() != "")
+                r = objCategory.CategoryGroupUpdate(0, txtcategory.Text.ToString().Trim());
+            txtcategory.Text = "";
             LoadCategory();
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            txtName.Text = "";
+            txtcategory.Text = "";
             
         }
     }

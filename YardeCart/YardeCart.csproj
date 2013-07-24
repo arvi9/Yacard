@@ -103,7 +103,6 @@
     <Content Include="ActivateUser.aspx" />
     <Content Include="AdminLogin.aspx" />
     <Content Include="AdminPage.aspx" />
-    <Content Include="AdminSection.aspx" />
     <Content Include="AdsBlock.aspx" />
     <Content Include="AdsDelete.aspx" />
     <Content Include="AdsList.aspx" />
@@ -111,9 +110,16 @@
     <Content Include="BuyAdslist.aspx" />
     <Content Include="CategoryGroup.aspx" />
     <Content Include="CategoryList.aspx" />
+    <Content Include="EditAdpost.aspx" />
+    <Content Include="EditProfile.aspx" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="MyAdposts.aspx" />
+    <Content Include="MyCartDetail.aspx" />
+    <Content Include="MyProfile.aspx" />
+    <Content Include="MyPurchases.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="UsersBlock.aspx" />
     <Content Include="UsersDelete.aspx" />
@@ -2042,13 +2048,6 @@
     <Compile Include="AdminPage.aspx.designer.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminSection.aspx.cs">
-      <DependentUpon>AdminSection.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminSection.aspx.designer.cs">
-      <DependentUpon>AdminSection.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AdsBlock.aspx.cs">
       <DependentUpon>AdsBlock.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2097,12 +2096,61 @@
     <Compile Include="CategoryList.aspx.designer.cs">
       <DependentUpon>CategoryList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditAdpost.aspx.cs">
+      <DependentUpon>EditAdpost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditAdpost.aspx.designer.cs">
+      <DependentUpon>EditAdpost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Logout.aspx.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyAdposts.aspx.cs">
+      <DependentUpon>MyAdposts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyAdposts.aspx.designer.cs">
+      <DependentUpon>MyAdposts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyCartDetail.aspx.cs">
+      <DependentUpon>MyCartDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyCartDetail.aspx.designer.cs">
+      <DependentUpon>MyCartDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyProfile.aspx.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyProfile.aspx.designer.cs">
+      <DependentUpon>MyProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyPurchases.aspx.cs">
+      <DependentUpon>MyPurchases.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyPurchases.aspx.designer.cs">
+      <DependentUpon>MyPurchases.aspx</DependentUpon>
     </Compile>
     <Compile Include="UsersBlock.aspx.cs">
       <DependentUpon>UsersBlock.aspx</DependentUpon>

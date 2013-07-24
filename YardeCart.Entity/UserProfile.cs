@@ -44,11 +44,11 @@ namespace YardeCart.Entity
             set { gender = value; }
         }
 
-        private string userPasswrod;
-        public string UserPasswrod
+        private string userPassword;
+        public string UserPassword
         {
-            get { return userPasswrod; }
-            set { userPasswrod = value; }
+            get { return userPassword; }
+            set { userPassword = value; }
         }
 
         private string email;

@@ -1,6 +1,19 @@
 ﻿<%@ Page Title="Yard eCart Admin Page" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="CategoryList.aspx.cs" Inherits="YardeCart.CategoryList" %>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <script type="text/javascript">
 
+        $(document).ready(function () {
+
+            $("#MainContent_btnCancel").click(function () {
+                $("#MainContent_txtName").val('');
+                $("#MainContent_txtName").removeClass('validate[required]');
+                $("#MainContent_ddlCategory").val('');
+            });
+
+        }
+        );
+
+</script>
     <div style="font-family:Tahoma;padding-top:50px;" BorderColor="Tan" BorderWidth="1px">
     <table style="font-size: large; height: 25px; width:900px; text-align: center;">
         <tr>
@@ -14,9 +27,7 @@
                 <asp:Label ID="Label1" runat="server" Text="Category Name"></asp:Label>
             </td>
             <td class="auto-style9">
-                <asp:TextBox ID="txtName" runat="server" Height="27px" Width="300px" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="1"></asp:TextBox>
-                <%--<asp:RequiredFieldValidator ID="reqAlbum" EnableClientScript="true" ControlToValidate="txtName" ErrorMessage="Album name should not be empty" runat="server"></asp:RequiredFieldValidator>--%>
-                <asp:Label ID="ErrMsg" runat="server" Text=""  ForeColor="Red"></asp:Label>
+                <asp:TextBox ID="txtName" runat="server" Height="27px" Width="300px" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="1"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -24,7 +35,7 @@
                 <asp:Label ID="Label4" runat="server" Text="Category Group"></asp:Label>
             </td>
             <td class="auto-style6">
-                <asp:DropDownList ID="ddlCategory" Height="24px" Width="300" style="border:solid 1px; transform-style:flat;"  runat="server" TabIndex="2" CssClass=" "></asp:DropDownList>
+                <asp:DropDownList ID="ddlCategory" Height="24px" Width="300px" CssClass="validate[required] radio" style="border:solid 1px; transform-style:flat;"  runat="server" TabIndex="2"></asp:DropDownList>
             </td>
         </tr>
         <tr>

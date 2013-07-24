@@ -31,7 +31,7 @@ namespace YardeCart.Business
                 dalComponent.SetParameters("@FirstName", SqlDbType.VarChar, 100, userDo.FirstName);
                 dalComponent.SetParameters("@LastName", SqlDbType.VarChar, 100, userDo.LastName);
                 dalComponent.SetParameters("@Gender", SqlDbType.Int, 4, userDo.Gender);
-                dalComponent.SetParameters("@UserPassword", SqlDbType.VarChar, 50, userDo.UserPasswrod);
+                dalComponent.SetParameters("@UserPassword", SqlDbType.VarChar, 50, userDo.UserPassword);
                 dalComponent.SetParameters("@Email", SqlDbType.VarChar, 50, userDo.Email);
                 dalComponent.SetParameters("@Mobile", SqlDbType.VarChar, 50, userDo.Mobile);
                 dalComponent.SetParameters("@Address", SqlDbType.VarChar, 100, userDo.Address);
@@ -98,7 +98,7 @@ namespace YardeCart.Business
                     userProfile.LastName = dt.Rows[0]["lastName"].ToString();
                     userProfile.Address = dt.Rows[0]["email"].ToString();
                     userProfile.UserName = dt.Rows[0]["userName"].ToString();
-                    userProfile.UserPasswrod = dt.Rows[0]["UserPassword"].ToString();
+                    userProfile.UserPassword = dt.Rows[0]["UserPassword"].ToString();
 
                     return userProfile;
                 }
@@ -279,6 +279,20 @@ namespace YardeCart.Business
                 dalComponent = new DALComponent();
                 dalComponent.SetParameters("@Keyword", SqlDbType.VarChar, 200, Keyword);
                 dalComponent.SqlCommandText = "SearchUsers";
+                return dalComponent.SelectRecord();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public DataTable SelectUserByEmail(string email)
+        {
+            try
+            {
+                dalComponent.SetParameters("@email", SqlDbType.VarChar, 100, email);
+                dalComponent.SqlCommandText = "SelectUserByEmail";
                 return dalComponent.SelectRecord();
             }
             catch (Exception ex)

@@ -28,7 +28,8 @@
                             <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="UserName" CssClass="field-validation-error" ErrorMessage="The user name field is required." />--%>
                         </li>
                         <li>
-                            <asp:Label ID="Label2" runat="server" AssociatedControlID="Password">Password</asp:Label>
+                            <asp:Label ID="Label2" runat="server" AssociatedControlID="Password">Password</asp:Label>&nbsp;&nbsp;
+                            <asp:LinkButton ID="lnkForgot" runat="server" OnClick="lnkForgot_Click">[Forgot Password]</asp:LinkButton>
                         </li>
                         <li>
                             <asp:TextBox ID="Password" runat="server" Height="27px" TextMode="Password" Width="287px" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="30" TabIndex="2" />

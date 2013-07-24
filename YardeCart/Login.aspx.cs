@@ -99,5 +99,10 @@ namespace YardeCart
             if(intErr==0)
             Response.Redirect("Default.aspx?uid="+Session["UserId"].ToString());
         }
+
+        protected void lnkForgot_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ForgotPassword.aspx");
+        }
     }
 }

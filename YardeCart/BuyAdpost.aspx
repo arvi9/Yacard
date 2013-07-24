@@ -75,7 +75,7 @@
             </td>
 
             <td style="text-align:right;width:200PX;">
-                   <asp:Button ID="Button1" Width="150" runat="server" Text="ADD TO CART" BorderStyle="Groove" BorderWidth="1px"  />
+                   <asp:Button ID="btnAddCart" Width="150" runat="server" Text="ADD TO CART" BorderStyle="Groove" BorderWidth="1px" OnClick="btnAddCart_Click"  />
 
             </td>
         </tr>

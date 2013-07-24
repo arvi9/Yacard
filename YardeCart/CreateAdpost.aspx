@@ -2,8 +2,6 @@
 <%@ Register Assembly="SlimeeLibrary" Namespace="SlimeeLibrary" TagPrefix="cc1" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-        <link href="CSS/FormValidation.css" rel="stylesheet" type="text/css" />
-    <link href="CSS/jquery.validate.password.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
     $(function () {
         $('#<%=FileUpload1.ClientID %>').change(function () {
@@ -76,7 +74,7 @@
 
             <tr>
                 <td class="auto-style13"><label class="label" for="ddlCategory">Category</label></td>
-                <td class="auto-style14" style="padding-top: 5px"><asp:DropDownList class="input" ID="ddlCategory" runat="server" CssClass="validate[required] radio" style="border:solid 1px" Height="24px" Width="400px" TabIndex="4"></asp:DropDownList>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td class="auto-style14" style="padding-top: 5px"><asp:DropDownList ID="ddlCategory" runat="server" style="border:solid 1px; transform-style:flat;" CssClass="validate[required] radio" Height="24px" Width="400px" TabIndex="4"></asp:DropDownList>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td class="auto-style14">
                     <asp:Label ID="ErrCategory" ForeColor="Red" runat="server" ></asp:Label>
                 </td>
@@ -113,7 +111,7 @@
             </tr>
             
             <tr>
-                <td class="auto-style3"><label >Add Image for Ad</label></td>
+                <td class="auto-style3" rowspan="2"><label >Add Image for Ad</label><h6><label>Size should not exceed 1 MB</label></h6></td>
                 <td class="auto-style1">
                     <asp:FileUpload ID="FileUpload1" runat="server" Height="24px" Width="400px" BorderWidth="1px" BorderStyle="Solid" TabIndex="7"/>
                 </td>
@@ -123,7 +121,6 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style4">&nbsp;</td>
                 <td class="auto-style2">
                     <asp:FileUpload ID="FileUpload2" runat="server"  Height="24px" Width="400px" BorderWidth="1px" BorderStyle="Solid" TabIndex="8" />
                 </td>
@@ -189,7 +186,6 @@
         }
         .auto-style3
         {
-            height: 22px;
             width: 161px;
         }
         .auto-style4

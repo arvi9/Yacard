@@ -52,7 +52,7 @@ namespace YardeCart
             ddlCategory.Items.Clear();
             DataTable dt1 = cnt.SelectCategory();
             ListItem listItem = new ListItem();
-            listItem.Text = "<Select Category>";
+            listItem.Text = "";
             listItem.Value = "0";
             //listItem.Attributes.Add("style", "background-Black:white;color:White");
             ddlCategory.Items.Add(listItem);
@@ -95,10 +95,10 @@ namespace YardeCart
 
                 if (FileUpload1.HasFile)
                 {
-                    if (FileUpload1.PostedFile.ContentLength > 4194304)
+                    if (FileUpload1.PostedFile.ContentLength > 1048576)
                     {
                         errFile1.Visible = true;
-                        errFile1.Text = "Exceeds maximum limit 4MB";
+                        errFile1.Text = "Exceeds maximum limit 1 MB";
                         intError++;
                     }
                     else
@@ -106,10 +106,10 @@ namespace YardeCart
                 }
                 if (FileUpload2.HasFile)
                 {
-                    if (FileUpload2.PostedFile.ContentLength > 4194304)
+                    if (FileUpload2.PostedFile.ContentLength > 1048576)
                     {
                         errFile2.Visible = true;
-                        errFile2.Text = "Exceeds maximum limit 4MB";
+                        errFile2.Text = "Exceeds maximum limit 1 MB";
                         intError++;
                     }
                     else
@@ -117,10 +117,10 @@ namespace YardeCart
                 }
                 if (FileUpload3.HasFile)
                 {
-                    if (FileUpload3.PostedFile.ContentLength > 4194304)
+                    if (FileUpload3.PostedFile.ContentLength > 1048576)
                     {
                         errFile3.Visible = true;
-                        errFile3.Text = "Exceeds maximum limit 4MB";
+                        errFile3.Text = "Exceeds maximum limit 1 MB";
                         intError++;
                     }
                     else
@@ -128,10 +128,10 @@ namespace YardeCart
                 }
                 if (FileUpload4.HasFile)
                 {
-                    if (FileUpload4.PostedFile.ContentLength > 4194304)
+                    if (FileUpload4.PostedFile.ContentLength > 1048576)
                     {
                         errFile4.Visible = true;
-                        errFile4.Text = "Exceeds maximum limit 4MB";
+                        errFile4.Text = "Exceeds maximum limit 1 MB";
                         intError++;
                     }
                     else
@@ -139,10 +139,10 @@ namespace YardeCart
                 }
                 if (FileUpload5.HasFile)
                 {
-                    if (FileUpload5.PostedFile.ContentLength > 4194304)
+                    if (FileUpload5.PostedFile.ContentLength > 1048576)
                     {
                         errFile5.Visible = true;
-                        errFile5.Text = "Exceeds maximum limit 4MB";
+                        errFile5.Text = "Exceeds maximum limit 1 MB";
                         intError++;
                     }
                     else

@@ -10,51 +10,51 @@
 namespace YardeCart {
     
     
-    public partial class Manage {
+    public partial class MyCartDetail {
         
         /// <summary>
-        /// successMessage control.
+        /// tblAdpost control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder successMessage;
+        protected global::System.Web.UI.HtmlControls.HtmlTable tblAdpost;
         
         /// <summary>
-        /// setPassword control.
+        /// lblCart control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder setPassword;
+        protected global::System.Web.UI.WebControls.Label lblCart;
         
         /// <summary>
-        /// password control.
+        /// btnKeep control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox password;
+        protected global::System.Web.UI.WebControls.Button btnKeep;
         
         /// <summary>
-        /// confirmPassword control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox confirmPassword;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// changePassword control.
+        /// btnBuy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder changePassword;
+        protected global::System.Web.UI.WebControls.Button btnBuy;
     }
 }

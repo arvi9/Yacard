@@ -10,6 +10,6 @@
 namespace YardeCart {
     
     
-    public partial class AdminSection {
+    public partial class MyPurchases {
     }
 }

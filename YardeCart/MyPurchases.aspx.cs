@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace YardeCart
 {
-    public partial class AdminSection : System.Web.UI.Page
+    public partial class MyPurchases : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

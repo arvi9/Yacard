@@ -24,6 +24,13 @@ document.writeln('  <li><a href="AdsDelete.aspx" class="menu_navigation"><span>D
 document.writeln('  </ul>');
 document.writeln('  </li>');
 
+document.writeln('  <li id="myaccountidli"><a href="#" class="sf-menu sf-vertical"><span>My Account</span></a>');
+document.writeln('  <ul id="myaccmenuli">');
+document.writeln('  <li><a href="MyProfile.aspx" class="menu_navigation"><span>My Profile</span></a></li>');
+document.writeln('  <li><a href="MyAdposts.aspx" class="menu_navigation"><span>My Ad posts</span></a></li>');
+document.writeln('  <li><a href="MyCartDetail.aspx" class="menu_navigation"><span>My Cart</span></a></li>');
+document.writeln('  <li><a href="MyPurchases.aspx" class="menu_navigation"><span>My Purchase</span></a></li>');
+document.writeln('  </ul>');
 
 document.writeln('  <li id="contactidli"><a href="Contact.aspx" class="menu_navigation"><span>Contact</span></a>');
 document.writeln('  </li>');

@@ -107,5 +107,20 @@ namespace YardeCart
         {
             LoadAds();
         }
+
+        protected void GridView1_RowCreated(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow && (e.Row.RowState == DataControlRowState.Normal || e.Row.RowState == DataControlRowState.Alternate))
+            {
+                CheckBox chkDeleteStatus = (CheckBox)e.Row.Cells[0].FindControl("chkDeleteStatus");
+                CheckBox chkBoxSelectDeSelectAll = (CheckBox)this.GridView1.HeaderRow.FindControl("chkBoxSelectDeSelectAll");
+                chkDeleteStatus.Attributes["onclick"] = string.Format
+                                                       (
+                                                          "javascript:ChildCheckBoxClick(this,'{0}');",
+                                                          chkBoxSelectDeSelectAll.ClientID
+                                                       );
+            }
+        }
+
     }
 }

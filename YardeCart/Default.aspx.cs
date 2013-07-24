@@ -15,7 +15,6 @@ namespace YardeCart
 {
     public partial class _Default : Page
     {
-        
         public string[] strImgpath = new string[5];
         DataTable dt = null;
         public int gridpageIndex=0;
