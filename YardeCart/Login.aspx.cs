@@ -27,11 +27,11 @@ namespace YardeCart
 
             if (Request.Cookies["Username"] != null)
             {
-                login.UserName = Request.Cookies["Username"].Value.ToString();
+                UserName.Text = Request.Cookies["Username"].Value.ToString();
                 //if (Request.Cookies["Password"] != null)
                     //login.Password = Request.Cookies["Password"].Value.ToString();
                 
-                login.RememberMeSet = true;
+                RememberMe.Checked = true;
             }   
         }
       
@@ -42,7 +42,7 @@ namespace YardeCart
 
             try
             {
-                int userId = userInfoBll.ValidateUser(login.UserName.Trim(), login.Password.Trim());
+                int userId = userInfoBll.ValidateUser(UserName.Text.Trim(), Password.Text.Trim());
                 if (string.IsNullOrEmpty(userId.ToString().Trim()))
                 {
                     intErr = 1;
@@ -71,11 +71,11 @@ namespace YardeCart
                     cUserId.Expires = DateTime.Now.AddDays(5);
                     Response.Cookies.Add(cUserId);
 
-                    if (login.RememberMeSet == true)
+                    if (RememberMe.Checked == true)
                     {
                         //Response.Cookies.Clear();
-                        HttpCookie cUsername = new HttpCookie("UserName", login.UserName.ToString().Trim());
-                        HttpCookie cPassword = new HttpCookie("Password", login.Password.ToString().Trim());
+                        HttpCookie cUsername = new HttpCookie("UserName", UserName.Text.ToString().Trim());
+                        HttpCookie cPassword = new HttpCookie("Password", Password.Text.ToString().Trim());
                         cUsername.Expires = DateTime.Now.AddDays(5);
                         cPassword.Expires = DateTime.Now.AddDays(5);
 
@@ -89,7 +89,7 @@ namespace YardeCart
             }
             catch (Exception ex)
             {
-                login.FailureText = ex.Message.ToString();
+                FailureText.Text = ex.Message.ToString();
 
                 intErr = 1;
                 lblError.Text = ex.Message.ToString();

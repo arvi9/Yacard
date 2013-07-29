@@ -7,10 +7,8 @@
     
  <section id="loginForm" >
 <%--        <div><h3 style=" padding-left:360px; ">Log in</h3></div>--%>
-        <asp:Panel ID="Panel1" runat="server" style="padding-top:50px">
-        <asp:Login runat="server" ViewStateMode="Disabled" RenderOuterTable="true" ID="login" Width="624px" Height="173px">
-            <LayoutTemplate>
-                <p class="validation-summary-errors">
+        <asp:Panel ID="Panel1" runat="server" style=" padding-left: 180px;padding-top:50px">
+                <p class="validation-summary-errors" style="color: #FF0000">
                     <asp:Literal runat="server" ID="FailureText" />
                 </p>
                 <fieldset >
@@ -44,8 +42,6 @@
                     </ol>
                     <asp:Button ID="btnLogin" runat="server" CommandName="Login" Text="Log in" Font-Bold="true" OnClick="btnLogin_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="4"  />
                 </fieldset>
-            </LayoutTemplate>
-        </asp:Login>
 </asp:Panel>
         <div>
                     <asp:Label runat="server" ID="lblError" Visible="false" />

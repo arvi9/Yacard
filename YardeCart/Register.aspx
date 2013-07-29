@@ -249,7 +249,7 @@ FormColumnError {
                  
                 </td>
                 <td ID="TableCell23" runat="server" class="auto-style22"  >
-                    <asp:TextBox ID="txtMobile" runat="server" Height="24"  Width="300" CssClass="validate[required,custom[phone]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="25" TabIndex="8"></asp:TextBox>
+                    <asp:TextBox ID="txtMobile" runat="server" Height="24"  Width="300" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="25" TabIndex="8"></asp:TextBox>
                     <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtMobile" ForeColor="Red"
                         ErrorMessage="must enter mobile no"></asp:RequiredFieldValidator>--%>
                      <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtMobile" ForeColor="Red"

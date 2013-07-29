@@ -39,7 +39,7 @@
     <script src="html-default/js/jquery.min.js"></script>
     <script src="html-default/js/scripts.js"></script>
     <!--ui_totop START -->
-    <link href="html-default/ui_totop/css/ui.totop.css" rel="stylesheet" />
+    <%--<link href="html-default/ui_totop/css/ui.totop.css" rel="stylesheet" />
     <script src="html-default/ui_totop/js/jquery.ui.totop.js" charset="utf-8"></script>
     <!-- ui_totop END -->
     <!-- DC Twitter Starts -->
@@ -73,7 +73,7 @@
     <!-- prettyPhoto Start -->
     <link rel="stylesheet" type="text/css" href="html-default/prettyPhoto/css/prettyPhoto.css" />
     <script type="text/javascript" src="html-default/prettyPhoto/js/jquery.prettyPhoto.js"></script>
-    <!-- prettyPhoto END -->
+    --%><!-- prettyPhoto END -->
     <!-- superfish -->
     <link rel="stylesheet" media="screen" href="html-default/superfish/css/superfish.css" />
     <script  src="html-default/superfish/js/superfish-1.4.8/js/hoverIntent.js"></script>
@@ -82,9 +82,9 @@
     <script  src="html-default/js/selectnav.min.js"></script>
     <!-- ENDS superfish -->
     <!-- Gallery Starts -->
-    <script type="text/javascript" src="html-default/js/gallery-masonry/jquery.masonry.min.js"></script>
+    <%--<script type="text/javascript" src="html-default/js/gallery-masonry/jquery.masonry.min.js"></script>
     <script type="text/javascript" src="html-default/js/gallery-masonry/modernizr-transitions.js"></script>
-    <script type="text/javascript" src="html-default/js/gallery-masonry/gallery-masonry.js"></script>
+    <script type="text/javascript" src="html-default/js/gallery-masonry/gallery-masonry.js"></script>--%>
     <!-- Gallery Ends -->
     <!-- Config User Intarface Box Import START -->
     <script type="text/javascript" src="html-default/js/head_html_default_block.js"></script>

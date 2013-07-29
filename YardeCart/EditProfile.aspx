@@ -1,4 +1,4 @@
-﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="EditProfile.aspx.cs" Inherits="YardeCart.EditProfile" %>
+﻿<%@ Page Title="Yard eCart User profile" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="EditProfile.aspx.cs" Inherits="YardeCart.EditProfile" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <%--<script type="text/javascript">
@@ -34,7 +34,7 @@
         $(document).ready(function () {
            // $("#MainContent_txtEmail").addClass('validate[required,custom[email]]');
             var a = $("#MainContent_txtEmail").val();
-            alert("hi");
+            //alert("hi");
         }
         );
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="EditAdpost.aspx.cs" Inherits="YardeCart.EditAdpost" %>
+﻿<%@ Page Title="Yard eCart Ad posts" Language="C#" MasterPageFile="~/Yarde.Master" AutoEventWireup="true" CodeBehind="EditAdpost.aspx.cs" Inherits="YardeCart.EditAdpost" %>
 <%@ Register Assembly="SlimeeLibrary" Namespace="SlimeeLibrary" TagPrefix="cc1" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
