@@ -179,7 +179,7 @@
                                     <label>Last Name</label>
                                 </td>
                                 <td style="width:250px;">
-                                    <asp:TextBox ID="txtLastName" runat="server" Height="24" Width="300" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
+                                    <asp:TextBox ID="txtLastName" runat="server" Height="24" Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr style="height:40px;">
@@ -220,7 +220,7 @@
                                     Address
                                 </td>
                                 <td style="width:250px;">
-                                    <asp:TextBox ID="txtAddress" runat="server" Height="24" Width="300" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
+                                    <asp:TextBox ID="txtAddress" runat="server" Height="24" Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr style="height:40px;">
@@ -228,7 +228,7 @@
                                     Street name
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="txtStreetname" runat="server" Height="24" Width="300" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
+                                    <asp:TextBox ID="txtStreetname" runat="server" Height="24" Width="300" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr style="height:40px;">
@@ -331,7 +331,7 @@
             </tr>
             <tr>
                 <td colspan="2" style="text-align: center;">
-                    <asp:Button ID="btnSubmit" Width="100" runat="server" Text="Submit" BorderStyle="Groove" BorderWidth="1px" Height="28px" style="font-weight: 700" TabIndex="16" />
+                    <asp:Button ID="btnSubmit" Width="100" runat="server" Text="Submit" BorderStyle="Groove" BorderWidth="1px" Height="28px" style="font-weight: 700" TabIndex="16" OnClick="btnSubmit_Click"/>
                 </td>
             </tr>
         </table>

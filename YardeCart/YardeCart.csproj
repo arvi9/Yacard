@@ -121,6 +121,7 @@
     <Content Include="MyProfile.aspx" />
     <Content Include="MyPurchases.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="ResetPassword.aspx" />
     <Content Include="UsersBlock.aspx" />
     <Content Include="UsersDelete.aspx" />
     <Content Include="ViewAds.aspx" />
@@ -2151,6 +2152,13 @@
     </Compile>
     <Compile Include="MyPurchases.aspx.designer.cs">
       <DependentUpon>MyPurchases.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="UsersBlock.aspx.cs">
       <DependentUpon>UsersBlock.aspx</DependentUpon>

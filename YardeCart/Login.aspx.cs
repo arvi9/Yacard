@@ -59,6 +59,8 @@ namespace YardeCart
                     else
                         Session.Add("UserId", userId.ToString());
 
+                    if (Session["UserType"] == null)
+                        Session.Add("UserType", "1");
                     Session.Add("IsLoginUser", "true");
 
                     // Use this line when you want to save a cookie
@@ -68,8 +70,11 @@ namespace YardeCart
                     Response.Cookies["TIS"].Expires = DateTime.Now.AddDays(10);
                     
                     HttpCookie cUserId = new HttpCookie("UserId", userId.ToString().Trim());
+                    HttpCookie cUsertype = new HttpCookie("UserType", "1");
                     cUserId.Expires = DateTime.Now.AddDays(5);
+                    cUsertype.Expires = DateTime.Now.AddDays(5);
                     Response.Cookies.Add(cUserId);
+                    Response.Cookies.Add(cUsertype);
 
                     if (RememberMe.Checked == true)
                     {

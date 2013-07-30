@@ -242,6 +242,9 @@ namespace YardeCart
 
             //if (intPwdError == 0)
             //    lblPwdError.Visible = false;
+            //UserInfoBll userBll = new UserInfoBll();
+            //userBll.UpdateUserPassword(Convert.ToInt32(Session["UserId"].ToString()), txtNewpwd.Text.Trim());
+                    
         }
 
     }

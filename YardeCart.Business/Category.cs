@@ -95,5 +95,20 @@ namespace YardeCart.Business
             }
         }
 
+        public DataTable AvailableCategoryGroup(string groupName)
+        {
+            try
+            {
+                DALComponent dalComponent = new DALComponent();
+                dalComponent.SetParameters("@groupname", SqlDbType.VarChar, 50, groupName);
+                dalComponent.SqlCommandText = "[AvailableCategoryGroup]";
+                return dalComponent.SelectRecord();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
     }
 }

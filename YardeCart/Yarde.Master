@@ -185,8 +185,8 @@
         document.getElementById("adminsubmenu").style.display = "block";
         document.getElementById("registeridli").style.display = "none";
         document.getElementById("loginidli").style.display = "none";
-        document.getElementById("myaccountidli").style.display = "none";
-        document.getElementById("myaccmenuli").style.display = "none";
+        document.getElementById("myaccountidli").style.display = "block";
+        document.getElementById("myaccmenuli").style.display = "block";
         document.getElementById("logoutidli").style.display = "block";
     }
     else if (ishide == "1")

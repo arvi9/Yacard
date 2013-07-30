@@ -35,6 +35,20 @@
                 </asp:GridView>
             </td></tr>
                <tr><td class="auto-style4" style="text-align: center" colspan="2">
+                    &nbsp;</td>
+               </tr>
+               <tr><td class="auto-style4" style="text-align: left; line-height: 30px; text-indent: 15px; vertical-align: top; padding-left: 100px;" colspan="2">
+                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="Small" Text="Delivery charges"></asp:Label>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                   <asp:RadioButtonList ID="RadioButtonList1" runat="server" BorderStyle="None" CellPadding="0" CellSpacing="0" Height="25px" RepeatDirection="Horizontal" RepeatLayout="Flow" Width="175px">
+                        <asp:ListItem Selected="True" Value="0">Normal </asp:ListItem>
+                        <asp:ListItem Value="1">Premium</asp:ListItem>
+                    </asp:RadioButtonList>
+
+                   </td>
+               </tr>
+               <tr><td class="auto-style4" style="text-align: center" colspan="2">
                     <asp:Button ID="btnBuy" Width="100" Height="28px" runat="server" Text="BUY" BorderStyle="Groove" BorderWidth="1px"  OnClick="btnBuy_Click" />
 
                    </td>

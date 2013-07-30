@@ -40,6 +40,7 @@ namespace YardeCart
                 string mSubject = "Yard E-Cart Password request";
                 string serverPath = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/Login.aspx";
                 string activatePath = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/ActivateUser.aspx?uid=" + UtilityClass.Encrypt(strUserId.ToString()).ToString();
+                string resetPath = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/ResetPassword.aspx?uid=" + UtilityClass.Encrypt(strUserId.ToString()).ToString();
 
                 string mMsg = "";
 
@@ -54,6 +55,8 @@ namespace YardeCart
                     "<a href='" + activatePath + "' runat='server' >" + activatePath + "</a>" +
                     "<br /><br />Now you can login with Yard E-Cart<br />" +
                     "<a href='" + serverPath + "' runat='server' >" + serverPath + "</a>" +
+                    "<br /><br />Or you can reset password with below link<br />" +
+                    "<a href='" + resetPath + "' runat='server' >" + resetPath + "</a>" +
                     "<br /><br /><br /><br />All the best,<br />Yard E-Cart.</div></form></body></html>";
                 }
                 else
@@ -63,12 +66,15 @@ namespace YardeCart
                     "<b>UserName : " + strUsername + "<br>Password : " + strPassword + "</b>" +
                     "<br /><br />Now you can login with Yard E-Cart<br />" +
                     "<a href='" + serverPath + "' runat='server' >" + serverPath + "</a>" +
+                    "<br /><br />Or you can reset password with below link<br />" +
+                    "<a href='" + resetPath + "' runat='server' >" + resetPath + "</a>" +
                     "<br /><br /><br /><br />All the best,<br />Yard E-Cart.</div></form></body></html>";
 
                 }
                 UtilityClass.SendMail(mUname, mPwd, mFrom, mTo, mCC, mSubject, mMsg, true);
 
                 tblMessage.InnerText = "User Name and Password are sending to " + txtEmail.Text.Trim() + ". Check your mail..";
+                txtEmail.Text = "";
             }
             else
             {

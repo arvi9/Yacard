@@ -423,7 +423,8 @@ namespace YardeCart
         {
             int r=0;
             objCategory = new Category();
-            if(txtcategory.Text.ToString().Trim() != "")
+            DataTable dt = objCategory.AvailableCategoryGroup(txtcategory.Text.ToString().Trim());
+            if (dt.Rows.Count == 0 && txtcategory.Text.ToString().Trim() != "")
                 r = objCategory.CategoryGroupUpdate(0, txtcategory.Text.ToString().Trim());
             txtcategory.Text = "";
             LoadCategory();

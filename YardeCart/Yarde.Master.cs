@@ -21,11 +21,11 @@ namespace YardeCart
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Cookies["AdminID"] != null)
+            if (Request.Cookies["UserType"] != null)
             {
-                Session.Add("AdminID", Request.Cookies["AdminID"].Value.ToString());
+                Session.Add("UserType", Request.Cookies["UserType"].Value.ToString());
             }
-            else if (Request.QueryString.Count == 1)
+            if (Request.QueryString.Count == 1)
                 {
                     if (this.Page.Title.Contains("Activa") == false)
                 {
@@ -39,7 +39,7 @@ namespace YardeCart
             }
 
 
-            if (this.Page.Title.Contains("Admin") || Session["AdminID"] != null)
+            if (this.Page.Title.Contains("Admin") || (Session["UserId"] != null && Session["UserType"] != null && Session["UserType"].ToString() == "2"))
             {
                 welcomeMessage.InnerText = "Welcome Admin";
                 isShowHideControl = "2";

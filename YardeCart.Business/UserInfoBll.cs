@@ -258,6 +258,21 @@ namespace YardeCart.Business
             }
         }
 
+        public void UpdateUserPassword(int userId, string userpassword)
+        {
+            try
+            {
+                dalComponent.SetParameters("@userid", SqlDbType.Int, 4, userId);
+                dalComponent.SetParameters("@userpassword", SqlDbType.VarChar, 50, userpassword);
+                dalComponent.SqlCommandText = "[UpdateUserPassword]";
+                int x = dalComponent.CreateRecord();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
         public DataTable SelectProfile(int userId)
         {
             try

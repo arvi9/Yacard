@@ -10,69 +10,69 @@
 namespace YardeCart {
     
     
-    public partial class MyCartDetail {
+    public partial class ResetPassword {
         
         /// <summary>
-        /// tblAdpost control.
+        /// tblMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable tblAdpost;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell tblMessage;
         
         /// <summary>
-        /// lblCart control.
+        /// TableCell19 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCart;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell TableCell19;
         
         /// <summary>
-        /// btnKeep control.
+        /// txtNewPwd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnKeep;
+        protected global::System.Web.UI.WebControls.TextBox txtNewPwd;
         
         /// <summary>
-        /// GridView1 control.
+        /// Td1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell Td1;
         
         /// <summary>
-        /// Label1 control.
+        /// txtConPwd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.TextBox txtConPwd;
         
         /// <summary>
-        /// RadioButtonList1 control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
-        /// btnBuy control.
+        /// btnSend control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuy;
+        protected global::System.Web.UI.WebControls.Button btnSend;
     }
 }
