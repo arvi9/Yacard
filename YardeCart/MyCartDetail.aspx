@@ -18,6 +18,7 @@
                     ShowHeader="False" OnPageIndexChanging="GridView1_PageIndexChanging" BorderColor="Black" BorderWidth="2px" PageSize="10"
                     >
                     <Columns>
+                        <asp:BoundField DataField="AdPostId" Visible="false" InsertVisible="false"/>
                         <asp:TemplateField >
                             <ItemTemplate>
                                 <table style="width:600px;">
@@ -30,6 +31,7 @@
                                 </table>
                             </ItemTemplate>
                         </asp:TemplateField>
+
                     </Columns>
                     <PagerStyle BorderStyle="Solid" HorizontalAlign="Center" VerticalAlign="Bottom" Wrap="True" />
                 </asp:GridView>

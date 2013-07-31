@@ -3,7 +3,7 @@
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <section id="AdminloginForm" >
         <asp:Panel ID="Panel1" runat="server" style="padding-left:200px; padding-top:50px">
-                <p class="validation-summary-errors">
+                <p class="validation-summary-errors" style="color: #FF0000">
                     <asp:Literal runat="server" ID="FailureText" />
                 </p>
                 <fieldset >

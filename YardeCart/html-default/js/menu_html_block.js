@@ -21,6 +21,7 @@ document.writeln('  <li><a href="UsersBlock.aspx" class="menu_navigation"><span>
 document.writeln('  <li><a href="UsersDelete.aspx" class="menu_navigation"><span>Delete Users</span></a></li>');
 document.writeln('  <li><a href="AdsBlock.aspx" class="menu_navigation"><span>Block Adposts</span></a></li>');
 document.writeln('  <li><a href="AdsDelete.aspx" class="menu_navigation"><span>Delete Adposts</span></a></li>');
+document.writeln('  <li><a href="AdsReport.aspx" class="menu_navigation"><span>Reports</span></a></li>');
 document.writeln('  </ul>');
 document.writeln('  </li>');
 

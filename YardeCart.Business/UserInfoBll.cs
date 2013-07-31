@@ -316,5 +316,19 @@ namespace YardeCart.Business
             }
         }
 
+        public DataTable SelectUserPurchases(int Userid)
+        {
+            try
+            {
+                dalComponent.SetParameters("@userid", SqlDbType.Int, 4, Userid);
+                dalComponent.SqlCommandText = "[SelectUserPurchases]";
+                return dalComponent.SelectRecord();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
     }
 }

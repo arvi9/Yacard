@@ -91,36 +91,36 @@ namespace YardeCart
             GridView1.DataBind();
         }
 
-        string BindUrl(string title, string desc, string category, string ipath, string aid, string userid, string price)
+        string BindUrl(string title, string desc, string category, string ipath, string aid, string userid, string price, string AdStatus)
         {
             int intNoPhotoInd = 0;
-            string strNoPhotoPath = "";
+            string htmlSText = "";
             strImgpath=ipath.Split(':');   
+            string sTestHtml = string.Empty;
 
             string path = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + strImgpath[0];
-            //string strViewlink = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/ViewAds.aspx?aid=" +aid + "&uid=" + userid;
-            //string strBuylink = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/BuyAdpost.aspx";
-
             string strViewlink = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/ViewAds.aspx?aid=" + aid + "&uid=" + userid;
             string strBuylink = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/BuyAdpost.aspx?aid=" + aid + "&uid=" + userid;
 
-
-//            string htmlSText = @"<table>
-//<tr><td><a title='{0}' href='{3}' ><IMG SRC='{3}' height='300px' width='200px' bordor='2' ></td></tr>
-//<tr><td style='font-family: Britannic Bold; font-size: large; color: #CB5091; font-weight: bold;'><h3>{0}<h3></br><span>{4}</span></td></tr>" +
-//                                "<tr><td style='font-family: Britannic Bold; font-size: large; color: #00CC00;'>{2}</td></tr><tr><td><a href='{6}' style='animation:alternate-reverse;font-family: Arial; font-size: medium; font-weight: bold; color: #3333FF;'>BUY</a></br><a href='{5}'>Details</a></td></tr></table>";
-
-
-          string htmlSText =@"<table>
+            if (AdStatus == "NEW")
+            {
+                htmlSText = @"<table>
 <tr><td><a title='{0}' href='{3}' ><IMG SRC='{3}' width='200px' bordor='2' style='height: 160px' ></td></tr>
 <tr><td style='font-family: Britannic Bold; color: #CB5091; ' class='auto-style1'><h3 class='auto-style2'>{0}<h3><span class='auto-style3'>
     <br class='auto-style1'></br></span><span class='auto-style2'>{4}</span></td></tr>" +
                                 "<tr><td style='font-family: Britannic Bold; color: #00CC00;' class='auto-style1'>{2}</td></tr><tr><td style='font-size: x-small'><a href='{6}' style='animation:alternate-reverse;font-family: Arial; font-size: medium; font-weight: bold; color: #3333FF;'>BUY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='{5}'>Details</a></td></tr></table>";
-
-
-
-            string sTestHtml = string.Empty;
             sTestHtml = string.Format(htmlSText, title, desc, category, path, price, strViewlink, strBuylink);
+            }
+            else if (AdStatus == "BOUGHT")
+            {
+                htmlSText = @"<table>
+<tr><td><a title='{0}' href='{3}' ><IMG SRC='{3}' width='200px' bordor='2' style='height: 160px' ></td></tr>
+<tr><td style='font-family: Britannic Bold; color: #CB5091; ' class='auto-style1'><h3 class='auto-style2'>{0}<h3><span class='auto-style3'>
+    <br class='auto-style1'></br></span><span class='auto-style2'>{4}</span></td></tr>" +
+                                                  "<tr><td style='font-family: Britannic Bold; color: #00CC00;' class='auto-style1'>{2}</td></tr><tr><td style='font-size: x-small'><a href='{6}' style='animation:alternate-reverse;font-family: Arial; font-size: medium; font-weight: bold; color: green;'>SOLD</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='{5}'>Details</a></td></tr></table>";
+
+                sTestHtml = string.Format(htmlSText, title, desc, category, path, price, strViewlink, "");
+            }
 
             //string sTestHtml = string.Empty;
             //    sTestHtml = string.Format(
@@ -168,8 +168,9 @@ namespace YardeCart
                     string sImagePath = dt.Rows[gridpageIndex]["ImagePath"].ToString().Trim();
                     string sAdPostId = dt.Rows[gridpageIndex]["AdPostId"].ToString().Trim();
                     string sUserId = dt.Rows[gridpageIndex]["UserId"].ToString().Trim();
+                    string sAdStatus = dt.Rows[gridpageIndex]["AdStatus"].ToString().Trim();
 
-                    spnHtml.InnerHtml = BindUrl(sAdPostTitle, sDescription, sCategoryName, sImagePath, sAdPostId, sUserId, sPrice);
+                    spnHtml.InnerHtml = BindUrl(sAdPostTitle, sDescription, sCategoryName, sImagePath, sAdPostId, sUserId, sPrice, sAdStatus);
                     y++;
                     gridpageIndex++;
                     if (dt.Rows.Count == gridpageIndex)

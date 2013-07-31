@@ -131,7 +131,7 @@
             
             <tr>
                 <td class="auto-style2" colspan="3" style="vertical-align:central;text-align:center;">
-                    <asp:Button ID="btnBuy" Width="100" runat="server" Text="BUY" BorderStyle="Groove" BorderWidth="1px"  OnClick="btnBuy_Click" />
+                    <asp:Button ID="btnBuy" Width="100" runat="server" Text="BUY" BorderStyle="Groove" BorderWidth="1px" Visible="false" OnClick="btnBuy_Click" />
 
                 </td>
             </tr>

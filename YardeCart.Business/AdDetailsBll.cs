@@ -222,5 +222,14 @@ namespace YardeCart.Business
             }
         }
 
+        public DataTable SelectReportsByDate(DateTime FromDate,DateTime ToDate)
+        {
+            dalComponent = new DALComponent();
+            dalComponent.SetParameters("@fromdate", SqlDbType.SmallDateTime, 4, FromDate);
+            dalComponent.SetParameters("@todate", SqlDbType.SmallDateTime, 4, ToDate);
+            dalComponent.SqlCommandText = "[SelectReportsByDate]";
+            return dalComponent.SelectRecord();
+        }
+
     }
 }

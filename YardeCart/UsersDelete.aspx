@@ -29,7 +29,8 @@
     <asp:GridView ID="GridView1" runat="server" DataKeyNames="UserId" BorderColor="Tan" BorderWidth="1px" OnRowCreated="GridView1_RowCreated"
                 GridLines="Both"  AutoGenerateColumns="false" AllowPaging="true" OnPageIndexChanging="GridView1_PageIndexChanging"
                 PageSize="50" Width="700px" HeaderStyle-Height="30px" HeaderStyle-VerticalAlign="Top" HeaderStyle-HorizontalAlign="Center"
-                RowStyle-Height="30px" RowStyle-VerticalAlign="Top" RowStyle-HorizontalAlign="Center" HeaderStyle-Wrap="true" AlternatingRowStyle-Height="30px" TabIndex="5"
+                RowStyle-Height="30px" RowStyle-VerticalAlign="Top" RowStyle-HorizontalAlign="Center" HeaderStyle-Wrap="true" 
+        AlternatingRowStyle-Height="30px" TabIndex="5"
                  >
                 <Columns>
                     <asp:TemplateField  HeaderText="Status" HeaderStyle-HorizontalAlign="Right" >

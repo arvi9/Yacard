@@ -19,6 +19,7 @@ namespace YardeCart
         DataTable dt = null;
         public int gridpageIndex = 0;
         string strUserId = "";
+        public static decimal decTotalPrice = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString["uid"] != null)
@@ -88,6 +89,8 @@ namespace YardeCart
             string sAdPostId = dt.Rows[e.Row.RowIndex]["AdPostId"].ToString().Trim();
             string sUserId = dt.Rows[e.Row.RowIndex]["UserId"].ToString().Trim();
 
+            decTotalPrice += Convert.ToDecimal(dt.Rows[e.Row.RowIndex]["Price"].ToString());
+
             spnHtml.InnerHtml = BindUrl(sAdPostTitle, sDescription, sCategoryName, sImagePath, sAdPostId, sUserId, sPrice);
         }
 
@@ -117,7 +120,52 @@ namespace YardeCart
             if (Session["UserId"] == null)
                 Response.Redirect("Login.aspx");
             else
-                Response.Redirect("BuyAdslist.aspx");
+            {
+                #region .. GET HISTORY ID ..
+                int intHistoryId = 0;
+                CartDetails objCart = new CartDetails();
+                DataTable dtMax = objCart.SelectMaxID();
+                if (dtMax.Rows.Count > 0)
+                {
+                    string st = dtMax.Rows[0]["HistroyId"].ToString();
+                    if (dtMax.Rows[0]["HistroyId"].ToString() == "")
+                        intHistoryId = 0;
+                    else
+                        intHistoryId = Convert.ToInt32(dtMax.Rows[0]["HistroyId"].ToString());
+                }
+                intHistoryId++;
+                #endregion
+                #region .. GET HISTORY ID ..
+
+                DataTable dtCart = objCart.SelectUserCartDetails(Convert.ToInt32(Session["UserId"].ToString()));
+                decimal delPrice = 0;
+                int intDeliType = int.Parse(RadioButtonList1.SelectedItem.Value.ToString().Trim());
+                if (intDeliType == 0)
+                    delPrice = decTotalPrice + ((decTotalPrice * 10) / 100);
+                else if (intDeliType == 1)
+                    delPrice = decTotalPrice + ((decTotalPrice * 15) / 100);
+                for (int i = 0; i < dtCart.Rows.Count; i++)
+                {
+
+                    objCart.CreateBuyDetails(
+                        Convert.ToInt32(dtCart.Rows[i]["AdPostId"].ToString()),
+                        intHistoryId,
+                        Convert.ToInt32(Session["UserId"].ToString()),
+                        delPrice,
+                        int.Parse(RadioButtonList1.SelectedItem.Value.ToString().Trim()),
+                        0,
+                        "BOUGHT",
+                        1
+                        );
+
+
+                    objCart.UpdateCartStatus(Convert.ToInt32(dtCart.Rows[i]["AdPostId"].ToString()), Convert.ToInt32(Session["UserId"].ToString()));
+                }
+
+
+                #endregion
+                Response.Redirect("MyPurchases.aspx");
+            }
         }
 
     }

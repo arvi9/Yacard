@@ -113,11 +113,11 @@ namespace YardeCart
                 currentLocation.InnerText = string.Format(" / Country: {0}/{1}, City: {2}/{3} ",
                     dynamicResult["countryName"].ToString(), dynamicResult["countryCode"].ToString(),dynamicResult["city"].ToString(),
                     dynamicResult["region"].ToString());
-
+                if (Session["Location"] == null)
+                    Session.Add("Location", dynamicResult["region"].ToString());
             }
             else
             {
-
             string userHostIpAddress = IPAdd; // "117.197.193.243";
             IPAddress ipAddress;
             //Response.Write("<script>alert('"+userHostIpAddress+"')</Script>");
@@ -132,11 +132,12 @@ namespace YardeCart
                 string iso3166TwoLetterCode = ipAddress.Iso3166TwoLetterCode(); // return value: US
                 currentLocation.InnerText = string.Format("Country: {0} / Location: {1} ", country, iso3166TwoLetterCode);
 
+                    if (Session["Location"] == null)
+                        Session.Add("Location", iso3166TwoLetterCode);
+
                 //Label1.Text = country;
             }
             }
-        
-
         }
 
         private string GetLocation(string ipAd)

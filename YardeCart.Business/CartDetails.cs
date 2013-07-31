@@ -54,5 +54,55 @@ namespace YardeCart.Business
                 throw;
             }
         }
+
+        public DataTable SelectMaxID()
+        {
+            DALComponent dalComponent = new DALComponent();
+            dalComponent.SqlCommandText = "SelectMaxID";
+            return dalComponent.SelectRecord();
+        }
+
+        public void CreateBuyDetails(int adpostId, int historyId, int userId, decimal totalprice, int delitype, int cityId, string currentstatus, int viewcount)
+        {
+            try
+            {
+                DALComponent dalComponent = new DALComponent();
+                dalComponent.SetParameters("@adpostId", SqlDbType.Int, 4, adpostId);
+                dalComponent.SetParameters("@historyId", SqlDbType.Int, 4, historyId);
+                dalComponent.SetParameters("@userId", SqlDbType.Int, 4, userId);
+                dalComponent.SetParameters("@totalprice", SqlDbType.Decimal, 9, totalprice);
+                dalComponent.SetParameters("@delitype", SqlDbType.Int, 4, delitype);
+                dalComponent.SetParameters("@cityId", SqlDbType.Int, 4, cityId);
+                dalComponent.SetParameters("@currentstatus", SqlDbType.VarChar, 50, currentstatus);
+                dalComponent.SetParameters("@viewcount", SqlDbType.Int, 4, viewcount);
+                dalComponent.SetParameters("@idvalue", SqlDbType.Int, true);
+
+                dalComponent.SqlCommandText = "[CreateBuyDetails]";
+                int x = dalComponent.CreateRecord();
+
+                object y = dalComponent.GetParameters("@idvalue");
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public void UpdateCartStatus(int adpostId, int userid)
+        {
+            try
+            {
+                DALComponent dalComponent = new DALComponent();
+                dalComponent.SetParameters("@adpostid", SqlDbType.Int, 4, adpostId);
+                dalComponent.SetParameters("@userid", SqlDbType.Int, 4, userid);
+                dalComponent.SqlCommandText = "[UpdateCartStatus]";
+                int x = dalComponent.CreateRecord();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
     }
 }

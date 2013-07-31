@@ -105,7 +105,7 @@
     <Content Include="AdminPage.aspx" />
     <Content Include="AdsBlock.aspx" />
     <Content Include="AdsDelete.aspx" />
-    <Content Include="AdsList.aspx" />
+    <Content Include="AdsReport.aspx" />
     <Content Include="BuyAdpost.aspx" />
     <Content Include="BuyAdslist.aspx" />
     <Content Include="CategoryGroup.aspx" />
@@ -2063,12 +2063,12 @@
     <Compile Include="AdsDelete.aspx.designer.cs">
       <DependentUpon>AdsDelete.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdsList.aspx.cs">
-      <DependentUpon>AdsList.aspx</DependentUpon>
+    <Compile Include="AdsReport.aspx.cs">
+      <DependentUpon>AdsReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdsList.aspx.designer.cs">
-      <DependentUpon>AdsList.aspx</DependentUpon>
+    <Compile Include="AdsReport.aspx.designer.cs">
+      <DependentUpon>AdsReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="BuyAdpost.aspx.cs">
       <DependentUpon>BuyAdpost.aspx</DependentUpon>
