@@ -114,7 +114,9 @@ namespace YardeCart
                     dynamicResult["countryName"].ToString(), dynamicResult["countryCode"].ToString(),dynamicResult["city"].ToString(),
                     dynamicResult["region"].ToString());
                 if (Session["Location"] == null)
-                    Session.Add("Location", dynamicResult["region"].ToString());
+                    Session.Add("Location", dynamicResult["city"].ToString());
+
+                //Session.Add("Location", "wyoming");
             }
             else
             {
@@ -134,6 +136,7 @@ namespace YardeCart
 
                     if (Session["Location"] == null)
                         Session.Add("Location", iso3166TwoLetterCode);
+                    //Session.Add("Location", "wyoming");
 
                 //Label1.Text = country;
             }

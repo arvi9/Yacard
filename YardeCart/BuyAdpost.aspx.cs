@@ -91,7 +91,6 @@ namespace YardeCart
             return sTestHtml;
         }
 
-     
         protected void btnBuy_Click(object sender, EventArgs e)
         {
             if (Session["UserId"] == null)

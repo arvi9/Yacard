@@ -31,8 +31,32 @@ namespace YardeCart
                 Session.Add("UserId", Request.Cookies["UserId"].Value.ToString());
             if (!IsPostBack)
             {
+                lblError.Visible = false;
+                LoadDeliveryType();
                 BindAlbumGrid();
             }
+        }
+
+        void LoadDeliveryType()
+        {
+            ChargeDetails cat = new ChargeDetails();
+            ddlDeliType.Items.Clear();
+            DataTable dt1 = cat.SelectChargeDetails();
+            ListItem listItem = new ListItem();
+            listItem.Text = "<Select Charge Type>";
+            listItem.Value = "0";
+            //listItem.Attributes.Add("style", "background-Black:white;color:White");
+            ddlDeliType.Items.Add(listItem);
+            for (int i = 0; i < dt1.Rows.Count; i++)
+            {
+                listItem = new ListItem();
+                listItem.Text = dt1.Rows[i]["ChargeName"].ToString();
+                listItem.Value = dt1.Rows[i]["ChargeId"].ToString();
+
+                //listItem.Attributes.Add("style", "background-color:Black;color:white");
+                ddlDeliType.Items.Add(listItem);
+            }
+            
         }
 
         void BindAlbumGrid()
@@ -121,6 +145,8 @@ namespace YardeCart
                 Response.Redirect("Login.aspx");
             else
             {
+                if (ddlDeliType.SelectedIndex != 0)
+                {
                 #region .. GET HISTORY ID ..
                 int intHistoryId = 0;
                 CartDetails objCart = new CartDetails();
@@ -138,12 +164,34 @@ namespace YardeCart
                 #region .. GET HISTORY ID ..
 
                 DataTable dtCart = objCart.SelectUserCartDetails(Convert.ToInt32(Session["UserId"].ToString()));
-                decimal delPrice = 0;
-                int intDeliType = int.Parse(RadioButtonList1.SelectedItem.Value.ToString().Trim());
-                if (intDeliType == 0)
-                    delPrice = decTotalPrice + ((decTotalPrice * 10) / 100);
-                else if (intDeliType == 1)
-                    delPrice = decTotalPrice + ((decTotalPrice * 15) / 100);
+                    double delPrice = 0;
+                    int intChargeId = int.Parse(ddlDeliType.SelectedItem.Value.ToString().Trim());
+
+                    ChargeDetails chg = new ChargeDetails();
+                    DataTable dt = chg.SelectChargeDetailsByID(intChargeId);
+                    string strType = "";
+                    string strAmount = "";
+                    if (dt.Rows.Count > 0)
+                    {
+                        strType = dt.Rows[0]["ChargeType"].ToString();
+                        strAmount = dt.Rows[0]["AmountOrPercent"].ToString();
+                    }
+
+                    double dblDeliAmount = Convert.ToDouble(strAmount);
+                    if (strType == "0")
+                        delPrice = Convert.ToDouble(decTotalPrice) + dblDeliAmount;
+                    else if (strType == "1")
+                        delPrice = Convert.ToDouble(decTotalPrice) + (Convert.ToDouble(decTotalPrice) * (dblDeliAmount / 100));
+
+                    string strLocationId = "";
+                    string strLocationName = "";
+                    if (Session["Location"] != null)
+                        strLocationName = Session["Location"].ToString();
+
+                    City objCity = new City();
+                    DataTable dtCity = objCity.SelectCityByName(strLocationName);
+                    if (dtCity.Rows.Count > 0) strLocationId = dtCity.Rows[0]["CityId"].ToString(); else strLocationId = "0";
+
                 for (int i = 0; i < dtCart.Rows.Count; i++)
                 {
 
@@ -151,20 +199,31 @@ namespace YardeCart
                         Convert.ToInt32(dtCart.Rows[i]["AdPostId"].ToString()),
                         intHistoryId,
                         Convert.ToInt32(Session["UserId"].ToString()),
-                        delPrice,
-                        int.Parse(RadioButtonList1.SelectedItem.Value.ToString().Trim()),
-                        0,
+                            Convert.ToDecimal(delPrice),
+                            int.Parse(ddlDeliType.SelectedItem.Value.ToString().Trim()),
+                            Convert.ToInt32(strLocationId),
                         "BOUGHT",
-                        1
+                            1,
+                            ddlDeliType.SelectedItem.Text.ToString().Trim(),
+                            Convert.ToInt32(strType),
+                            Convert.ToDouble(strAmount)
                         );
 
 
                     objCart.UpdateCartStatus(Convert.ToInt32(dtCart.Rows[i]["AdPostId"].ToString()), Convert.ToInt32(Session["UserId"].ToString()));
                 }
+                    decTotalPrice = 0;
 
 
                 #endregion
                 Response.Redirect("MyPurchases.aspx");
+            }
+                else
+                {
+                    lblError.Visible = true;
+                    lblError.Text = "Select Delivery charges";
+                }
+
             }
         }
 

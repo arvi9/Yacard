@@ -34,11 +34,11 @@ namespace YardeCart
         {
             objAd = new AdDetailsBll();
 
-            //if (rdoSearch.SelectedItem.Value.ToString() == "0")
+            if (rdoSearch.SelectedItem.Value.ToString() == "0")
             {
-                //dt = objAd.SearchAdsByAdtitle(txtSearch.Text.ToString().Trim());    //GetAllAdDetails();
+                dt = objAd.SelectReportsByCity(txtSearch.Text.ToString().Trim());   
             }
-            //else
+            else
             {
                 dt = objAd.SelectReportsByDate(Convert.ToDateTime(DatePicker1.SelectedDate.ToString()), Convert.ToDateTime(DatePicker2.SelectedDate.ToString()));
             }
@@ -65,8 +65,49 @@ namespace YardeCart
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
+            if (rdoSearch.SelectedIndex == 1)
+            {
             if ((DatePicker1.SelectedDate.ToString() != "1/1/0001 12:00:00 AM") && (DatePicker2.SelectedDate.ToString() != "1/1/0001 12:00:00 AM"))
                 LoadAds();
+                else
+                {
+                    tblAdpost.Visible = false;
+                    lblError.Visible = true;
+                    lblError.Text = "No Reports";
+                }
+            }
+            else if (rdoSearch.SelectedIndex == 0)
+            {
+                if (txtSearch.Text != "")
+                    LoadAds();
+                else
+                {
+                    tblAdpost.Visible = false;
+                    lblError.Visible = true;
+                    lblError.Text = "No Reports";
+                }
+            }
+        }
+
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                // Find the value in the c04_oprogrs column. You'll have to use
+
+                string value = e.Row.Cells[3].Text;
+                City objCity = new City();
+                DataTable dtCity = objCity.SelectCityById(value);
+                if (dtCity.Rows.Count > 0)
+                {
+                    e.Row.Cells[3].Text = dtCity.Rows[0]["CityName"].ToString();
+                }
+                else
+                {
+                    e.Row.Cells[3].Text = "No US City";
+                }
+            }
+
         }
 
     }

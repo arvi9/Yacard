@@ -17,5 +17,22 @@ namespace YardeCart.Business
             return dalCom.SelectRecord();
         }
     
+        public DataTable SelectCityByName(string cityname)
+        {
+            DALComponent dalCom = new DALComponent();
+            dalCom.SetParameters("@cityname", SqlDbType.VarChar, 50, cityname);
+            dalCom.SqlCommandText = "[SelectCityByName]";
+            return dalCom.SelectRecord();
+        }
+
+        public DataTable SelectCityById(string cityid)
+        {
+            DALComponent dalCom = new DALComponent();
+            dalCom.SetParameters("@cityid", SqlDbType.Int, 4, cityid);
+            dalCom.SqlCommandText = "[SelectCityById]";
+            return dalCom.SelectRecord();
+        }
+
+    
     }
 }

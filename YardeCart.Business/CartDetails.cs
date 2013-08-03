@@ -62,7 +62,8 @@ namespace YardeCart.Business
             return dalComponent.SelectRecord();
         }
 
-        public void CreateBuyDetails(int adpostId, int historyId, int userId, decimal totalprice, int delitype, int cityId, string currentstatus, int viewcount)
+        public void CreateBuyDetails(int adpostId, int historyId, int userId, decimal totalprice, int delitype, int cityId,
+            string currentstatus, int viewcount, string chargeName, int chargeType, double chargeAmount)
         {
             try
             {
@@ -75,6 +76,9 @@ namespace YardeCart.Business
                 dalComponent.SetParameters("@cityId", SqlDbType.Int, 4, cityId);
                 dalComponent.SetParameters("@currentstatus", SqlDbType.VarChar, 50, currentstatus);
                 dalComponent.SetParameters("@viewcount", SqlDbType.Int, 4, viewcount);
+                dalComponent.SetParameters("@chargeName", SqlDbType.VarChar, 50, chargeName);
+                dalComponent.SetParameters("@chargeType", SqlDbType.Int, 4, chargeType);
+                dalComponent.SetParameters("@chargeAmount", SqlDbType.Float, 9, chargeAmount);
                 dalComponent.SetParameters("@idvalue", SqlDbType.Int, true);
 
                 dalComponent.SqlCommandText = "[CreateBuyDetails]";

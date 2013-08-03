@@ -231,5 +231,13 @@ namespace YardeCart.Business
             return dalComponent.SelectRecord();
         }
 
+        public DataTable SelectReportsByCity(string cityname)
+        {
+            dalComponent = new DALComponent();
+            dalComponent.SetParameters("@cityname", SqlDbType.VarChar, 50, cityname);
+            dalComponent.SqlCommandText = "[SelectReportsByCity]";
+            return dalComponent.SelectRecord();
+        }
+
     }
 }

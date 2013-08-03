@@ -81,10 +81,11 @@
                </td></tr>
             <tr><td style="text-align:center;"><asp:Label ID="lblMessage" runat="server" Visible="false"></asp:Label>&nbsp;</td></tr>
             <tr><td>
-            <asp:GridView ID="GridView1" runat="server" DataKeyNames="AdPostId" BorderColor="Tan" BorderWidth="1px" 
+            <asp:GridView ID="GridView1" runat="server" DataKeyNames="AdPostId" BorderColor="Tan" BorderWidth="1px" OnRowDataBound="GridView1_RowDataBound"
                                 GridLines="Both"  AutoGenerateColumns="false" AllowPaging="true" OnPageIndexChanging="GridView1_PageIndexChanging"
                 PageSize="50" Width="750px" HeaderStyle-Height="30px" HeaderStyle-VerticalAlign="Top" HeaderStyle-HorizontalAlign="Center"
                 RowStyle-Height="30px" RowStyle-VerticalAlign="Top" RowStyle-HorizontalAlign="Center" HeaderStyle-Wrap="true" AlternatingRowStyle-Height="30px"
+                RowStyle-BorderStyle="Solid" RowStyle-BorderWidth="1px" RowStyle-BorderColor="Tan"
                 >
                 <Columns>
                     <asp:BoundField DataField="AdPostTitle" HeaderText="Ad Name" ItemStyle-Width="150px" ItemStyle-Height="30px"/>

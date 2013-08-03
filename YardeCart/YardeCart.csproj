@@ -110,6 +110,7 @@
     <Content Include="BuyAdslist.aspx" />
     <Content Include="CategoryGroup.aspx" />
     <Content Include="CategoryList.aspx" />
+    <Content Include="ChargesList.aspx" />
     <Content Include="EditAdpost.aspx" />
     <Content Include="EditProfile.aspx" />
     <Content Include="ForgotPassword.aspx" />
@@ -2096,6 +2097,13 @@
     </Compile>
     <Compile Include="CategoryList.aspx.designer.cs">
       <DependentUpon>CategoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChargesList.aspx.cs">
+      <DependentUpon>ChargesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChargesList.aspx.designer.cs">
+      <DependentUpon>ChargesList.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditAdpost.aspx.cs">
       <DependentUpon>EditAdpost.aspx</DependentUpon>

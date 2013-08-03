@@ -55,14 +55,10 @@ namespace YardeCart
             GridView1.DataBind();
         }
 
-        string BindUrl(string title, string desc, string category, string ipath, string aid, string userid, string price, string DeliveryType, string SaleDate)
+        string BindUrl(string title, string desc, string category, string ipath, string aid, string userid, string price, string DeliveryType, string SaleDate, string DeliveryAmount)
         {
-            string sDeliveryType ="";
             strImgpath = ipath.Split(':');
             
-            if (DeliveryType == "0") sDeliveryType = "Normal";
-            else if (DeliveryType == "1") sDeliveryType = "Premium";
-
             string path = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + strImgpath[0];
             string strViewlink = ConfigurationManager.AppSettings["ApplicationPath"].ToString() + "/ViewAds.aspx?aid=" + aid + "&uid=" + userid;
 
@@ -86,8 +82,8 @@ namespace YardeCart
             <td class='auto-style6'>&nbsp;{4}</td>
         </tr>
         <tr>
-            <td class='auto-style6'>&nbsp;Delivery Type</td>
-            <td class='auto-style6'>&nbsp;{5}</td>        
+            <td class='auto-style6'>&nbsp;Delivery Type -  Charges</td>
+            <td class='auto-style6'>&nbsp;{5} - {8}</td>        
         </tr>
         <tr>
             <td class='auto-style6'>&nbsp;Purchased Date</td>
@@ -95,17 +91,8 @@ namespace YardeCart
         </tr>
     </table>";
             
-        
-//        string htmlSText = @"<table height='100px' width='500px'>
-//<tr>
-//<td><a title='{0}' href='{3}' ><IMG SRC='{3}' width='200px' bordor='2' style='height: 160px' ></td><td>&nbsp;</td>
-//<td style='font-family: Britannic Bold; color: #00CC00;'>{0}
-//<h2 class='auto-style2'>{2}<h2><span class='auto-style3'>
-//<br class='auto-style1'></br></span><span>{4}</span><br/>
-//</td></tr></table>";
-
             string sTestHtml = string.Empty;
-            sTestHtml = string.Format(htmlSText, title, desc, category, path, price, sDeliveryType, SaleDate, strViewlink);
+            sTestHtml = string.Format(htmlSText, title, desc, category, path, price, DeliveryType, SaleDate, strViewlink, DeliveryAmount);
 
             return sTestHtml;
         }
@@ -123,12 +110,20 @@ namespace YardeCart
             string sAdPostId = dt.Rows[e.Row.RowIndex]["AdPostId"].ToString().Trim();
             string sPurUserId = dt.Rows[e.Row.RowIndex]["PurUserId"].ToString().Trim();
             string sAdUserId = dt.Rows[e.Row.RowIndex]["AdUserId"].ToString().Trim();
-            string sDeliveryType = dt.Rows[e.Row.RowIndex]["DeliveryType"].ToString().Trim();
             string sSaleDate = dt.Rows[e.Row.RowIndex]["SaleDate"].ToString().Trim();
-
+            string sDeliType = dt.Rows[e.Row.RowIndex]["ChargeType"].ToString().Trim();
+            string sChargeName = dt.Rows[e.Row.RowIndex]["ChargeName"].ToString().Trim();
+            string sDeliAmtorPerc = dt.Rows[e.Row.RowIndex]["ChargeAmount"].ToString().Trim();
+            string sDeliAmount = "";
+            if (sDeliType == "0") sDeliAmount = "$ " + sDeliAmtorPerc;
+            else if (sDeliType == "1")
+            {
+                double dbl = Convert.ToDouble(dt.Rows[e.Row.RowIndex]["Price"].ToString()) * (Convert.ToDouble(sDeliAmtorPerc) / 100);
+                sDeliAmount = "$ "+dbl.ToString();
+            }
             //decTotalPrice += Convert.ToDecimal(dt.Rows[e.Row.RowIndex]["Price"].ToString());
 
-            spnHtml.InnerHtml = BindUrl(sAdPostTitle, sDescription, sCategoryName, sImagePath, sAdPostId, sAdUserId, sPrice, sDeliveryType, sSaleDate);
+            spnHtml.InnerHtml = BindUrl(sAdPostTitle, sDescription, sCategoryName, sImagePath, sAdPostId, sAdUserId, sPrice, sChargeName, sSaleDate, sDeliAmount);
         }
 
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)

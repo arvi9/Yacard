@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="CartDetails.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="ChargeDetails.cs" />
     <Compile Include="City.cs" />
     <Compile Include="Country.cs" />
     <Compile Include="AdDetailsBll.cs" />
