@@ -16,6 +16,7 @@ namespace YardeCart
     public partial class MyCartDetail : System.Web.UI.Page
     {
         public string[] strImgpath = new string[5];
+        CartDetails objCart = null;
         DataTable dt = null;
         public int gridpageIndex = 0;
         string strUserId = "";
@@ -68,7 +69,12 @@ namespace YardeCart
             CartDetails cartbll = new CartDetails();
             dt=cartbll.SelectUserCartDetails(Convert.ToInt32(Session["UserId"].ToString()));
             lblCart.Text = dt.Rows.Count.ToString() + " Items in Your Cart";
-
+            if (dt.Rows.Count > 0)
+            {
+                decTotalPrice = 0;
+                tblAdpost.Visible = true;
+                tblAmount.Visible = true;
+                tblBuy.Visible = true;
             if (dt.Rows.Count > 4)
             {
                 decimal dPageSize = (dt.Rows.Count / 4M);
@@ -77,6 +83,13 @@ namespace YardeCart
             }
             GridView1.DataSource = dt.DefaultView;
             GridView1.DataBind();
+        }
+            else
+            {
+                tblAdpost.Visible = false;
+                tblAmount.Visible = false;
+                tblBuy.Visible = false;
+            }
         }
 
         string BindUrl(string title, string desc, string category, string ipath, string aid, string userid, string price)
@@ -137,6 +150,9 @@ namespace YardeCart
             objCart.CartDetailDelete(Convert.ToInt32(sCartId));
 
             BindAlbumGrid();
+
+            if (ddlDeliType.SelectedIndex != 0)
+                ddlDeliType_SelectedIndexChanged(sender, e);
         }
 
         protected void btnBuy_Click(object sender, EventArgs e)
@@ -149,7 +165,7 @@ namespace YardeCart
                 {
                 #region .. GET HISTORY ID ..
                 int intHistoryId = 0;
-                CartDetails objCart = new CartDetails();
+                    objCart = new CartDetails();
                 DataTable dtMax = objCart.SelectMaxID();
                 if (dtMax.Rows.Count > 0)
                 {
@@ -161,7 +177,7 @@ namespace YardeCart
                 }
                 intHistoryId++;
                 #endregion
-                #region .. GET HISTORY ID ..
+                    #region .. BUY DETAILS ..
 
                 DataTable dtCart = objCart.SelectUserCartDetails(Convert.ToInt32(Session["UserId"].ToString()));
                     double delPrice = 0;
@@ -224,6 +240,49 @@ namespace YardeCart
                     lblError.Text = "Select Delivery charges";
                 }
 
+            }
+        }
+
+        protected void ddlDeliType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlDeliType.SelectedIndex != 0)
+            {
+                objCart = new CartDetails();
+                DataTable dtCart = objCart.SelectUserCartDetails(Convert.ToInt32(Session["UserId"].ToString()));
+                double delPrice = 0;
+                int intChargeId = int.Parse(ddlDeliType.SelectedItem.Value.ToString().Trim());
+
+                ChargeDetails chg = new ChargeDetails();
+                DataTable dt = chg.SelectChargeDetailsByID(intChargeId);
+                string strType = "";
+                string strAmount = "";
+                if (dt.Rows.Count > 0)
+                {
+                    strType = dt.Rows[0]["ChargeType"].ToString();
+                    strAmount = dt.Rows[0]["AmountOrPercent"].ToString();
+                }
+
+                double dblDeliAmount = Convert.ToDouble(strAmount);
+                if (strType == "0")
+                    delPrice = Convert.ToDouble(decTotalPrice) + dblDeliAmount;
+                else if (strType == "1")
+                {
+                    dblDeliAmount = (Convert.ToDouble(decTotalPrice) * (dblDeliAmount / 100));
+                    delPrice = Convert.ToDouble(decTotalPrice) + dblDeliAmount;
+                }
+                //decTotalPrice = 0;
+
+                trDeliAmt.Visible = true;
+                trTotalAmt.Visible = true;
+                lblError.Visible = false;
+                lblDeliAmt.Text = "$ " +String.Format("{0:0.00}", dblDeliAmount);
+                lblTotalAmt.Text = "$ " + String.Format("{0:0.00}", delPrice);
+            }
+            else
+            {
+                trDeliAmt.Visible = false;
+                lblError.Visible = true;
+                trTotalAmt.Visible = false;
             }
         }
 

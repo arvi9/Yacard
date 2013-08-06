@@ -115,11 +115,11 @@ namespace YardeCart
             string sChargeName = dt.Rows[e.Row.RowIndex]["ChargeName"].ToString().Trim();
             string sDeliAmtorPerc = dt.Rows[e.Row.RowIndex]["ChargeAmount"].ToString().Trim();
             string sDeliAmount = "";
-            if (sDeliType == "0") sDeliAmount = "$ " + sDeliAmtorPerc;
+            if (sDeliType == "0") sDeliAmount = "$ " + String.Format("{0:0.00}",Convert.ToDouble(sDeliAmtorPerc));
             else if (sDeliType == "1")
             {
                 double dbl = Convert.ToDouble(dt.Rows[e.Row.RowIndex]["Price"].ToString()) * (Convert.ToDouble(sDeliAmtorPerc) / 100);
-                sDeliAmount = "$ "+dbl.ToString();
+                sDeliAmount = "$ " + String.Format("{0:0.00}", dbl);
             }
             //decTotalPrice += Convert.ToDecimal(dt.Rows[e.Row.RowIndex]["Price"].ToString());
 
