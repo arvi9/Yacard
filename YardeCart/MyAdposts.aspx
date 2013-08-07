@@ -38,3 +38,16 @@
            </table>
     </div>
 </asp:Content>
+<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+        .auto-style4 {
+            width: 865px;
+        }
+        .auto-style6 {
+            height: 20px;
+        }
+        .auto-style7 {
+            width: 214px;
+        }
+    </style>
+</asp:Content>

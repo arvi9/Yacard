@@ -21,31 +21,43 @@
         </tr>
     </table>
     <table id="tblCategory" style="width:900px;">
-            <tr><td class="auto-style7">&nbsp;</td></tr>
+            <tr><td class="auto-style7" colspan="3">&nbsp;</td></tr>
         <tr>
-            <td align="center" class="auto-style8" valign="center" style="text-align: right; padding-right: 25px">
+            <td align="center" class="auto-style17" valign="center" style="text-align: right; padding-right: 25px">
+                </td>
+            <td class="auto-style18">
                 <asp:Label ID="Label1" runat="server" Text="Category Name"></asp:Label>
             </td>
-            <td class="auto-style9">
-                <asp:TextBox ID="txtName" runat="server" Height="27px" Width="300px" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="1"></asp:TextBox>
+            <td class="auto-style19">
+                <asp:TextBox ID="txtName" runat="server" Height="20px" Width="250px" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="1"></asp:TextBox>
+            </td>
+            <td class="auto-style20">
             </td>
         </tr>
         <tr>
-            <td align="center" class="auto-style5" valign="center" style="padding-right: 20px; text-align: right">
+            <td class="auto-style17" >
+                </td>
+            <td class="auto-style18" >
                 <asp:Label ID="Label4" runat="server" Text="Category Group"></asp:Label>
             </td>
-            <td class="auto-style6">
-                <asp:DropDownList ID="ddlCategory" Height="24px" Width="300px" CssClass="validate[required] radio" style="border:solid 1px; transform-style:flat;"  runat="server" TabIndex="2"></asp:DropDownList>
+            <td class="auto-style19">
+                <asp:DropDownList ID="ddlCategory" Height="24px" Width="250px" CssClass="validate[required] radio" style="border:solid 1px; transform-style:flat;"  runat="server" TabIndex="2"></asp:DropDownList>
+            </td>
+            <td class="auto-style20">
             </td>
         </tr>
         <tr>
-            <td class="auto-style7">
+            <td class="auto-style12">
                 &nbsp;
             </td>
-            <td>
-                <asp:Button ID="btnSave" runat="server" Text="Add" Font-Bold="true" OnClick="btnSave_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="3"  />
+            <td class="auto-style15">
+                </td>
+            <td class="auto-style16">
+                &nbsp;<asp:Button ID="btnSave" runat="server" Text="Add" Font-Bold="true" OnClick="btnSave_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="25px" Width="105px" TabIndex="3"  />
+                &nbsp;&nbsp;<asp:Button ID="btnCancel" runat="server" Text="Cancel" Font-Bold="true" CausesValidation="false" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="25px" Width="105px" TabIndex="4" OnClick="btnCancel_Click"  />
+            </td>
+            <td class="auto-style21">
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" Font-Bold="true" CausesValidation="false" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="4" OnClick="btnCancel_Click"  />
             </td> 
         </tr>
     </table>
@@ -258,22 +270,38 @@ OnUpdateCommand="DataList1_UpdateCommand">
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
     <style type="text/css">
-        .auto-style5 {
-            width: 349px;
-            height: 37px;
-        }
-        .auto-style6 {
-            height: 37px;
-        }
         .auto-style7 {
             width: 349px;
         }
-        .auto-style8 {
-            width: 349px;
-            height: 20px;
+        .auto-style12 {
+            width: 161px;
+            height: 49px;
         }
-        .auto-style9 {
-            height: 20px;
+        .auto-style15 {
+            width: 140px;
+            height: 49px;
+        }
+        .auto-style16 {
+            width: 293px;
+            height: 49px;
+        }
+        .auto-style17 {
+            width: 161px;
+            height: 30px;
+        }
+        .auto-style18 {
+            width: 140px;
+            height: 30px;
+        }
+        .auto-style19 {
+            width: 293px;
+            height: 30px;
+        }
+        .auto-style20 {
+            height: 30px;
+        }
+        .auto-style21 {
+            height: 49px;
         }
     </style>
 </asp:Content>

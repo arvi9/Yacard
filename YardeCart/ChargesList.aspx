@@ -21,47 +21,66 @@
         </tr>
     </table>
     <table id="tblCategory" style="width:900px;">
-            <tr><td class="auto-style7">&nbsp;</td></tr>
+            <tr><td class="auto-style7" colspan="3">&nbsp;</td></tr>
         <tr>
-            <td align="center" class="auto-style8" valign="center" style="text-align: right; padding-right: 25px">
+            <td align="center" class="auto-style18" valign="center" style="text-align: right; padding-right: 25px">
+                &nbsp;&nbsp;
+            </td>
+            <td class="auto-style16" >
                 <asp:Label ID="Label1" runat="server" Text="Charge Name"></asp:Label>
             </td>
-            <td class="auto-style9">
-                <asp:TextBox ID="txtName" runat="server" Height="27px" Width="300px" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="1"></asp:TextBox>
+            <td class="auto-style14" >
+                <asp:TextBox ID="txtName" runat="server" Height="20px" Width="200px" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="1"></asp:TextBox>
             </td>
+            <td class="auto-style15">
+                &nbsp;</td>
         </tr>
         <tr>
-            <td align="center" class="auto-style5" valign="center" style="padding-right: 20px; text-align: right">
+            <td align="center" class="auto-style18" valign="center" style="padding-right: 20px; text-align: right">
+            &nbsp;&nbsp;
+            </td>
+            <td class="auto-style16" >
                 <asp:Label ID="Label4" runat="server" Text="Charge Type"></asp:Label>
             </td>
-            <td class="auto-style6">
-                <asp:RadioButtonList ID="RadioButtonList1" runat="server" BorderStyle="None" CellPadding="0" CellSpacing="0" Height="25px" RepeatDirection="Horizontal" RepeatLayout="Flow" Width="175px">
+            <td class="auto-style14" >
+                <asp:RadioButtonList ID="RadioButtonList1" runat="server" BorderStyle="None" CellPadding="0" CellSpacing="0" Height="19px" RepeatDirection="Horizontal" RepeatLayout="Flow" Width="175px">
                         <asp:ListItem Selected="True" Value="0">Amount </asp:ListItem>
                         <asp:ListItem Value="1">Percentage</asp:ListItem>
                     </asp:RadioButtonList>
 
             </td>
+            <td class="auto-style15">
+                &nbsp;</td>
         </tr>
         <tr>
-            <td align="center" class="auto-style5" valign="center" style="padding-right: 20px; text-align: right">
+            <td class="auto-style18">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td class="auto-style16">
                 <asp:Label ID="lblAmount" runat="server" Text="Amount"></asp:Label>
             </td>
-            <td class="auto-style6">
-                <asp:TextBox ID="txtAmount" runat="server" Height="27px" Width="300px" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="1"></asp:TextBox>
+            <td class="auto-style14">
+                <asp:TextBox ID="txtAmount" runat="server" Height="20px" Width="200px" CssClass="validate[required]" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" MaxLength="50" TabIndex="1"></asp:TextBox>
             </td>
+            <td class="auto-style15">
+                &nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style7">
+            <td class="auto-style19">
                 &nbsp;
             </td>
-            <td>
-                <asp:Button ID="btnSave" runat="server" Text="Add" Font-Bold="true" OnClick="btnSave_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="3"  />
+            <td class="auto-style20">
+                </td>
+            <td class="auto-style21">
+                <asp:Button ID="btnSave" runat="server" Text="Add" Font-Bold="true" OnClick="btnSave_Click" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="25px" Width="105px" TabIndex="3"  />
+                &nbsp;&nbsp;<asp:Button ID="btnCancel" runat="server" Text="Cancel" Font-Bold="true" CausesValidation="false" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="25px" Width="105px" TabIndex="4" OnClick="btnCancel_Click"  />
+            </td>
+            <td class="auto-style22">
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" Font-Bold="true" CausesValidation="false" BorderColor="Black" BorderStyle="Ridge" BorderWidth="1px" Height="32px" Width="105px" TabIndex="4" OnClick="btnCancel_Click"  />
-            </td> 
+                </td> 
         </tr>
         <tr>
-            <td class="auto-style7">
+            <td class="auto-style7" colspan="3">
                 &nbsp;</td>
             <td>
                 &nbsp;</td> 
@@ -180,22 +199,45 @@ OnUpdateCommand="DataList1_UpdateCommand">
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="head">
     <style type="text/css">
-        .auto-style5 {
-            width: 349px;
-            height: 37px;
-        }
-        .auto-style6 {
-            height: 37px;
-        }
         .auto-style7 {
             width: 349px;
         }
-        .auto-style8 {
+        .validate[required] {}
+        .validate[required] {}
+        .validate[required] {}
+        .validate[required] {}
+        .validate[required] {}
+        .validate[required] {}
+        .validate[required] {}
+        .auto-style14 {
             width: 349px;
-            height: 20px;
+            height: 28px;
         }
-        .auto-style9 {
-            height: 20px;
+        .auto-style15 {
+            height: 28px;
+        }
+        .auto-style16 {
+            width: 137px;
+            height: 28px;
+        }
+        .auto-style18 {
+            width: 246px;
+            height: 28px;
+        }
+        .auto-style19 {
+            width: 246px;
+            height: 56px;
+        }
+        .auto-style20 {
+            width: 137px;
+            height: 56px;
+        }
+        .auto-style21 {
+            width: 349px;
+            height: 56px;
+        }
+        .auto-style22 {
+            height: 56px;
         }
     </style>
 </asp:Content>

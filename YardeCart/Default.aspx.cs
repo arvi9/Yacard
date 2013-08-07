@@ -108,19 +108,31 @@ namespace YardeCart
             if (AdStatus == "NEW")
             {
                 htmlSText = @"<table>
-<tr><td><a title='{0}' href='{3}' ><IMG SRC='{3}' width='200px' bordor='2' style='height: 160px' ></td></tr>
-<tr><td style='font-family: Britannic Bold; color: #CB5091; ' class='auto-style1'><h3 class='auto-style2'>{0}<h3><span class='auto-style3'>
-    <br class='auto-style1'></br></span><span class='auto-style2'>{4}</span></td></tr>" +
-                                  "<tr><td style='font-family: Britannic Bold; color: #00CC00;' class='auto-style1'>{2}</td></tr><tr><td style='font-size: x-small'><a href='{6}' style='animation:alternate-reverse;font-family: Arial; font-size: medium; font-weight: bold; color: #3333FF;'>BUY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='{5}'>Details</a></td></tr></table>";
+<tr><td colspan='2'><a title='{0}' href='{3}' ><IMG SRC='{3}' width='180px' style='border: thin ridge #C0C0C0;height: 140px' ></td></tr>
+<tr><td colspan='2' style=' font-family: Tahoma;font-size: medium; font-weight: bold; color: #800080;height:30px;'>{0}</td></tr>
+<tr>
+<td style='font-size: small; font-weight: 800; color:green; font-family: Tahoma; text-align: center; vertical-align: middle;height:25px;'>{4}</td>
+<td style='font-size: small; font-weight: 200; color:gray;text-align: right; vertical-align: middle;height:25px;'>{2}</td>
+</tr>
+<tr><td ><a href='{6}' style='font-size: medium; font-weight: 800; color:blue;height:25px;'>Add to Cart</a></td>
+<td style='text-align: right' >&nbsp;<a href='{5}' style='font-size: small; font-weight: 100;color:GrayText;height:25px;'>Details</a></td></tr>
+<tr><td>&nbsp;</td></tr></table>";
+
             sTestHtml = string.Format(htmlSText, title, desc, category, path, price, strViewlink, strBuylink);
             }
             else if (AdStatus == "BOUGHT")
             {
+                // style='border: thick groove #660066'
                 htmlSText = @"<table>
-<tr><td><a title='{0}' href='{3}' ><IMG SRC='{3}' width='200px' bordor='2' style='height: 160px' ></td></tr>
-<tr><td style='font-family: Britannic Bold; color: #CB5091; ' class='auto-style1'><h3 class='auto-style2'>{0}<h3><span class='auto-style3'>
-    <br class='auto-style1'></br></span><span class='auto-style2'>{4}</span></td></tr>" +
-                                                  "<tr><td style='font-family: Britannic Bold; color: #00CC00;' class='auto-style1'>{2}</td></tr><tr><td style='font-size: x-small'><a href='{6}' style='animation:alternate-reverse;font-family: Arial; font-size: medium; font-weight: bold; color: green;'>SOLD</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='{5}'>Details</a></td></tr></table>";
+<tr><td colspan='2'><a title='{0}' href='{3}' ><IMG SRC='{3}' width='180px' style='border: thin ridge #C0C0C0;height: 140px' ></td></tr>
+<tr><td colspan='2' style='font-family:Tahoma;font-size: medium; font-weight: bold; color: #800080;height:30px;'>{0}</td></tr>
+<tr>
+<td style='font-size: small; font-weight: 800; color:green; font-family: Tahoma; text-align: center; vertical-align: middle;height:25px;'>{4}</td>
+<td style='font-size: small; font-weight: 200; color:gray;text-align: right; vertical-align: middle;height:25px;'>{2}</td>
+</tr>
+<tr><td style='font-size: large; font-weight: 800; color:chocolate;height:25px;'>SOLD</td>
+<td style='text-align: right' >&nbsp;<a href='{5}' style='font-size: small; font-weight: 100;color:GrayText;height:25px;'>Details</a></td></tr>
+<tr><td>&nbsp;</td></tr></table>";
 
                 sTestHtml = string.Format(htmlSText, title, desc, category, path, price, strViewlink, "");
             }
@@ -168,7 +180,7 @@ namespace YardeCart
                     string sAdPostTitle = dt.Rows[gridpageIndex]["AdPostTitle"].ToString().Trim();
                     string sDescription = dt.Rows[gridpageIndex]["Description"].ToString().Trim();
                     string sCategoryName = dt.Rows[gridpageIndex]["CategoryName"].ToString().Trim();
-                    string sPrice ="Price : $"+ dt.Rows[gridpageIndex]["Price"].ToString().Trim();
+                    string sPrice =" $ "+ dt.Rows[gridpageIndex]["Price"].ToString().Trim();
                     string sImagePath = dt.Rows[gridpageIndex]["ImagePath"].ToString().Trim();
                     string sAdPostId = dt.Rows[gridpageIndex]["AdPostId"].ToString().Trim();
                     string sUserId = dt.Rows[gridpageIndex]["UserId"].ToString().Trim();
