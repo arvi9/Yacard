@@ -17,6 +17,10 @@ namespace YardeCart
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int ad = 0;
+            if (Session["UserType"] != null && Session["UserType"].ToString() == "2")
+                ad = 1;
+            
             Session.Clear();
             Session.Abandon();
             Session.RemoveAll();
@@ -31,7 +35,11 @@ namespace YardeCart
                 Response.Cookies.Add(aCookie);
             }
             FormsAuthentication.SignOut();
+            if(ad==1)
+                Response.Redirect("AdminLogin.aspx");        
+            else
             Response.Redirect("Login.aspx");
+
         }
     }
 }

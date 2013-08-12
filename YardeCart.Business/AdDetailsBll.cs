@@ -131,6 +131,7 @@ namespace YardeCart.Business
                 throw;
             }
         }
+
         public void UpdateAdDeleteStatus(int adpostId, int delVal)
         {
             try

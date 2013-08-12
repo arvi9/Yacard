@@ -97,7 +97,7 @@ namespace YardeCart
 
                 string value = e.Row.Cells[3].Text;
                 City objCity = new City();
-                DataTable dtCity = objCity.SelectCityById(value);
+                DataTable dtCity = objCity.SelectCityById(Convert.ToInt32(value));
                 if (dtCity.Rows.Count > 0)
                 {
                     e.Row.Cells[3].Text = dtCity.Rows[0]["CityName"].ToString();

@@ -25,7 +25,7 @@ namespace YardeCart.Business
             return dalCom.SelectRecord();
         }
 
-        public DataTable SelectCityById(string cityid)
+        public DataTable SelectCityById(int cityid)
         {
             DALComponent dalCom = new DALComponent();
             dalCom.SetParameters("@cityid", SqlDbType.Int, 4, cityid);
